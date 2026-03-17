@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto — Juan Felipe Medina</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <div class="cursor"      id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <canvas id="canvas"></canvas>
+
+  <nav>
+    <div class="logo">JF<span>.dev</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="about.html">Sobre mí</a></li>
+      <li><a href="skills.html">Stack</a></li>
+      <li><a href="projects.html">Proyectos</a></li>
+      <li><a href="contact.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <section id="contact" style="padding-top:9rem;">
+    <div class="section-header reveal">
+      <span class="section-num">04 —</span>
+      <h2 class="section-title">Contacto</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- Info -->
+      <div class="reveal">
+        <div class="contact-info">
+          <h3>¿Trabajamos juntos?</h3>
+          <p>
+            Estoy abierto a oportunidades de desarrollo, colaboraciones técnicas
+            y proyectos freelance. Si tienes una idea o propuesta, escríbeme.
+          </p>
+        </div>
+
+        <div class="contact-links">
+          <a href="mailto:Juan.Medina@estudiantesunibague.edu.co" class="contact-link">
+            <div class="link-icon">✉</div>
+            <div class="link-meta">
+              <span>Email</span>
+              <p>Juan.Medina@estudiantesunibague.edu.co</p>
+            </div>
+          </a>
+          <a href="https://github.com/Sekkon0906" target="_blank" class="contact-link">
+            <div class="link-icon">⌥</div>
+            <div class="link-meta">
+              <span>GitHub</span>
+              <p>github.com/Sekkon0906</p>
+            </div>
+          </a>
+          <a href="https://instagram.com/felipe_medina_9" target="_blank" class="contact-link">
+            <div class="link-icon">◈</div>
+            <div class="link-meta">
+              <span>Instagram</span>
+              <p>@felipe_medina_9</p>
+            </div>
+          </a>
+          <a href="https://facebook.com/juanpimedina916539" target="_blank" class="contact-link">
+            <div class="link-icon">ƒ</div>
+            <div class="link-meta">
+              <span>Facebook</span>
+              <p>juanpimedina916539</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="reveal">
+        <form class="contact-form" id="contactForm">
+          <div class="form-field">
+            <label for="name">Nombre</label>
+            <input id="name" type="text" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="tu@email.com" required />
+          </div>
+          <div class="form-field">
+            <label for="subject">Asunto</label>
+            <input id="subject" type="text" placeholder="Asunto del mensaje" />
+          </div>
+          <div class="form-field">
+            <label for="message">Mensaje</label>
+            <textarea id="message" rows="5"
+              placeholder="Cuéntame sobre tu proyecto o propuesta..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="cursor:none; width:100%;">
+            Enviar mensaje →
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Juan Felipe Medina O. — Sekkon0906</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
