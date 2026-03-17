@@ -5,10 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Proyectos — Juan Felipe Medina</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Extended project card */
+    .project-card .project-role {
+      font-family: var(--mono);
+      font-size: 0.58rem; color: var(--dgray);
+      letter-spacing: 0.12em; text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      padding: 0.18rem 0;
+      border-top: 1px solid var(--border);
+      margin-top: auto;
+    }
+    .project-card { display: flex; flex-direction: column; }
+    .project-card .project-desc { flex: 1; }
+
+    .no-link-badge {
+      font-family: var(--mono);
+      font-size: 0.58rem; color: var(--dgray);
+      letter-spacing: 0.1em;
+      padding: 0.18rem 0.6rem;
+      border: 1px solid var(--border);
+      display: inline-block;
+    }
+    .deploy-placeholder {
+      font-family: var(--mono);
+      font-size: 0.62rem; color: var(--dgray);
+      letter-spacing: 0.08em;
+      font-style: italic;
+    }
+  </style>
 </head>
 <body>
-
-  <div class="cursor"      id="cursor"></div>
+  <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
   <canvas id="canvas"></canvas>
 
@@ -34,79 +62,118 @@
 
     <div class="projects-grid">
 
+      <!-- 1. CoffeeOps -->
       <div class="project-card reveal">
-        <div class="project-id">PRJ — 001</div>
-        <span class="status status-live">En producción</span>
-        <h3 class="project-title">Full-Stack Web App</h3>
+        <div class="project-id">PRJ — 001 · JavaScript · Nov 2025</div>
+        <span class="status status-live">Público</span>
+        <h3 class="project-title">CoffeeOps — Coffee Management</h3>
         <p class="project-desc">
-          Aplicación web completa con arquitectura REST API, autenticación JWT
-          y panel de administración interactivo. Back-end con Laravel, front-end en React.
+          Plataforma SaaS para cafeterías y productores de café que centraliza la gestión
+          de inventarios, lotes, proveedores, documentos y equipo. Incluye analítica en
+          tiempo real para la toma de decisiones operativas.
         </p>
         <div class="project-tags">
-          <span class="project-tag">Laravel</span>
-          <span class="project-tag">React</span>
-          <span class="project-tag">MySQL</span>
-          <span class="project-tag">Docker</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/Sekkon0906" target="_blank" class="project-link">↗ GitHub</a>
-        </div>
-      </div>
-
-      <div class="project-card reveal">
-        <div class="project-id">PRJ — 002</div>
-        <span class="status status-live">En producción</span>
-        <h3 class="project-title">3D Scene — Three.js</h3>
-        <p class="project-desc">
-          Escena tridimensional interactiva con iluminación dinámica, modelos 3D
-          personalizados y controles de cámara en tiempo real usando Three.js y WebGL.
-        </p>
-        <div class="project-tags">
-          <span class="project-tag">Three.js</span>
-          <span class="project-tag">OpenGL</span>
           <span class="project-tag">JavaScript</span>
-          <span class="project-tag">WebGL</span>
+          <span class="project-tag">SaaS</span>
+          <span class="project-tag">Inventarios</span>
+          <span class="project-tag">Analítica</span>
         </div>
         <div class="project-links">
-          <a href="https://github.com/Sekkon0906" target="_blank" class="project-link">↗ GitHub</a>
+          <a href="https://github.com/Sekkon0906/Coffee-management" target="_blank" class="project-link">↗ GitHub</a>
+          <!-- <a href="TU_DEPLOY_URL" target="_blank" class="project-link">↗ Demo</a> -->
         </div>
       </div>
 
+      <!-- 2. Consultorio Estético -->
       <div class="project-card reveal">
-        <div class="project-id">PRJ — 003</div>
-        <span class="status status-dev">En desarrollo</span>
-        <h3 class="project-title">ML Model — TensorFlow</h3>
+        <div class="project-id">PRJ — 002 · TypeScript · Nov 2025</div>
+        <span class="status status-live">Público</span>
+        <h3 class="project-title">Consultorio Estético Dra. Juliet Medina</h3>
         <p class="project-desc">
-          Modelo de machine learning para clasificación de datos usando TensorFlow y Keras,
-          con visualización de métricas y exportación a API REST.
+          Aplicación web para clínica estética desarrollada con Next.js, TypeScript y NextAuth.
+          Incluye autenticación segura, panel de administración, gestión de citas y procedimientos.
+          Desarrollé todo el front-end y realicé la migración completa del back-end.
         </p>
         <div class="project-tags">
-          <span class="project-tag">TensorFlow</span>
-          <span class="project-tag">Keras</span>
+          <span class="project-tag">Next.js</span>
+          <span class="project-tag">TypeScript</span>
+          <span class="project-tag">NextAuth</span>
+          <span class="project-tag">Full-Stack</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Sekkon0906/consultorio-estetico" target="_blank" class="project-link">↗ GitHub</a>
+          <!-- <a href="TU_DEPLOY_URL" target="_blank" class="project-link">↗ Demo</a> -->
+        </div>
+      </div>
+
+      <!-- 3. Ardy-IA -->
+      <div class="project-card reveal">
+        <div class="project-id">PRJ — 003 · Python · Nov 2025</div>
+        <span class="status status-live">Público · 1 fork</span>
+        <h3 class="project-title">Ardy-IA — Aprendizaje de idiomas con IA</h3>
+        <p class="project-desc">
+          Plataforma web de aprendizaje de idiomas impulsada por IA. Detecta el idioma del
+          usuario, corrige errores en tiempo real, genera voz mediante Whisper y produce
+          imágenes para práctica visual. Se adapta al nivel y progreso del usuario
+          usando GPT de OpenAI.
+        </p>
+        <div class="project-tags">
           <span class="project-tag">Python</span>
-          <span class="project-tag">Pandas</span>
+          <span class="project-tag">OpenAI GPT</span>
+          <span class="project-tag">Whisper</span>
+          <span class="project-tag">Voice AI</span>
+          <span class="project-tag">Image Gen</span>
         </div>
         <div class="project-links">
-          <a href="https://github.com/Sekkon0906" target="_blank" class="project-link">↗ GitHub</a>
+          <a href="https://github.com/Sekkon0906/Ardy-IA" target="_blank" class="project-link">↗ GitHub</a>
+          <!-- <a href="TU_DEPLOY_URL" target="_blank" class="project-link">↗ Demo</a> -->
         </div>
       </div>
 
+      <!-- 4. Wallnut -->
       <div class="project-card reveal">
-        <div class="project-id">PRJ — 004</div>
-        <span class="status status-live">En producción</span>
-        <h3 class="project-title">Mobile App — Flutter</h3>
+        <div class="project-id">PRJ — 004 · TypeScript · Nov 2025</div>
+        <span class="status status-dev">Privado</span>
+        <h3 class="project-title">Wallnut — Wallet Universitaria Gamificada</h3>
         <p class="project-desc">
-          Aplicación móvil multiplataforma con Firebase como back-end,
-          notificaciones push y autenticación social integrada.
+          App universitaria que integra una wallet digital gamificada para estudiantes,
+          docentes y administradores. Usa el sistema de puntos Ardys para incentivar la
+          participación en eventos y actividades académicas.
+          Construida con Next.js y TypeScript.
         </p>
         <div class="project-tags">
-          <span class="project-tag">Flutter</span>
-          <span class="project-tag">Firebase</span>
-          <span class="project-tag">Dart</span>
-          <span class="project-tag">Android Studio</span>
+          <span class="project-tag">Next.js</span>
+          <span class="project-tag">TypeScript</span>
+          <span class="project-tag">Gamificación</span>
+          <span class="project-tag">Wallet</span>
         </div>
         <div class="project-links">
-          <a href="https://github.com/Sekkon0906" target="_blank" class="project-link">↗ GitHub</a>
+          <span class="no-link-badge">Repositorio privado</span>
+          <span class="deploy-placeholder">· deploy próximamente</span>
+        </div>
+      </div>
+
+      <!-- 5. SorteosCCM -->
+      <div class="project-card reveal">
+        <div class="project-id">PRJ — 005 · TypeScript · En curso</div>
+        <span class="status status-dev">Privado · En desarrollo</span>
+        <h3 class="project-title">SorteosCCM — Rifas para Caballos Colombianos</h3>
+        <p class="project-desc">
+          MVP de plataforma de rifas online para la comunidad de Caballos Colombianos de Paso.
+          Arquitectura Feature-Sliced + Clean Architecture sobre Angular 17 standalone con SSR,
+          Supabase PostgreSQL y Edge Functions para lógica serverless.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">Angular 17</span>
+          <span class="project-tag">TypeScript</span>
+          <span class="project-tag">Supabase</span>
+          <span class="project-tag">PostgreSQL</span>
+          <span class="project-tag">SSR</span>
+          <span class="project-tag">Clean Arch</span>
+        </div>
+        <div class="project-links">
+          <span class="no-link-badge">Repositorio privado</span>
+          <span class="deploy-placeholder">· deploy próximamente</span>
         </div>
       </div>
 
@@ -114,7 +181,7 @@
 
     <div style="margin-top:3rem; text-align:center;" class="reveal">
       <a href="https://github.com/Sekkon0906" target="_blank" class="btn-ghost">
-        Ver todos los repositorios en GitHub ↗
+        Ver perfil completo en GitHub ↗
       </a>
     </div>
   </section>
@@ -123,7 +190,6 @@
     <p>© 2025 Juan Felipe Medina O. — Sekkon0906</p>
     <p>Hecho desde <a href="contact.html">Ibagué, Colombia 🇨🇴</a></p>
   </footer>
-
   <script src="js/main.js"></script>
 </body>
 </html>
