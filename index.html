@@ -3,267 +3,526 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Juan Felipe Medina — Portfolio</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <title>Juan Felipe Medina — ¿Qué quieres conocer?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <style>
-
-    /* ══════════════════════════════════════
-       SECCIONES EXTRA (intro / stack / teaser)
-       ══════════════════════════════════════ */
-    #intro           { background:var(--bg2); padding:6rem 4rem; }
-    #stack-preview   { background:var(--bg);  padding:5rem 4rem; }
-    #projects-teaser { background:var(--bg2); padding:5rem 4rem; position:relative; }
-
-    /* Intro grid */
-    .intro-grid {
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:5rem; align-items:start;
-    }
-    .intro-bio p { font-size:.98rem; line-height:1.95; color:var(--gray); margin-bottom:1.4rem; }
-    .intro-bio p strong { color:var(--white); font-weight:700; }
-    .intro-stats { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:2rem; }
-
-    /* Stack grid */
-    .stack-cols { display:grid; grid-template-columns:repeat(4,1fr); gap:2.5rem; }
-    .stack-col-title {
-      font-family:var(--mono); font-size:.6rem; color:var(--gray);
-      letter-spacing:.22em; text-transform:uppercase; margin-bottom:1rem;
-      display:flex; align-items:center; gap:.6rem;
-    }
-    .stack-col-title::after { content:''; flex:1; height:1px; background:var(--border); }
-    .stack-list { display:flex; flex-direction:column; gap:.45rem; }
-    .stack-item {
-      font-family:var(--mono); font-size:.65rem; color:var(--white2);
-      padding:.38rem .7rem; border:1px solid var(--border);
-      background:var(--bg3); letter-spacing:.06em; transition:all .22s; cursor:default;
-    }
-    .stack-item:hover { border-color:var(--border2); color:var(--white); background:var(--bg4); transform:translateX(4px); }
-
-    /* Teaser grid */
-    .teaser-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-bottom:2.5rem; }
-    .teaser-card { background:var(--bg3); border:1px solid var(--border); padding:1.5rem; transition:all .3s; }
-    .teaser-card:hover { border-color:var(--border2); transform:translateY(-3px); box-shadow:var(--glow); }
-    .teaser-dot  { width:6px; height:6px; border-radius:50%; background:var(--white2); margin-bottom:1rem; }
-    .teaser-name { font-size:.95rem; font-weight:700; margin-bottom:.5rem; letter-spacing:-.02em; }
-    .teaser-desc { font-size:.78rem; color:var(--gray); line-height:1.65; }
-
-    /* ══════════════════════════════════════
-       RESPONSIVE — tablet  ≤ 960px
-       ══════════════════════════════════════ */
-    @media (max-width:960px) {
-      #intro, #stack-preview, #projects-teaser { padding:4rem 1.5rem; }
-
-      .intro-grid  { grid-template-columns:1fr; gap:2.5rem; }
-      .stack-cols  { grid-template-columns:1fr 1fr; gap:1.5rem; }
-      .teaser-grid { grid-template-columns:1fr 1fr; gap:1rem; }
+    :root {
+      --bg:      #090909;
+      --bg2:     #101010;
+      --bg3:     #181818;
+      --bg4:     #202020;
+      --white:   #ede9e0;
+      --white2:  #b8b4ac;
+      --gray:    #787470;
+      --dgray:   #3a3836;
+      --border:  rgba(237,233,224,0.10);
+      --border2: rgba(237,233,224,0.22);
+      --glow:    0 0 36px rgba(237,233,224,0.07);
+      --mono:    'Space Mono', monospace;
+      --sans:    'Syne', sans-serif;
     }
 
-    /* ══════════════════════════════════════
-       RESPONSIVE — móvil  ≤ 600px
-       ══════════════════════════════════════ */
-    @media (max-width:600px) {
-      #intro, #stack-preview, #projects-teaser { padding:3rem 1rem; }
-
-      .stack-cols  { grid-template-columns:1fr 1fr; gap:.85rem; }
-      .stack-col-title { font-size:.54rem; }
-      .stack-item  { font-size:.6rem; padding:.28rem .5rem; }
-
-      .teaser-grid { grid-template-columns:1fr; }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      background: var(--bg);
+      color: var(--white);
+      font-family: var(--sans);
+      overflow: hidden;
+      cursor: none;
     }
 
+    /* ---- Cursor ---- */
+    .cursor {
+      width: 10px; height: 10px;
+      background: var(--white); border-radius: 50%;
+      position: fixed; pointer-events: none; z-index: 9999;
+      transition: transform 0.1s;
+      mix-blend-mode: difference;
+    }
+    .cursor-ring {
+      width: 34px; height: 34px;
+      border: 1px solid rgba(237,233,224,0.35);
+      border-radius: 50%;
+      position: fixed; pointer-events: none; z-index: 9998;
+      transition: all 0.15s ease;
+    }
+
+    /* ---- Canvas ---- */
+    #canvas {
+      position: fixed; inset: 0;
+      z-index: 0; opacity: 0.22;
+      pointer-events: none;
+    }
+
+    /* ---- Layout ---- */
+    .page {
+      position: relative; z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+    }
+
+    /* ---- Top label ---- */
+    .page-label {
+      position: fixed;
+      top: 1.6rem; left: 50%;
+      transform: translateX(-50%);
+      font-family: var(--mono);
+      font-size: 0.56rem;
+      color: var(--dgray);
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      z-index: 10;
+      opacity: 0;
+      animation: fadeIn 0.8s 0.1s forwards;
+    }
+
+    /* ---- Card ---- */
+    .card {
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Photo */
+    .photo-wrap {
+      position: relative;
+      margin-bottom: 1.8rem;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.2s forwards;
+    }
+    .photo-ring-outer {
+      position: absolute;
+      inset: -14px; border-radius: 50%;
+      border: 1px solid rgba(237,233,224,0.04);
+      pointer-events: none;
+    }
+    .photo-ring-inner {
+      position: absolute;
+      inset: -6px; border-radius: 50%;
+      border: 1px solid var(--border);
+      pointer-events: none;
+    }
+    .photo {
+      width: 108px; height: 108px;
+      object-fit: cover; object-position: top;
+      border-radius: 50%;
+      display: block;
+      filter: grayscale(100%) contrast(1.12);
+      border: 1px solid var(--border2);
+      transition: filter 0.5s;
+    }
+    .photo:hover { filter: grayscale(40%) contrast(1.05); }
+    .online-dot {
+      position: absolute;
+      bottom: 5px; right: 5px;
+      width: 13px; height: 13px;
+      background: var(--bg3);
+      border-radius: 50%;
+      border: 2px solid var(--bg);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .online-dot::after {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: #8a8a78;
+      animation: pulse 2s infinite;
+    }
+
+    /* Identity */
+    .name {
+      font-size: 1.55rem; font-weight: 800;
+      letter-spacing: -0.04em;
+      text-align: center;
+      margin-bottom: 0.3rem;
+      opacity: 0; animation: fadeUp 0.7s 0.32s forwards;
+    }
+    .handle {
+      font-family: var(--mono);
+      font-size: 0.6rem; color: var(--gray);
+      letter-spacing: 0.18em; text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 0.45rem;
+      opacity: 0; animation: fadeUp 0.7s 0.42s forwards;
+    }
+    .tagline {
+      display: flex; align-items: center; gap: 0.6rem;
+      font-family: var(--mono);
+      font-size: 0.6rem; color: var(--dgray);
+      letter-spacing: 0.1em;
+      text-align: center;
+      margin-bottom: 2.6rem;
+      opacity: 0; animation: fadeUp 0.7s 0.5s forwards;
+    }
+    .tagline::before, .tagline::after {
+      content: ''; flex: 1; height: 1px;
+      background: var(--border);
+    }
+
+    /* Pregunta */
+    .question {
+      font-family: var(--mono);
+      font-size: 0.58rem; color: var(--gray);
+      letter-spacing: 0.2em; text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 1rem;
+      opacity: 0; animation: fadeUp 0.6s 0.56s forwards;
+    }
+
+    /* Buttons */
+    .buttons {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .btn-card {
+      width: 100%;
+      display: flex; align-items: center; gap: 1rem;
+      padding: 0.9rem 1.2rem;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--white2);
+      text-decoration: none;
+      cursor: none;
+      transition: all 0.28s;
+      position: relative; overflow: hidden;
+      opacity: 0;
+    }
+    .btn-card:nth-child(1) { animation: fadeUp 0.6s 0.62s forwards; }
+    .btn-card:nth-child(2) { animation: fadeUp 0.6s 0.71s forwards; }
+    .btn-card:nth-child(3) { animation: fadeUp 0.6s 0.80s forwards; }
+    .btn-card:nth-child(4) { animation: fadeUp 0.6s 0.89s forwards; }
+
+    .btn-card::before {
+      content: '';
+      position: absolute; left: 0; top: 0; bottom: 0;
+      width: 2px; background: var(--white);
+      transform: scaleY(0); transform-origin: bottom;
+      transition: transform 0.3s;
+    }
+    .btn-card:hover::before { transform: scaleY(1); }
+    .btn-card:hover {
+      border-color: var(--border2);
+      color: var(--white);
+      box-shadow: var(--glow);
+      transform: translateX(4px);
+    }
+
+    .btn-icon {
+      width: 32px; height: 32px;
+      background: var(--bg4);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.88rem; flex-shrink: 0;
+      transition: border-color 0.28s;
+    }
+    .btn-card:hover .btn-icon { border-color: var(--border2); }
+
+    .btn-text { display: flex; flex-direction: column; gap: 0.08rem; }
+    .btn-sub {
+      font-family: var(--mono);
+      font-size: 0.56rem; color: var(--dgray);
+      letter-spacing: 0.15em; text-transform: uppercase;
+    }
+    .btn-label { font-size: 0.88rem; font-weight: 700; letter-spacing: -0.02em; }
+
+    .btn-arrow {
+      margin-left: auto;
+      font-family: var(--mono);
+      font-size: 0.7rem; color: var(--dgray);
+      transition: color 0.28s, transform 0.28s;
+    }
+    .btn-card:hover .btn-arrow { color: var(--white2); transform: translateX(3px); }
+
+    /* Sig */
+    .sig {
+      margin-top: 2.2rem;
+      font-family: var(--mono);
+      font-size: 0.52rem; color: var(--dgray);
+      letter-spacing: 0.15em; text-transform: uppercase;
+      opacity: 0; animation: fadeIn 1s 1s forwards;
+    }
+
+    /* Modal contacto */
+    .modal-overlay {
+      position: fixed; inset: 0;
+      background: rgba(9,9,9,0.9);
+      backdrop-filter: blur(14px);
+      z-index: 200;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 0 1rem 1.5rem;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.32s;
+    }
+    .modal-overlay.open { opacity: 1; pointer-events: all; }
+
+    .modal-panel {
+      width: 100%; max-width: 400px;
+      background: var(--bg2);
+      border: 1px solid var(--border2);
+      padding: 1.8rem 1.4rem 1.4rem;
+      transform: translateY(36px);
+      transition: transform 0.36s cubic-bezier(0.4,0,0.2,1);
+      clip-path: polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px));
+    }
+    .modal-overlay.open .modal-panel { transform: translateY(0); }
+
+    .modal-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 1.3rem;
+    }
+    .modal-title {
+      font-family: var(--mono); font-size: 0.6rem;
+      color: var(--gray); letter-spacing: 0.2em; text-transform: uppercase;
+    }
+    .modal-close {
+      background: none; border: 1px solid var(--border);
+      color: var(--gray);
+      width: 28px; height: 28px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; cursor: none;
+      transition: all 0.2s;
+    }
+    .modal-close:hover { border-color: var(--border2); color: var(--white); }
+
+    .modal-links { display: flex; flex-direction: column; gap: 0.55rem; }
+
+    .modal-link {
+      display: flex; align-items: center; gap: 0.85rem;
+      padding: 0.7rem 0.95rem;
+      background: var(--bg3); border: 1px solid var(--border);
+      text-decoration: none; cursor: none;
+      transition: all 0.25s;
+    }
+    .modal-link:hover {
+      border-color: var(--border2);
+      transform: translateX(4px);
+      box-shadow: var(--glow);
+    }
+    .modal-icon {
+      width: 28px; height: 28px;
+      background: var(--bg4); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.78rem; flex-shrink: 0;
+    }
+    .modal-info { display: flex; flex-direction: column; gap: 0.06rem; }
+    .modal-platform {
+      font-family: var(--mono); font-size: 0.52rem;
+      color: var(--dgray); letter-spacing: 0.15em; text-transform: uppercase;
+    }
+    .modal-handle { font-size: 0.82rem; color: var(--white2); }
+    .modal-link:hover .modal-handle { color: var(--white); }
+    .modal-arrow {
+      margin-left: auto;
+      font-family: var(--mono); font-size: 0.62rem; color: var(--dgray);
+      transition: all 0.25s;
+    }
+    .modal-link:hover .modal-arrow { color: var(--white2); transform: translateX(3px); }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; } to { opacity: 1; }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; } 50% { opacity: 0.3; }
+    }
+
+    /* Mobile */
+    @media (max-width: 480px) {
+      .name { font-size: 1.3rem; }
+      .page { padding: 4rem 1.2rem 2rem; }
+    }
   </style>
 </head>
 <body>
-  <div class="cursor"      id="cursor"></div>
+  <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
   <canvas id="canvas"></canvas>
 
-  <nav>
-    <div class="logo">JF<span>.dev</span></div>
-    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="home.html">Inicio</a></li>
-      <li><a href="about.html">Sobre mí</a></li>
-      <li><a href="skills.html">Stack</a></li>
-      <li><a href="projects.html">Proyectos</a></li>
-      <li><a href="contact.html">Contacto</a></li>
-      <li><a href="index.html">← Card</a></li>
-    </ul>
-  </nav>
-
-  <!-- ══ HERO ══════════════════════════════ -->
-  <section id="hero">
-    <div class="grid-bg"></div>
-    <div class="hero-left">
-      <div class="hero-tag">
-        <div class="status-dot"></div>
-        Disponible para colaborar
+  <!-- Modal de redes -->
+  <div class="modal-overlay" id="modalRedes">
+    <div class="modal-panel">
+      <div class="modal-header">
+        <span class="modal-title">03 — Contacto directo</span>
+        <button class="modal-close" id="modalClose">×</button>
       </div>
-      <h1 class="hero-name">
-        Juan<br>Felipe<br><span class="outline">Medina</span>
-      </h1>
-      <div class="hero-role">
-        <span id="typed"></span><span class="typed-cursor"></span>
-      </div>
-      <div class="hero-btns">
-        <a href="projects.html" class="btn-primary">Ver proyectos</a>
-        <a href="contact.html"  class="btn-ghost">Contactar</a>
-      </div>
-    </div>
-    <div class="hero-photo-panel">
-      <div class="photo-frame">
-        <img src="assets/fotoCV.jpg" alt="Juan Felipe Medina O." />
-        <span class="photo-tag">Colombia · he/him</span>
-      </div>
-    </div>
-    <div class="hero-scroll">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- ══ BIO ═══════════════════════════════ -->
-  <section id="intro">
-    <div class="section-header reveal">
-      <span class="section-num">—</span>
-      <h2 class="section-title">Quién soy</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="intro-grid">
-      <div class="intro-bio reveal">
-        <p>Soy <strong>Juan Felipe Medina</strong>, estudiante de Ingeniería de Sistemas
-           en la Universidad de Ibagué. Me dedico a construir aplicaciones
-           <strong>full-stack</strong> que resuelven problemas reales — desde plataformas
-           SaaS hasta sistemas con inteligencia artificial integrada.</p>
-        <p>Mi enfoque está en escribir <strong>back-ends eficientes</strong> y front-ends
-           que realmente se disfrutan usar. Cuando llego a un stack o lenguaje que no
-           conozco, me adapto rápido y doy lo mejor hasta destacar en él.</p>
-        <p>He trabajado en proyectos que van desde clínicas estéticas hasta plataformas
-           universitarias gamificadas y herramientas de aprendizaje con IA.</p>
-        <div style="margin-top:1.8rem;">
-          <a href="about.html" class="btn-ghost">Leer más sobre mí →</a>
-        </div>
-      </div>
-      <div class="reveal">
-        <div class="intro-stats">
-          <div class="stat-card"><span class="stat-num">5</span><span class="stat-label">Proyectos reales</span></div>
-          <div class="stat-card"><span class="stat-num">6+</span><span class="stat-label">Lenguajes activos</span></div>
-          <div class="stat-card"><span class="stat-num">3</span><span class="stat-label">Apps en producción</span></div>
-          <div class="stat-card"><span class="stat-num">∞</span><span class="stat-label">Ganas de aprender</span></div>
-        </div>
-        <a href="projects.html" class="btn-primary" style="display:inline-block;">
-          Ver todos los proyectos →
+      <div class="modal-links">
+        <a href="https://instagram.com/felipe_medina_9" target="_blank" class="modal-link">
+          <div class="modal-icon">◈</div>
+          <div class="modal-info">
+            <span class="modal-platform">Instagram</span>
+            <span class="modal-handle">@felipe_medina_9</span>
+          </div>
+          <span class="modal-arrow">↗</span>
+        </a>
+        <a href="https://facebook.com/juanpimedina916539" target="_blank" class="modal-link">
+          <div class="modal-icon">ƒ</div>
+          <div class="modal-info">
+            <span class="modal-platform">Facebook</span>
+            <span class="modal-handle">juanpimedina916539</span>
+          </div>
+          <span class="modal-arrow">↗</span>
+        </a>
+        
+        <a href="https://wa.me/316048061" target="_blank" class="modal-link">
+          <div class="modal-icon">◎</div>
+          <div class="modal-info">
+            <span class="modal-platform">WhatsApp</span>
+            <span class="modal-handle">Chat de whatsapp</span>
+          </div>
+          <span class="modal-arrow">↗</span>
+        </a>
+        <a href="https://t.me/@juanf0906" target="_blank" class="modal-link">
+          <div class="modal-icon">▷</div>
+          <div class="modal-info">
+            <span class="modal-platform">Telegram</span>
+            <span class="modal-handle">Chat de telegram
+            </span>
+          </div>
+          <span class="modal-arrow">↗</span>
         </a>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- ══ STACK ══════════════════════════════ -->
-  <section id="stack-preview">
-    <div class="section-header reveal">
-      <span class="section-num">—</span>
-      <h2 class="section-title">Tech Stack</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="stack-cols">
-      <div class="reveal">
-        <div class="stack-col-title">Lenguajes</div>
-        <div class="stack-list">
-          <span class="stack-item">JavaScript</span>
-          <span class="stack-item">TypeScript</span>
-          <span class="stack-item">Python</span>
-          <span class="stack-item">Java</span>
-          <span class="stack-item">C / C++</span>
-          <span class="stack-item">HTML · CSS</span>
-        </div>
-      </div>
-      <div class="reveal">
-        <div class="stack-col-title">Frameworks</div>
-        <div class="stack-list">
-          <span class="stack-item">Next.js</span>
-          <span class="stack-item">React</span>
-          <span class="stack-item">Angular 17</span>
-          <span class="stack-item">Laravel</span>
-          <span class="stack-item">Flutter</span>
-          <span class="stack-item">Three.js</span>
-        </div>
-      </div>
-      <div class="reveal">
-        <div class="stack-col-title">Backend / DB</div>
-        <div class="stack-list">
-          <span class="stack-item">Supabase</span>
-          <span class="stack-item">Firebase</span>
-          <span class="stack-item">PostgreSQL</span>
-          <span class="stack-item">MySQL</span>
-          <span class="stack-item">NextAuth</span>
-          <span class="stack-item">REST API</span>
-        </div>
-      </div>
-      <div class="reveal">
-        <div class="stack-col-title">Herramientas</div>
-        <div class="stack-list">
-          <span class="stack-item">Docker</span>
-          <span class="stack-item">Git · GitHub</span>
-          <span class="stack-item">OpenAI API</span>
-          <span class="stack-item">Figma</span>
-          <span class="stack-item">Postman</span>
-          <span class="stack-item">VS Code</span>
-        </div>
-      </div>
-    </div>
-    <div style="margin-top:3rem;text-align:right;" class="reveal">
-      <a href="skills.html" class="btn-ghost">Ver stack completo →</a>
-    </div>
-  </section>
+  <!-- Etiqueta superior -->
+  <span class="page-label">JF.dev — Portfolio</span>
 
-  <!-- ══ PROYECTOS TEASER ═══════════════════ -->
-  <section id="projects-teaser">
-    <div class="grid-bg"></div>
-    <div class="section-header reveal">
-      <span class="section-num">—</span>
-      <h2 class="section-title">Proyectos destacados</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="teaser-grid">
-      <div class="teaser-card reveal">
-        <div class="teaser-dot"></div>
-        <div class="teaser-name">CoffeeOps</div>
-        <p class="teaser-desc">SaaS para cafeterías — inventarios, lotes, proveedores y analítica en tiempo real.</p>
-      </div>
-      <div class="teaser-card reveal">
-        <div class="teaser-dot"></div>
-        <div class="teaser-name">Consultorio Estético</div>
-        <p class="teaser-desc">App web para clínica estética con Next.js, TypeScript y NextAuth.</p>
-      </div>
-      <div class="teaser-card reveal">
-        <div class="teaser-dot"></div>
-        <div class="teaser-name">Ardy-IA</div>
-        <p class="teaser-desc">Plataforma de aprendizaje de idiomas con GPT + Whisper.</p>
-      </div>
-      <div class="teaser-card reveal">
-        <div class="teaser-dot"></div>
-        <div class="teaser-name">Wallnut</div>
-        <p class="teaser-desc">Wallet universitaria gamificada con sistema de puntos Ardys.</p>
-      </div>
-      <div class="teaser-card reveal">
-        <div class="teaser-dot"></div>
-        <div class="teaser-name">SorteosCCM</div>
-        <p class="teaser-desc">MVP de rifas online. Angular 17 + Supabase + Clean Architecture.</p>
-      </div>
-    </div>
-    <div style="text-align:center;" class="reveal">
-      <a href="projects.html" class="btn-primary">Ver proyectos completos →</a>
-    </div>
-  </section>
+  <main class="page">
+    <div class="card">
 
-  <footer>
-    <p>© 2025 Juan Felipe Medina O. — Sekkon0906</p>
-    <p>Hecho desde <a href="contact.html">Colombia 🇨🇴</a></p>
-  </footer>
+      <!-- Foto -->
+      <div class="photo-wrap">
+        <div class="photo-ring-outer"></div>
+        <div class="photo-ring-inner"></div>
+        <img src="assets/fotoCV.jpg" alt="Juan Felipe Medina O." class="photo" />
+        <div class="online-dot"></div>
+      </div>
 
-  <script src="js/main.js"></script>
+      <!-- Identidad -->
+      <h1 class="name">Juan Felipe Medina</h1>
+      <p class="handle">@Sekkon0906</p>
+      <p class="tagline">Full-Stack Dev · Ibagué, Colombia 🇨🇴</p>
+
+      <!-- Pregunta -->
+      <p class="question">¿Qué quieres conocer?</p>
+
+      <!-- Botones -->
+      <div class="buttons">
+
+        <!-- 01 — Portfolio -->
+        <a href="home.html" class="btn-card">
+          <div class="btn-icon">⬡</div>
+          <div class="btn-text">
+            <span class="btn-sub">01 — Web</span>
+            <span class="btn-label">Portafolio completo</span>
+          </div>
+          <span class="btn-arrow">→</span>
+        </a>
+
+        <!-- 02 — GitHub -->
+        <a href="https://github.com/Sekkon0906" target="_blank" class="btn-card">
+          <div class="btn-icon">⌥</div>
+          <div class="btn-text">
+            <span class="btn-sub">02 — Código</span>
+            <span class="btn-label">GitHub</span>
+          </div>
+          <span class="btn-arrow">↗</span>
+        </a>
+
+        <!-- 03 — Redes (abre modal) -->
+        <button class="btn-card" id="openModal" style="font-family:inherit; background:var(--bg3);">
+          <div class="btn-icon">◈</div>
+          <div class="btn-text">
+            <span class="btn-sub">03 — Redes</span>
+            <span class="btn-label">Contacto directo</span>
+          </div>
+          <span class="btn-arrow">↓</span>
+        </button>
+
+        <!-- 04 — Mail -->
+        <a href="mailto:Juan.Medina@estudiantesunibague.edu.co" class="btn-card">
+          <div class="btn-icon">✉</div>
+          <div class="btn-text">
+            <span class="btn-sub">04 — Email</span>
+            <span class="btn-label">Enviar correo</span>
+          </div>
+          <span class="btn-arrow">→</span>
+        </a>
+
+      </div>
+
+      <p class="sig">© 2025 · Ibagué, Colombia</p>
+    </div>
+  </main>
+
+  <script>
+    /* Cursor */
+    const cursor = document.getElementById('cursor');
+    const ring   = document.getElementById('cursorRing');
+    let mx=0,my=0,rx=0,ry=0;
+    document.addEventListener('mousemove', e => {
+      mx=e.clientX; my=e.clientY;
+      cursor.style.left=(mx-5)+'px'; cursor.style.top=(my-5)+'px';
+    });
+    (function rl(){ rx+=(mx-rx-17)*.14; ry+=(my-ry-17)*.14;
+      ring.style.left=rx+'px'; ring.style.top=ry+'px';
+      requestAnimationFrame(rl); })();
+    document.querySelectorAll('a,button').forEach(el=>{
+      el.addEventListener('mouseenter',()=>{ cursor.style.transform='scale(2.4)'; ring.style.transform='scale(1.5)'; ring.style.borderColor='rgba(237,233,224,.6)'; });
+      el.addEventListener('mouseleave',()=>{ cursor.style.transform='scale(1)'; ring.style.transform='scale(1)'; ring.style.borderColor='rgba(237,233,224,.35)'; });
+    });
+
+    /* Canvas partículas */
+    const cv=document.getElementById('canvas');
+    const ctx=cv.getContext('2d');
+    let W,H,dots=[];
+    function resize(){ W=cv.width=window.innerWidth; H=cv.height=window.innerHeight; }
+    resize(); window.addEventListener('resize',resize);
+    class Dot{ constructor(){ this.init(); }
+      init(){ this.x=Math.random()*W; this.y=Math.random()*H;
+        this.vx=(Math.random()-.5)*.3; this.vy=(Math.random()-.5)*.3;
+        this.r=Math.random()*1.1+.4; this.a=Math.random()*.45+.1; }
+      update(){ this.x+=this.vx; this.y+=this.vy;
+        if(this.x<0||this.x>W||this.y<0||this.y>H) this.init(); }
+      draw(){ ctx.beginPath(); ctx.arc(this.x,this.y,this.r,0,Math.PI*2);
+        ctx.fillStyle=`rgba(190,186,178,${this.a})`; ctx.fill(); }
+    }
+    for(let i=0;i<70;i++) dots.push(new Dot());
+    (function loop(){ ctx.clearRect(0,0,W,H);
+      for(let i=0;i<dots.length;i++){ dots[i].update(); dots[i].draw();
+        for(let j=i+1;j<dots.length;j++){
+          const dx=dots[i].x-dots[j].x, dy=dots[i].y-dots[j].y, d=Math.hypot(dx,dy);
+          if(d<100){ ctx.beginPath(); ctx.strokeStyle=`rgba(190,186,178,${.05*(1-d/100)})`;
+            ctx.lineWidth=.5; ctx.moveTo(dots[i].x,dots[i].y); ctx.lineTo(dots[j].x,dots[j].y); ctx.stroke(); }
+        }
+      } requestAnimationFrame(loop); })();
+
+    /* Modal */
+    const modal   = document.getElementById('modalRedes');
+    const openBtn = document.getElementById('openModal');
+    const closeBtn= document.getElementById('modalClose');
+    openBtn.addEventListener('click', () => modal.classList.add('open'));
+    closeBtn.addEventListener('click', () => modal.classList.remove('open'));
+    modal.addEventListener('click', e => { if(e.target===modal) modal.classList.remove('open'); });
+    document.addEventListener('keydown', e => { if(e.key==='Escape') modal.classList.remove('open'); });
+  </script>
 </body>
 </html>

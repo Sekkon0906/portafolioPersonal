@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css" />
   <title>Juan Felipe Medina — Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <style>
@@ -203,62 +204,80 @@ footer a{color:var(--white2);text-decoration:none;}
   nav { padding: .85rem 1rem; }
   .hamburger { display: flex; }
 
-  /* Panel nav deslizante */
-  .nav-links {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-    gap: 0;
-    background: rgba(9,9,9,.97);
-    backdrop-filter: blur(20px);
-    transform: translateX(100%);
-    transition: transform .38s cubic-bezier(.4,0,.2,1);
-    z-index: 101;
-    overflow-y: auto;
-    padding: 0;
-  }
-  .nav-links.open { transform: translateX(0); }
-  .nav-links li { border-bottom: 1px solid var(--border); }
-  .nav-links li:first-child { margin-top: 4.5rem; border-top: 1px solid var(--border); }
-  .nav-links a {
-    display: block;
-    padding: 1.2rem 2rem;
-    font-size: .75rem;
-    letter-spacing: .2em;
-    color: var(--gray);
-    background: none;
-    transition: color .2s, padding-left .2s;
-  }
-  .nav-links a:hover { color: var(--white); padding-left: 2.8rem; }
+ .nav-links {
+  position: fixed;
+  inset: 0; /* reemplaza top/left/right/bottom */
+  
+  display: flex;
+  flex-direction: column;
+
+  /* 🔥 CLAVE */
+  width: 100vw;
+  height: 100vh;
+
+  /* reset de layout */
+  margin: 0;
+  
+  justify-content: flex-start;
+  align-items: stretch;
+
+  background: rgba(9,9,9,.97);
+  backdrop-filter: blur(20px);
+
+  transform: translateX(100%);
+  transition: transform .38s cubic-bezier(.4,0,.2,1);
+
+  z-index: 999;
+
+  padding-top: 5rem;
+}
+
+.nav-links.open {
+  transform: translateX(0);
+}
+
+.nav-links li {
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-links a {
+  display: block;
+  padding: 1.4rem 1.6rem;
+  font-size: .9rem;
+  color: var(--white);
+}
 
   /* ── HERO MÓVIL ── */
-  #hero {
-    /* Cancelar el grid de 2 columnas */
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 5.5rem 1.2rem 3rem !important;
-    min-height: 100svh;
-    gap: 0;
-  }
+#hero {
+  display: flex !important;
+  flex-direction: column !important;
 
-  /* Foto circular arriba del nombre — visible en móvil */
-  .hero-mobile-photo {
-    display: block;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: top;
-    filter: grayscale(100%) contrast(1.1);
-    border: 1px solid var(--border2);
-    margin-bottom: 1.4rem;
-    opacity: 0;
-    animation: fadeIn .8s .2s forwards;
-  }
+  justify-content: center;   /* 🔥 centra vertical */
+  align-items: center;       /* 🔥 centra horizontal */
+
+  padding: 5.5rem 1.2rem 3rem !important;
+
+  min-height: 100vh;         /* 🔥 ocupa toda la pantalla */
+  text-align: center;        /* opcional, mejora estética */
+}
+
+.hero-mobile-photo {
+  display: block;
+  width: 250px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+
+  margin: 0 auto 1.6rem auto; /* centra */
+
+  filter: none; /* sin gris */
+
+  border: 1px solid var(--border2);
+
+  opacity: 0;
+  animation: fadeIn .8s .2s forwards;
+}
 
   /* Panel foto desktop: oculto */
   .hero-photo-panel { display: none !important; }
@@ -317,20 +336,22 @@ footer a{color:var(--white2);text-decoration:none;}
   <div class="cursor-ring" id="cursorRing"></div>
   <canvas id="canvas"></canvas>
 
-  <nav>
-    <div class="logo">JF<span>.dev</span></div>
-    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="home.html">Inicio</a></li>
-      <li><a href="about.html">Sobre mí</a></li>
-      <li><a href="skills.html">Stack</a></li>
-      <li><a href="projects.html">Proyectos</a></li>
-      <li><a href="contact.html">Contacto</a></li>
-      <li><a href="index.html">← Card</a></li>
-    </ul>
-  </nav>
+<nav>
+  <div class="logo">JF<span>.dev</span></div>
+
+  <button class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="home.html">Inicio</a></li>
+    <li><a href="about.html">Sobre mí</a></li>
+    <li><a href="skills.html">Stack</a></li>
+    <li><a href="projects.html">Proyectos</a></li>
+    <li><a href="contact.html">Contacto</a></li>
+    <li><a href="index.html" style="color:var(--white2);">↗ Card</a></li>
+  </ul>
+</nav>
 
   <!-- ═══ HERO ════════════════════════════════ -->
   <section id="hero">
