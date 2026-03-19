@@ -6,61 +6,95 @@
   <title>Juan Felipe Medina — Portfolio</title>
   <link rel="stylesheet" href="css/styles.css" />
   <style>
-    #intro { background: var(--bg2); padding: 6rem 4rem; }
-    .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
-    .intro-bio p { font-size: 0.98rem; line-height: 1.95; color: var(--gray); margin-bottom: 1.4rem; }
-    .intro-bio p strong { color: var(--white); font-weight: 700; }
-    .intro-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem; }
 
-    #stack-preview { background: var(--bg); padding: 5rem 4rem; }
-    .stack-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5rem; }
+    /* ══════════════════════════════════════
+       SECCIONES EXTRA (intro / stack / teaser)
+       ══════════════════════════════════════ */
+    #intro           { background:var(--bg2); padding:6rem 4rem; }
+    #stack-preview   { background:var(--bg);  padding:5rem 4rem; }
+    #projects-teaser { background:var(--bg2); padding:5rem 4rem; position:relative; }
+
+    /* Intro grid */
+    .intro-grid {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:5rem; align-items:start;
+    }
+    .intro-bio p { font-size:.98rem; line-height:1.95; color:var(--gray); margin-bottom:1.4rem; }
+    .intro-bio p strong { color:var(--white); font-weight:700; }
+    .intro-stats { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:2rem; }
+
+    /* Stack grid */
+    .stack-cols { display:grid; grid-template-columns:repeat(4,1fr); gap:2.5rem; }
     .stack-col-title {
-      font-family: var(--mono); font-size: 0.6rem; color: var(--gray);
-      letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 1rem;
-      display: flex; align-items: center; gap: 0.6rem;
+      font-family:var(--mono); font-size:.6rem; color:var(--gray);
+      letter-spacing:.22em; text-transform:uppercase; margin-bottom:1rem;
+      display:flex; align-items:center; gap:.6rem;
     }
-    .stack-col-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-    .stack-list { display: flex; flex-direction: column; gap: 0.45rem; }
+    .stack-col-title::after { content:''; flex:1; height:1px; background:var(--border); }
+    .stack-list { display:flex; flex-direction:column; gap:.45rem; }
     .stack-item {
-      font-family: var(--mono); font-size: 0.65rem; color: var(--white2);
-      padding: 0.38rem 0.7rem; border: 1px solid var(--border);
-      background: var(--bg3); letter-spacing: 0.06em; transition: all 0.22s; cursor: default;
+      font-family:var(--mono); font-size:.65rem; color:var(--white2);
+      padding:.38rem .7rem; border:1px solid var(--border);
+      background:var(--bg3); letter-spacing:.06em; transition:all .22s; cursor:default;
     }
-    .stack-item:hover { border-color: var(--border2); color: var(--white); background: var(--bg4); transform: translateX(4px); }
+    .stack-item:hover { border-color:var(--border2); color:var(--white); background:var(--bg4); transform:translateX(4px); }
 
-    #projects-teaser { background: var(--bg2); padding: 5rem 4rem; }
-    .teaser-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-bottom: 2.5rem; }
-    .teaser-card { background: var(--bg3); border: 1px solid var(--border); padding: 1.5rem; transition: all 0.3s; }
-    .teaser-card:hover { border-color: var(--border2); transform: translateY(-3px); box-shadow: var(--glow); }
-    .teaser-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--white2); margin-bottom: 1rem; }
-    .teaser-name { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
-    .teaser-desc { font-size: 0.78rem; color: var(--gray); line-height: 1.65; }
+    /* Teaser grid */
+    .teaser-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-bottom:2.5rem; }
+    .teaser-card { background:var(--bg3); border:1px solid var(--border); padding:1.5rem; transition:all .3s; }
+    .teaser-card:hover { border-color:var(--border2); transform:translateY(-3px); box-shadow:var(--glow); }
+    .teaser-dot  { width:6px; height:6px; border-radius:50%; background:var(--white2); margin-bottom:1rem; }
+    .teaser-name { font-size:.95rem; font-weight:700; margin-bottom:.5rem; letter-spacing:-.02em; }
+    .teaser-desc { font-size:.78rem; color:var(--gray); line-height:1.65; }
 
-    @media (max-width: 960px) {
-      #intro, #stack-preview, #projects-teaser { padding: 4rem 1.5rem; }
-      .intro-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .stack-cols { grid-template-columns: 1fr 1fr; }
-      .teaser-grid { grid-template-columns: 1fr; }
+    /* ══════════════════════════════════════
+       RESPONSIVE — tablet  ≤ 960px
+       ══════════════════════════════════════ */
+    @media (max-width:960px) {
+      #intro, #stack-preview, #projects-teaser { padding:4rem 1.5rem; }
+
+      .intro-grid  { grid-template-columns:1fr; gap:2.5rem; }
+      .stack-cols  { grid-template-columns:1fr 1fr; gap:1.5rem; }
+      .teaser-grid { grid-template-columns:1fr 1fr; gap:1rem; }
     }
+
+    /* ══════════════════════════════════════
+       RESPONSIVE — móvil  ≤ 600px
+       ══════════════════════════════════════ */
+    @media (max-width:600px) {
+      #intro, #stack-preview, #projects-teaser { padding:3rem 1rem; }
+
+      .stack-cols  { grid-template-columns:1fr 1fr; gap:.85rem; }
+      .stack-col-title { font-size:.54rem; }
+      .stack-item  { font-size:.6rem; padding:.28rem .5rem; }
+
+      .teaser-grid { grid-template-columns:1fr; }
+    }
+
   </style>
 </head>
 <body>
-  <div class="cursor" id="cursor"></div>
+  <div class="cursor"      id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
   <canvas id="canvas"></canvas>
 
   <nav>
     <div class="logo">JF<span>.dev</span></div>
-    <ul class="nav-links">
-      <li><a href="index.html">Inicio</a></li>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="home.html">Inicio</a></li>
       <li><a href="about.html">Sobre mí</a></li>
       <li><a href="skills.html">Stack</a></li>
       <li><a href="projects.html">Proyectos</a></li>
       <li><a href="contact.html">Contacto</a></li>
+      <li><a href="index.html">← Card</a></li>
     </ul>
   </nav>
 
-  <!-- HERO -->
+  <!-- ══ HERO ══════════════════════════════ -->
   <section id="hero">
     <div class="grid-bg"></div>
     <div class="hero-left">
@@ -76,7 +110,7 @@
       </div>
       <div class="hero-btns">
         <a href="projects.html" class="btn-primary">Ver proyectos</a>
-        <a href="contact.html" class="btn-ghost">Contactar</a>
+        <a href="contact.html"  class="btn-ghost">Contactar</a>
       </div>
     </div>
     <div class="hero-photo-panel">
@@ -91,7 +125,7 @@
     </div>
   </section>
 
-  <!-- BIO -->
+  <!-- ══ BIO ═══════════════════════════════ -->
   <section id="intro">
     <div class="section-header reveal">
       <span class="section-num">—</span>
@@ -100,9 +134,15 @@
     </div>
     <div class="intro-grid">
       <div class="intro-bio reveal">
-        <p>Soy <strong>Juan Felipe Medina</strong>, estudiante de Ingeniería de Sistemas en la Universidad de Ibagué. Me dedico a construir aplicaciones <strong>full-stack</strong> que resuelven problemas reales — desde plataformas SaaS hasta sistemas con inteligencia artificial integrada.</p>
-        <p>Mi enfoque está en escribir <strong>back-ends eficientes</strong> y front-ends que realmente se disfrutan usar. Cuando llego a un stack o lenguaje que no conozco, me adapto rápido y doy lo mejor hasta destacar en él.</p>
-        <p>He trabajado en proyectos que van desde clínicas estéticas hasta plataformas universitarias gamificadas y herramientas de aprendizaje con IA. Cada proyecto me ha dejado algo nuevo: un patrón de arquitectura, una librería, una forma diferente de pensar el problema.</p>
+        <p>Soy <strong>Juan Felipe Medina</strong>, estudiante de Ingeniería de Sistemas
+           en la Universidad de Ibagué. Me dedico a construir aplicaciones
+           <strong>full-stack</strong> que resuelven problemas reales — desde plataformas
+           SaaS hasta sistemas con inteligencia artificial integrada.</p>
+        <p>Mi enfoque está en escribir <strong>back-ends eficientes</strong> y front-ends
+           que realmente se disfrutan usar. Cuando llego a un stack o lenguaje que no
+           conozco, me adapto rápido y doy lo mejor hasta destacar en él.</p>
+        <p>He trabajado en proyectos que van desde clínicas estéticas hasta plataformas
+           universitarias gamificadas y herramientas de aprendizaje con IA.</p>
         <div style="margin-top:1.8rem;">
           <a href="about.html" class="btn-ghost">Leer más sobre mí →</a>
         </div>
@@ -114,12 +154,14 @@
           <div class="stat-card"><span class="stat-num">3</span><span class="stat-label">Apps en producción</span></div>
           <div class="stat-card"><span class="stat-num">∞</span><span class="stat-label">Ganas de aprender</span></div>
         </div>
-        <a href="projects.html" class="btn-primary" style="display:inline-block;">Ver todos los proyectos →</a>
+        <a href="projects.html" class="btn-primary" style="display:inline-block;">
+          Ver todos los proyectos →
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- STACK -->
+  <!-- ══ STACK ══════════════════════════════ -->
   <section id="stack-preview">
     <div class="section-header reveal">
       <span class="section-num">—</span>
@@ -172,12 +214,12 @@
         </div>
       </div>
     </div>
-    <div style="margin-top:3rem; text-align:right;" class="reveal">
+    <div style="margin-top:3rem;text-align:right;" class="reveal">
       <a href="skills.html" class="btn-ghost">Ver stack completo →</a>
     </div>
   </section>
 
-  <!-- PROYECTOS TEASER -->
+  <!-- ══ PROYECTOS TEASER ═══════════════════ -->
   <section id="projects-teaser">
     <div class="grid-bg"></div>
     <div class="section-header reveal">
@@ -194,22 +236,22 @@
       <div class="teaser-card reveal">
         <div class="teaser-dot"></div>
         <div class="teaser-name">Consultorio Estético</div>
-        <p class="teaser-desc">App web para clínica estética con Next.js, TypeScript y NextAuth. Front completo + migración de back-end.</p>
+        <p class="teaser-desc">App web para clínica estética con Next.js, TypeScript y NextAuth.</p>
       </div>
       <div class="teaser-card reveal">
         <div class="teaser-dot"></div>
         <div class="teaser-name">Ardy-IA</div>
-        <p class="teaser-desc">Plataforma de aprendizaje de idiomas con GPT + Whisper. Voz, imágenes y corrección adaptativa.</p>
+        <p class="teaser-desc">Plataforma de aprendizaje de idiomas con GPT + Whisper.</p>
       </div>
       <div class="teaser-card reveal">
         <div class="teaser-dot"></div>
         <div class="teaser-name">Wallnut</div>
-        <p class="teaser-desc">Wallet universitaria gamificada con sistema de puntos Ardys para estudiantes, docentes y admins.</p>
+        <p class="teaser-desc">Wallet universitaria gamificada con sistema de puntos Ardys.</p>
       </div>
       <div class="teaser-card reveal">
         <div class="teaser-dot"></div>
         <div class="teaser-name">SorteosCCM</div>
-        <p class="teaser-desc">MVP de rifas online para Caballos Colombianos. Angular 17 + Supabase + Clean Architecture.</p>
+        <p class="teaser-desc">MVP de rifas online. Angular 17 + Supabase + Clean Architecture.</p>
       </div>
     </div>
     <div style="text-align:center;" class="reveal">
@@ -221,6 +263,7 @@
     <p>© 2025 Juan Felipe Medina O. — Sekkon0906</p>
     <p>Hecho desde <a href="contact.html">Colombia 🇨🇴</a></p>
   </footer>
+
   <script src="js/main.js"></script>
 </body>
 </html>

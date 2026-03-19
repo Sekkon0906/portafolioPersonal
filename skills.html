@@ -7,21 +7,25 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-
-  <div class="cursor"      id="cursor"></div>
+  <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
   <canvas id="canvas"></canvas>
 
-  <nav>
+    <nav>
     <div class="logo">JF<span>.dev</span></div>
-    <ul class="nav-links">
-      <li><a href="index.html">Inicio</a></li>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="home.html">Inicio</a></li>
       <li><a href="about.html">Sobre mí</a></li>
       <li><a href="skills.html">Stack</a></li>
       <li><a href="projects.html">Proyectos</a></li>
       <li><a href="contact.html">Contacto</a></li>
+      <li><a href="index.html" style="color:var(--white2);">↗ Card</a></li>
     </ul>
   </nav>
+</div>
 
   <section id="skills" style="padding-top:9rem;">
     <div class="section-header reveal">
@@ -29,9 +33,7 @@
       <h2 class="section-title">Tech Stack</h2>
       <div class="section-line"></div>
     </div>
-
     <div class="skills-container">
-
       <div class="reveal">
         <div class="group-label">Lenguajes</div>
         <div class="badges">
@@ -44,7 +46,6 @@
           <span class="badge">Python</span>
         </div>
       </div>
-
       <div class="reveal">
         <div class="group-label">Frameworks</div>
         <div class="badges">
@@ -57,7 +58,6 @@
           <span class="badge">React</span>
         </div>
       </div>
-
       <div class="reveal">
         <div class="group-label">Librerías</div>
         <div class="badges">
@@ -65,7 +65,6 @@
           <span class="badge">Pandas</span>
         </div>
       </div>
-
       <div class="reveal">
         <div class="group-label">Herramientas</div>
         <div class="badges">
@@ -82,12 +81,10 @@
           <span class="badge">Figma</span>
         </div>
       </div>
-
     </div>
-
     <div style="margin-top:4rem; display:flex; gap:1rem; flex-wrap:wrap;" class="reveal">
       <a href="projects.html" class="btn-primary">Ver proyectos →</a>
-      <a href="about.html"    class="btn-ghost">Sobre mí</a>
+      <a href="about.html" class="btn-ghost">Sobre mí</a>
     </div>
   </section>
 
@@ -95,7 +92,6 @@
     <p>© 2025 Juan Felipe Medina O. — Sekkon0906</p>
     <p>Hecho desde <a href="contact.html">Ibagué, Colombia 🇨🇴</a></p>
   </footer>
-
   <script src="js/main.js"></script>
 </body>
 </html>

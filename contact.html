@@ -7,21 +7,25 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-
-  <div class="cursor"      id="cursor"></div>
+  <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
   <canvas id="canvas"></canvas>
 
-  <nav>
+    <nav>
     <div class="logo">JF<span>.dev</span></div>
-    <ul class="nav-links">
-      <li><a href="index.html">Inicio</a></li>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="home.html">Inicio</a></li>
       <li><a href="about.html">Sobre mí</a></li>
       <li><a href="skills.html">Stack</a></li>
       <li><a href="projects.html">Proyectos</a></li>
       <li><a href="contact.html">Contacto</a></li>
+      <li><a href="index.html" style="color:var(--white2);">↗ Card</a></li>
     </ul>
   </nav>
+</div>
 
   <section id="contact" style="padding-top:9rem;">
     <div class="section-header reveal">
@@ -29,25 +33,18 @@
       <h2 class="section-title">Contacto</h2>
       <div class="section-line"></div>
     </div>
-
     <div class="contact-grid">
-
-      <!-- Info -->
       <div class="reveal">
         <div class="contact-info">
           <h3>¿Trabajamos juntos?</h3>
-          <p>
-            Estoy abierto a oportunidades de desarrollo, colaboraciones técnicas
-            y proyectos freelance. Si tienes una idea o propuesta, escríbeme.
-          </p>
+          <p>Estoy abierto a oportunidades de desarrollo, colaboraciones técnicas y proyectos freelance. Si tienes una idea o propuesta, escríbeme.</p>
         </div>
-
         <div class="contact-links">
-          <a href="mailto:Juan.Medina@estudiantesunibague.edu.co" class="contact-link">
+          <a href="/cdn-cgi/l/email-protection#347e41555a1a7951505d5a557451474041505d555a405147415a5d56555341511a5150411a575b" class="contact-link">
             <div class="link-icon">✉</div>
             <div class="link-meta">
               <span>Email</span>
-              <p>Juan.Medina@estudiantesunibague.edu.co</p>
+              <p><span class="__cf_email__" data-cfemail="89c3fce8e7a7c4ecede0e7e8c9ecfafdfcede0e8e7fdecfafce7e0ebe8eefceca7ecedfca7eae6">[email&#160;protected]</span></p>
             </div>
           </a>
           <a href="https://github.com/Sekkon0906" target="_blank" class="contact-link">
@@ -73,8 +70,6 @@
           </a>
         </div>
       </div>
-
-      <!-- Form -->
       <div class="reveal">
         <form class="contact-form" id="contactForm">
           <div class="form-field">
@@ -91,22 +86,9 @@
           </div>
           <div class="form-field">
             <label for="message">Mensaje</label>
-            <textarea id="message" rows="5"
-              placeholder="Cuéntame sobre tu proyecto o propuesta..." required></textarea>
+            <textarea id="message" rows="5" placeholder="Cuéntame sobre tu proyecto o propuesta..." required></textarea>
           </div>
           <button type="submit" class="btn-primary" style="cursor:none; width:100%;">
             Enviar mensaje →
           </button>
-        </form>
-      </div>
-
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 Juan Felipe Medina O. — Sekkon0906</p>
-  </footer>
-
-  <script src="js/main.js"></script>
-</body>
-</html>
+        </for

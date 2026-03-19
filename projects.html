@@ -6,32 +6,217 @@
   <title>Proyectos — Juan Felipe Medina</title>
   <link rel="stylesheet" href="css/styles.css" />
   <style>
-    /* Extended project card */
-    .project-card .project-role {
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .project-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.35s, box-shadow 0.35s, transform 0.35s;
+    }
+    .project-card:hover {
+      border-color: var(--border2);
+      box-shadow: var(--glow);
+      transform: translateY(-4px);
+    }
+    .project-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--white2), transparent);
+      transform: scaleX(0);
+      transition: transform 0.4s;
+      transform-origin: left;
+    }
+    .project-card:hover::after { transform: scaleX(1); }
+
+    /* Preview image */
+    .project-preview {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: var(--bg4);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .project-preview img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+      filter: grayscale(30%) contrast(1.05);
+      transition: filter 0.5s, transform 0.5s;
+    }
+    .project-card:hover .project-preview img {
+      filter: grayscale(0%);
+      transform: scale(1.03);
+    }
+
+    /* Placeholder sin imagen */
+    .preview-placeholder {
+      width: 100%; height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      background: repeating-linear-gradient(
+        45deg,
+        var(--bg4) 0px,
+        var(--bg4) 14px,
+        var(--bg3) 14px,
+        var(--bg3) 28px
+      );
+    }
+    .preview-placeholder-icon {
+      font-size: 1.5rem;
+      opacity: 0.15;
+    }
+    .preview-placeholder-label {
       font-family: var(--mono);
-      font-size: 0.58rem; color: var(--dgray);
-      letter-spacing: 0.12em; text-transform: uppercase;
-      margin-bottom: 0.5rem;
-      padding: 0.18rem 0;
+      font-size: 0.54rem;
+      color: var(--dgray);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    /* Badge deploy overlay */
+    .project-deploy-badge {
+      position: absolute;
+      bottom: 0.65rem; right: 0.65rem;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.3rem 0.75rem;
+      background: rgba(9,9,9,0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border);
+      font-family: var(--mono);
+      font-size: 0.55rem;
+      color: var(--gray);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.25s;
+    }
+    a.project-deploy-badge { cursor: none; }
+    a.project-deploy-badge:hover {
+      border-color: var(--border2);
+      color: var(--white);
+      background: rgba(9,9,9,0.97);
+    }
+    .deploy-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: #8a8a78;
+      animation: pulse 2s infinite;
+      flex-shrink: 0;
+    }
+    .no-deploy-badge { color: var(--dgray); }
+    .no-deploy-badge .deploy-dot {
+      background: var(--dgray);
+      animation: none;
+    }
+
+    /* Body */
+    .project-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .project-id {
+      font-family: var(--mono);
+      font-size: 0.55rem;
+      color: var(--dgray);
+      letter-spacing: 0.2em;
+      margin-bottom: 0.55rem;
+    }
+    .status {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 0.54rem;
+      letter-spacing: 0.1em;
+      padding: 0.15rem 0.6rem;
+      margin-bottom: 0.7rem;
+    }
+    .status-live {
+      color: #9c9c8c;
+      border: 1px solid rgba(156,156,140,0.28);
+      background: rgba(156,156,140,0.06);
+    }
+    .status-live::before { content: '● '; animation: pulse 2s infinite; }
+    .status-dev {
+      color: var(--dgray);
+      border: 1px solid rgba(58,56,54,0.5);
+      background: rgba(58,56,54,0.1);
+    }
+    .project-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.55rem;
+      line-height: 1.3;
+    }
+    .project-desc {
+      font-size: 0.83rem;
+      color: var(--gray);
+      line-height: 1.78;
+      margin-bottom: 1.1rem;
+      flex: 1;
+    }
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.32rem;
+      margin-bottom: 1.1rem;
+    }
+    .project-tag {
+      font-family: var(--mono);
+      font-size: 0.54rem;
+      color: var(--gray);
+      border: 1px solid var(--border);
+      padding: 0.12rem 0.5rem;
+      letter-spacing: 0.06em;
+    }
+    .project-footer {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding-top: 1rem;
       border-top: 1px solid var(--border);
       margin-top: auto;
     }
-    .project-card { display: flex; flex-direction: column; }
-    .project-card .project-desc { flex: 1; }
-
+    .project-links { display: flex; gap: 0.85rem; align-items: center; flex-wrap: wrap; }
+    .project-link {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      color: var(--gray);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      transition: color 0.25s;
+    }
+    .project-link:hover { color: var(--white); }
+    .project-link-sep { width: 1px; height: 11px; background: var(--border); }
     .no-link-badge {
       font-family: var(--mono);
-      font-size: 0.58rem; color: var(--dgray);
+      font-size: 0.54rem;
+      color: var(--dgray);
       letter-spacing: 0.1em;
-      padding: 0.18rem 0.6rem;
-      border: 1px solid var(--border);
-      display: inline-block;
     }
-    .deploy-placeholder {
-      font-family: var(--mono);
-      font-size: 0.62rem; color: var(--dgray);
-      letter-spacing: 0.08em;
-      font-style: italic;
+
+    @media (max-width: 720px) {
+      .projects-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -40,14 +225,18 @@
   <div class="cursor-ring" id="cursorRing"></div>
   <canvas id="canvas"></canvas>
 
-  <nav>
+    <nav>
     <div class="logo">JF<span>.dev</span></div>
-    <ul class="nav-links">
-      <li><a href="index.html">Inicio</a></li>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="home.html">Inicio</a></li>
       <li><a href="about.html">Sobre mí</a></li>
       <li><a href="skills.html">Stack</a></li>
       <li><a href="projects.html">Proyectos</a></li>
       <li><a href="contact.html">Contacto</a></li>
+      <li><a href="index.html" style="color:var(--white2);">↗ Card</a></li>
     </ul>
   </nav>
 
@@ -62,122 +251,208 @@
 
     <div class="projects-grid">
 
-      <!-- 1. CoffeeOps -->
+      <!-- ═══════════════════════════════════════════
+           PRJ 001 — CoffeeOps
+           Para agregar imagen:   src="assets/previews/coffeeops.jpg"
+           Para agregar deploy:   reemplaza <span> por <a href="URL">
+           ═══════════════════════════════════════════ -->
       <div class="project-card reveal">
-        <div class="project-id">PRJ — 001 · JavaScript · Nov 2025</div>
-        <span class="status status-live">Público</span>
-        <h3 class="project-title">CoffeeOps — Coffee Management</h3>
-        <p class="project-desc">
-          Plataforma SaaS para cafeterías y productores de café que centraliza la gestión
-          de inventarios, lotes, proveedores, documentos y equipo. Incluye analítica en
-          tiempo real para la toma de decisiones operativas.
-        </p>
-        <div class="project-tags">
-          <span class="project-tag">JavaScript</span>
-          <span class="project-tag">SaaS</span>
-          <span class="project-tag">Inventarios</span>
-          <span class="project-tag">Analítica</span>
+        <div class="project-preview">
+          <!-- CON IMAGEN: descomenta y pon la ruta
+          <img src="assets/previews/coffeeops.jpg" alt="CoffeeOps preview" />
+          -->
+          <div class="preview-placeholder">
+            <span class="preview-placeholder-icon">☕</span>
+            <span class="preview-placeholder-label">Sin preview aún</span>
+          </div>
+          <!-- CON DEPLOY: cambia span por a href="URL_DEL_DEPLOY" -->
+          <span class="project-deploy-badge no-deploy-badge">
+            <span class="deploy-dot"></span>No tiene deploy
+          </span>
         </div>
-        <div class="project-links">
-          <a href="https://github.com/Sekkon0906/Coffee-management" target="_blank" class="project-link">↗ GitHub</a>
-          <!-- <a href="TU_DEPLOY_URL" target="_blank" class="project-link">↗ Demo</a> -->
+        <div class="project-body">
+          <div class="project-id">PRJ — 001 · JavaScript · Nov 2025</div>
+          <span class="status status-live">Público</span>
+          <h3 class="project-title">CoffeeOps — Coffee Management</h3>
+          <p class="project-desc">
+            Plataforma SaaS para cafeterías y productores de café que centraliza la gestión
+            de inventarios, lotes, proveedores, documentos y equipo. Incluye analítica en
+            tiempo real para la toma de decisiones operativas.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">JavaScript</span>
+            <span class="project-tag">SaaS</span>
+            <span class="project-tag">Inventarios</span>
+            <span class="project-tag">Analítica</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-links">
+              <a href="https://github.com/Sekkon0906/Coffee-management" target="_blank" class="project-link">↗ GitHub</a>
+              <!-- CON DEPLOY: añade esto cuando tengas URL
+              <div class="project-link-sep"></div>
+              <a href="URL_DEL_DEPLOY" target="_blank" class="project-link">↗ Ver en vivo</a>
+              -->
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- 2. Consultorio Estético -->
+
+      <!-- ═══════════════════════════════════════════
+           PRJ 002 — Consultorio Estético
+           ═══════════════════════════════════════════ -->
       <div class="project-card reveal">
-        <div class="project-id">PRJ — 002 · TypeScript · Nov 2025</div>
-        <span class="status status-live">Público</span>
-        <h3 class="project-title">Consultorio Estético Dra. Juliet Medina</h3>
-        <p class="project-desc">
-          Aplicación web para clínica estética desarrollada con Next.js, TypeScript y NextAuth.
-          Incluye autenticación segura, panel de administración, gestión de citas y procedimientos.
-          Desarrollé todo el front-end y realicé la migración completa del back-end.
-        </p>
-        <div class="project-tags">
-          <span class="project-tag">Next.js</span>
-          <span class="project-tag">TypeScript</span>
-          <span class="project-tag">NextAuth</span>
-          <span class="project-tag">Full-Stack</span>
+        <div class="project-preview">
+          <!--<img src="assets/previews/consultorio.jpg" alt="Consultorio Estético preview" />-->
+          <div class="preview-placeholder">
+            <span class="preview-placeholder-icon">◎</span>
+            <span class="preview-placeholder-label">Sin preview aún</span>
+          </div>
+          <span class="project-deploy-badge no-deploy-badge">
+            <span class="deploy-dot"></span>No tiene deploy
+          </span>
         </div>
-        <div class="project-links">
-          <a href="https://github.com/Sekkon0906/consultorio-estetico" target="_blank" class="project-link">↗ GitHub</a>
-          <!-- <a href="TU_DEPLOY_URL" target="_blank" class="project-link">↗ Demo</a> -->
+        <div class="project-body">
+          <div class="project-id">PRJ — 002 · TypeScript · Nov 2025</div>
+          <span class="status status-live">Público</span>
+          <h3 class="project-title">Consultorio Estético Dra. Juliet Medina</h3>
+          <p class="project-desc">
+            Aplicación web para clínica estética desarrollada con Next.js, TypeScript y NextAuth.
+            Incluye autenticación segura, panel de administración, gestión de citas y procedimientos.
+            Desarrollé todo el front-end y realicé la migración completa del back-end.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Next.js</span>
+            <span class="project-tag">TypeScript</span>
+            <span class="project-tag">NextAuth</span>
+            <span class="project-tag">Full-Stack</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-links">
+              <a href="https://github.com/Sekkon0906/consultorio-estetico" target="_blank" class="project-link">↗ GitHub</a>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- 3. Ardy-IA -->
+
+      <!-- ═══════════════════════════════════════════
+           PRJ 003 — Ardy-IA
+           ═══════════════════════════════════════════ -->
       <div class="project-card reveal">
-        <div class="project-id">PRJ — 003 · Python · Nov 2025</div>
-        <span class="status status-live">Público · 1 fork</span>
-        <h3 class="project-title">Ardy-IA — Aprendizaje de idiomas con IA</h3>
-        <p class="project-desc">
-          Plataforma web de aprendizaje de idiomas impulsada por IA. Detecta el idioma del
-          usuario, corrige errores en tiempo real, genera voz mediante Whisper y produce
-          imágenes para práctica visual. Se adapta al nivel y progreso del usuario
-          usando GPT de OpenAI.
-        </p>
-        <div class="project-tags">
-          <span class="project-tag">Python</span>
-          <span class="project-tag">OpenAI GPT</span>
-          <span class="project-tag">Whisper</span>
-          <span class="project-tag">Voice AI</span>
-          <span class="project-tag">Image Gen</span>
+        <div class="project-preview">
+          <!--<img src="assets/previews/ardy.jpg" alt="Ardy-IA preview" />-->
+          <div class="preview-placeholder">
+            <span class="preview-placeholder-icon">⬡</span>
+            <span class="preview-placeholder-label">Sin preview aún</span>
+          </div>
+          <span class="project-deploy-badge no-deploy-badge">
+            <span class="deploy-dot"></span>No tiene deploy
+          </span>
         </div>
-        <div class="project-links">
-          <a href="https://github.com/Sekkon0906/Ardy-IA" target="_blank" class="project-link">↗ GitHub</a>
-          <!-- <a href="TU_DEPLOY_URL" target="_blank" class="project-link">↗ Demo</a> -->
+        <div class="project-body">
+          <div class="project-id">PRJ — 003 · Python · Nov 2025</div>
+          <span class="status status-live">Público · 1 fork</span>
+          <h3 class="project-title">Ardy-IA — Aprendizaje de idiomas con IA</h3>
+          <p class="project-desc">
+            Plataforma web de aprendizaje de idiomas impulsada por IA. Detecta el idioma del
+            usuario, corrige errores en tiempo real, genera voz mediante Whisper y produce
+            imágenes para práctica visual. Se adapta al nivel y progreso del usuario usando GPT.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">OpenAI GPT</span>
+            <span class="project-tag">Whisper</span>
+            <span class="project-tag">Voice AI</span>
+            <span class="project-tag">Image Gen</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-links">
+              <a href="https://github.com/Sekkon0906/Ardy-IA" target="_blank" class="project-link">↗ GitHub</a>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- 4. Wallnut -->
+
+      <!-- ═══════════════════════════════════════════
+           PRJ 004 — Wallnut
+           ═══════════════════════════════════════════ -->
       <div class="project-card reveal">
-        <div class="project-id">PRJ — 004 · TypeScript · Nov 2025</div>
-        <span class="status status-dev">Privado</span>
-        <h3 class="project-title">Wallnut — Wallet Universitaria Gamificada</h3>
-        <p class="project-desc">
-          App universitaria que integra una wallet digital gamificada para estudiantes,
-          docentes y administradores. Usa el sistema de puntos Ardys para incentivar la
-          participación en eventos y actividades académicas.
-          Construida con Next.js y TypeScript.
-        </p>
-        <div class="project-tags">
-          <span class="project-tag">Next.js</span>
-          <span class="project-tag">TypeScript</span>
-          <span class="project-tag">Gamificación</span>
-          <span class="project-tag">Wallet</span>
+        <div class="project-preview">
+          <!--<img src="assets/previews/wallnut.jpg" alt="Wallnut preview" />-->
+          <div class="preview-placeholder">
+            <span class="preview-placeholder-icon">◈</span>
+            <span class="preview-placeholder-label">Sin preview aún</span>
+          </div>
+          <span class="project-deploy-badge no-deploy-badge">
+            <span class="deploy-dot"></span>No tiene deploy
+          </span>
         </div>
-        <div class="project-links">
-          <span class="no-link-badge">Repositorio privado</span>
-          <span class="deploy-placeholder">· deploy próximamente</span>
+        <div class="project-body">
+          <div class="project-id">PRJ — 004 · TypeScript · Nov 2025</div>
+          <span class="status status-dev">Privado</span>
+          <h3 class="project-title">Wallnut — Wallet Universitaria Gamificada</h3>
+          <p class="project-desc">
+            App universitaria que integra una wallet digital gamificada para estudiantes,
+            docentes y administradores. Usa el sistema de puntos Ardys para incentivar la
+            participación en eventos y actividades académicas. Construida con Next.js y TypeScript.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Next.js</span>
+            <span class="project-tag">TypeScript</span>
+            <span class="project-tag">Gamificación</span>
+            <span class="project-tag">Wallet</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-links">
+              <span class="no-link-badge">Repositorio privado</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- 5. SorteosCCM -->
+
+      <!-- ═══════════════════════════════════════════
+           PRJ 005 — SorteosCCM
+           ═══════════════════════════════════════════ -->
       <div class="project-card reveal">
-        <div class="project-id">PRJ — 005 · TypeScript · En curso</div>
-        <span class="status status-dev">Privado · En desarrollo</span>
-        <h3 class="project-title">SorteosCCM — Rifas para Caballos Colombianos</h3>
-        <p class="project-desc">
-          MVP de plataforma de rifas online para la comunidad de Caballos Colombianos de Paso.
-          Arquitectura Feature-Sliced + Clean Architecture sobre Angular 17 standalone con SSR,
-          Supabase PostgreSQL y Edge Functions para lógica serverless.
-        </p>
-        <div class="project-tags">
-          <span class="project-tag">Angular 17</span>
-          <span class="project-tag">TypeScript</span>
-          <span class="project-tag">Supabase</span>
-          <span class="project-tag">PostgreSQL</span>
-          <span class="project-tag">SSR</span>
-          <span class="project-tag">Clean Arch</span>
+        <div class="project-preview">
+          <!--<img src="assets/previews/sorteos.jpg" alt="SorteosCCM preview" />-->
+          <div class="preview-placeholder">
+            <span class="preview-placeholder-icon">▷</span>
+            <span class="preview-placeholder-label">Sin preview aún</span>
+          </div>
+          <span class="project-deploy-badge no-deploy-badge">
+            <span class="deploy-dot"></span>No tiene deploy
+          </span>
         </div>
-        <div class="project-links">
-          <span class="no-link-badge">Repositorio privado</span>
-          <span class="deploy-placeholder">· deploy próximamente</span>
+        <div class="project-body">
+          <div class="project-id">PRJ — 005 · TypeScript · En curso</div>
+          <span class="status status-dev">Privado · En desarrollo</span>
+          <h3 class="project-title">SorteosCCM — Rifas para Caballos Colombianos</h3>
+          <p class="project-desc">
+            MVP de plataforma de rifas online para la comunidad de Caballos Colombianos de Paso.
+            Arquitectura Feature-Sliced + Clean Architecture sobre Angular 17 standalone con SSR,
+            Supabase PostgreSQL y Edge Functions para lógica serverless.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Angular 17</span>
+            <span class="project-tag">TypeScript</span>
+            <span class="project-tag">Supabase</span>
+            <span class="project-tag">PostgreSQL</span>
+            <span class="project-tag">SSR</span>
+            <span class="project-tag">Clean Arch</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-links">
+              <span class="no-link-badge">Repositorio privado</span>
+            </div>
+          </div>
         </div>
       </div>
 
-    </div>
+    </div><!-- /projects-grid -->
 
     <div style="margin-top:3rem; text-align:center;" class="reveal">
       <a href="https://github.com/Sekkon0906" target="_blank" class="btn-ghost">
