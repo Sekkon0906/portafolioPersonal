@@ -487,6 +487,7 @@ footer {
 .chip-val {
   font-family:var(--mono); font-size:.6rem; color:var(--white2);
   letter-spacing:.04em; text-align:right;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:220px;
 }
 
 .quote-block { border-left:2px solid rgba(200,169,110,.35); padding:1.1rem 1.5rem; background:rgba(200,169,110,.04); }

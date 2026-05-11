@@ -134,7 +134,8 @@
       content: '';
       width: 5px; height: 5px;
       border-radius: 50%;
-      background: #8a8a78;
+      background: #c8a96e;
+      box-shadow: 0 0 6px rgba(200,169,110,.6);
       animation: pulse 2s infinite;
     }
 
@@ -207,15 +208,15 @@
     .btn-card::before {
       content: '';
       position: absolute; left: 0; top: 0; bottom: 0;
-      width: 2px; background: var(--white);
+      width: 2px; background: #c8a96e;
       transform: scaleY(0); transform-origin: bottom;
       transition: transform 0.3s;
     }
     .btn-card:hover::before { transform: scaleY(1); }
     .btn-card:hover {
-      border-color: var(--border2);
+      border-color: rgba(200,169,110,0.28);
       color: var(--white);
-      box-shadow: var(--glow);
+      box-shadow: 0 0 28px rgba(200,169,110,0.10);
       transform: translateX(4px);
     }
 
@@ -308,9 +309,9 @@
       transition: all 0.25s;
     }
     .modal-link:hover {
-      border-color: var(--border2);
+      border-color: rgba(200,169,110,0.28);
       transform: translateX(4px);
-      box-shadow: var(--glow);
+      box-shadow: 0 0 24px rgba(200,169,110,0.10);
     }
     .modal-icon {
       width: 28px; height: 28px;
@@ -381,20 +382,19 @@
           <span class="modal-arrow">↗</span>
         </a>
         
-        <a href="https://wa.me/316048061" target="_blank" class="modal-link">
+        <a href="https://wa.me/573160480641" target="_blank" class="modal-link">
           <div class="modal-icon">◎</div>
           <div class="modal-info">
             <span class="modal-platform">WhatsApp</span>
-            <span class="modal-handle">Chat de whatsapp</span>
+            <span class="modal-handle">+57 316 048 0641</span>
           </div>
           <span class="modal-arrow">↗</span>
         </a>
-        <a href="https://t.me/@juanf0906" target="_blank" class="modal-link">
+        <a href="https://t.me/juanf0906" target="_blank" class="modal-link">
           <div class="modal-icon">▷</div>
           <div class="modal-info">
             <span class="modal-platform">Telegram</span>
-            <span class="modal-handle">Chat de telegram
-            </span>
+            <span class="modal-handle">@juanf0906</span>
           </div>
           <span class="modal-arrow">↗</span>
         </a>
