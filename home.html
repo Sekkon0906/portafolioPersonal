@@ -82,7 +82,7 @@ nav {
   opacity:0;animation:fadeUp .8s .3s forwards;
 }
 .hero-tag::before{content:'';width:36px;height:1px;background:var(--dgray);}
-.status-dot{width:6px;height:6px;background:#8a8880;border-radius:50%;animation:pulse 2s infinite;flex-shrink:0;}
+.status-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite;flex-shrink:0;box-shadow:0 0 8px rgba(200,169,110,.5);}
 .hero-name{
   font-size:clamp(3.2rem,6.5vw,5.8rem);
   font-weight:800;line-height:.93;letter-spacing:-.04em;margin-bottom:1.3rem;
@@ -120,13 +120,13 @@ nav {
 /* ─── BUTTONS ────────────────────────────── */
 .btn-primary{
   display:inline-block;padding:.8rem 2rem;
-  background:var(--white);color:var(--bg);border:none;
+  background:var(--accent);color:var(--bg);border:none;
   font-family:var(--mono);font-size:.7rem;font-weight:700;
   letter-spacing:.1em;text-transform:uppercase;
   cursor:none;text-decoration:none;transition:all .3s;
   clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));
 }
-.btn-primary:hover{background:var(--white2);box-shadow:0 0 28px rgba(237,233,224,.18);transform:translateY(-2px);}
+.btn-primary:hover{background:var(--white);box-shadow:0 0 28px rgba(200,169,110,.25);transform:translateY(-2px);}
 .btn-ghost{
   display:inline-block;padding:.8rem 2rem;
   background:transparent;color:var(--white2);border:1px solid var(--border);
@@ -134,12 +134,12 @@ nav {
   cursor:none;text-decoration:none;transition:all .3s;
   clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));
 }
-.btn-ghost:hover{border-color:var(--border2);color:var(--white);box-shadow:var(--glow);}
+.btn-ghost:hover{border-color:rgba(200,169,110,.35);color:var(--white);box-shadow:0 0 28px rgba(200,169,110,.12);}
 
 /* ─── SECCIONES EXTRA ────────────────────── */
 .section{position:relative;z-index:1;padding:7rem 4rem;}
 .section-header{display:flex;align-items:center;gap:1.5rem;margin-bottom:4.5rem;}
-.section-num{font-family:var(--mono);font-size:.62rem;color:var(--dgray);letter-spacing:.2em;}
+.section-num{font-family:var(--mono);font-size:.62rem;color:var(--accent);letter-spacing:.2em;opacity:.8;}
 .section-title{font-size:2.2rem;font-weight:800;letter-spacing:-.04em;}
 .section-line{flex:1;height:1px;background:var(--border);max-width:380px;}
 .grid-bg{
@@ -412,18 +412,20 @@ footer a{color:var(--white2);text-decoration:none;}
            en la Universidad de Ibagué. Me dedico a construir aplicaciones
            <strong>full-stack</strong> que resuelven problemas reales.</p>
         <p>Mi enfoque está en escribir <strong>back-ends eficientes</strong> y front-ends
-           que realmente se disfrutan usar. Me adapto rápido a cualquier stack.</p>
-        <p>He trabajado en clínicas estéticas, plataformas universitarias gamificadas
-           y herramientas de aprendizaje con IA.</p>
+           que realmente se disfrutan usar. Me adapto rápido a cualquier stack y he
+           trabajado con múltiples lenguajes y tecnologías en proyectos reales.</p>
+        <p>He construido desde clínicas estéticas y plataformas universitarias gamificadas
+           hasta <strong>sistemas de IA en producción</strong> con agentes de WhatsApp y
+           automatizaciones end-to-end para clientes reales en Colombia.</p>
         <div style="margin-top:1.8rem;">
           <a href="about.html" class="btn-ghost">Leer más sobre mí →</a>
         </div>
       </div>
       <div class="reveal">
         <div class="intro-stats">
-          <div class="stat-card"><span class="stat-num">5</span><span class="stat-label">Proyectos reales</span></div>
-          <div class="stat-card"><span class="stat-num">6+</span><span class="stat-label">Lenguajes activos</span></div>
-          <div class="stat-card"><span class="stat-num">3</span><span class="stat-label">Apps en producción</span></div>
+          <div class="stat-card"><span class="stat-num">6</span><span class="stat-label">Proyectos reales</span></div>
+          <div class="stat-card"><span class="stat-num">6+</span><span class="stat-label">Lenguajes trabajados</span></div>
+          <div class="stat-card"><span class="stat-num">4</span><span class="stat-label">Apps en producción</span></div>
           <div class="stat-card"><span class="stat-num">∞</span><span class="stat-label">Ganas de aprender</span></div>
         </div>
         <a href="projects.html" class="btn-primary" style="display:inline-block;margin-top:0">
@@ -524,6 +526,11 @@ footer a{color:var(--white2);text-decoration:none;}
         <div class="teaser-dot"></div>
         <div class="teaser-name">SorteosCCM</div>
         <p class="teaser-desc">MVP de rifas online. Angular 17 + Supabase + Clean Architecture.</p>
+      </div>
+      <div class="teaser-card reveal" style="border-color:rgba(200,169,110,.18);">
+        <div class="teaser-dot" style="background:var(--accent);box-shadow:0 0 8px rgba(200,169,110,.5);"></div>
+        <div class="teaser-name">New Blood Premium BARF</div>
+        <p class="teaser-desc">Panel admin + agente IA en WhatsApp + automatizaciones. Sistema en producción con clientes reales.</p>
       </div>
     </div>
     <div style="text-align:center;" class="reveal">
