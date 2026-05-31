@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap');
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+    :root {
+      --serif: 'EB Garamond', 'Garamond', 'Times New Roman', serif;
+      --sans:  'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+      --ink:   #111;
+      --mid:   #444;
+    }
+
+    html { font-size: 10.5pt; }
+
+    body {
+      font-family: var(--serif);
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.42;
+      padding: 0;
+      margin: 0;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid #111;
+    }
+    header h1 {
+      font-family: var(--serif);
+      font-size: 20pt;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+    .contact-line {
+      font-family: var(--sans);
+      font-size: 9pt;
+      color: var(--mid);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0 16px;
+      line-height: 1.7;
+    }
+    .contact-line a { color: var(--mid); text-decoration: none; }
+
+    section { margin-bottom: 13px; }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: 10.5pt;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      border-bottom: 1px solid #111;
+      padding-bottom: 2px;
+      margin-bottom: 8px;
+    }
+
+    .entry { margin-bottom: 9px; }
+    .entry:last-child { margin-bottom: 0; }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 6px;
+    }
+    .entry-title {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 10.5pt;
+    }
+    .entry-date {
+      font-family: var(--sans);
+      font-size: 9pt;
+      color: var(--mid);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .entry-sub {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 10pt;
+      color: var(--mid);
+      margin-bottom: 2px;
+    }
+    .entry-body { font-family: var(--serif); font-size: 10.5pt; }
+    .entry-body ul { padding-left: 1.1em; margin-top: 1px; }
+    .entry-body li { margin-bottom: 1.5px; }
+    .entry-body a { color: var(--ink); }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 3px 8px;
+      font-size: 10.5pt;
+    }
+    .skill-cat { font-weight: 700; }
+
+    @page { size: letter; margin: 18mm 18mm 18mm 20mm; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Juan Felipe Medina Orjuela</h1>
+    <div class="contact-line">
+      <span>Ibagué, Colombia</span>
+      <span>+57 316 048 0641</span>
+      <a href="mailto:Juan.Medina@estudiantesunibague.edu.co">Juan.Medina@estudiantesunibague.edu.co</a>
+      <a href="https://github.com/Sekkon0906">github.com/Sekkon0906</a>
+    </div>
+  </header>
+
+  <!-- EDUCATION -->
+  <section>
+    <div class="section-title">Education</div>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Universidad de Ibagué</span>
+        <span class="entry-date">Jan. 2022 – Dec. 2027 (expected)</span>
+      </div>
+      <div class="entry-sub">B.S. in Systems Engineering &nbsp;·&nbsp; Ibagué, Colombia</div>
+      <div class="entry-body">
+        <ul>
+          <li>Semester 8 of 10. Relevant coursework: Data Structures, Algorithms, Object-Oriented Programming, Databases, Operating Systems, Computer Networks, Software Engineering, Artificial Intelligence, Computer Graphics (OpenGL).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section>
+    <div class="section-title">Experience</div>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Independent Software Developer</span>
+        <span class="entry-date">2023 – Present</span>
+      </div>
+      <div class="entry-sub">Freelance &nbsp;·&nbsp; Ibagué, Colombia</div>
+      <div class="entry-body">
+        <ul>
+          <li>Designed and delivered 7 full-stack software projects for real clients and end users; 5 are currently live in production.</li>
+          <li>Integrated generative AI (GPT-4, Groq, Gemini, Anthropic Claude) into production systems, including an autonomous WhatsApp sales agent and a conversational assistant capable of executing 50+ real business actions (GESTEK Gestbot).</li>
+          <li>Built event-driven and signal-oriented architectures, end-to-end automation workflows with n8n, and payment integrations with MercadoPago featuring HMAC-verified idempotent webhooks.</li>
+          <li>Consistent use of React, Angular, Next.js, Node.js (Express), Supabase, PostgreSQL, and TailwindCSS in production projects with real clients across Colombia.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section>
+    <div class="section-title">Selected Projects</div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">GESTEK Event OS — AI-Powered SaaS Event Management Platform</span>
+        <span class="entry-date">2026</span>
+      </div>
+      <div class="entry-sub">React 18 · Node.js (Express 5) · Supabase · PostgreSQL · Groq / Gemini / Claude · MercadoPago · TailwindCSS · Web Push</div>
+      <div class="entry-body">
+        <ul>
+          <li>White-label SaaS: event creation, JWT-signed QR ticketing, check-in, team management with granular roles, Kanban tasks, loyalty points, and analytics dashboard.</li>
+          <li>Gestbot AI assistant with 50+ real event actions (create, publish, edit, check-in, send reminders) via natural language, form prompting, and PDF/image analysis. Multi-provider failover: Groq → Gemini → Claude.</li>
+          <li>MercadoPago Checkout Pro for ticket sales and Pro plan billing; HMAC-verified idempotent webhooks; manual fallback mode.</li>
+          <li>Live: <a href="https://gestor-eventos-frontend.vercel.app/">gestor-eventos-frontend.vercel.app</a> — Code: <a href="https://github.com/Sekkon0906/GestorEventosMarcaBlanca">github.com/Sekkon0906/GestorEventosMarcaBlanca</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">New Blood Premium BARF — Admin Panel + AI WhatsApp Sales Agent</span>
+        <span class="entry-date">2026</span>
+      </div>
+      <div class="entry-sub">Vanilla JavaScript · Supabase · n8n · LangChain · GPT-4.1-mini · Whapi.cloud · Chart.js · PostgreSQL</div>
+      <div class="entry-body">
+        <ul>
+          <li>Frameworkless admin panel with real-time dashboard, full order lifecycle management (pending → paid → shipped → delivered), automatic stock deduction, PDF shipping labels, and CSV export.</li>
+          <li>Autonomous agent "Diana": complete WhatsApp sales flow from greeting to order confirmation; handles audio, images, and internal signals (ORDER_CONFIRMED, END_CONVERSATION).</li>
+          <li>Daily automated restock workflow: calculates estimated depletion date and sends proactive WhatsApp reminders 3 days before, via n8n cron + Supabase views.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Wallnut — Gamified University Wallet</span>
+        <span class="entry-date">2025</span>
+      </div>
+      <div class="entry-sub">Next.js · TypeScript · PostgreSQL</div>
+      <div class="entry-body">
+        <ul>
+          <li>University app with a gamified digital wallet for students, faculty, and administrators. Ardys points system incentivizes participation in academic events and activities.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">SorteosCCM — Online Raffle Platform</span>
+        <span class="entry-date">2025</span>
+      </div>
+      <div class="entry-sub">Angular 17 · TypeScript · Supabase · PostgreSQL · SSR · Clean Architecture</div>
+      <div class="entry-body">
+        <ul>
+          <li>Raffle platform for the Colombian Paso Horse community. Feature-Sliced + Clean Architecture over Angular 17 standalone with SSR and Supabase Edge Functions for serverless logic. Live: <a href="https://caballoscolombianosymas.com/">caballoscolombianosymas.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Ardy-IA — AI Language Learning Platform</span>
+        <span class="entry-date">2024</span>
+      </div>
+      <div class="entry-sub">Python · OpenAI GPT-4 · Whisper · DALL·E</div>
+      <div class="entry-body">
+        <ul>
+          <li>Web platform that detects user language, corrects errors in real time, generates voice with Whisper, and produces images for visual practice; adapts to user level and progress. 1 GitHub fork. Code: <a href="https://github.com/Sekkon0906/Ardy-IA">github.com/Sekkon0906/Ardy-IA</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">CoffeeOps — Coffee Operations SaaS</span>
+        <span class="entry-date">2024</span>
+      </div>
+      <div class="entry-sub">Vanilla JavaScript · SaaS</div>
+      <div class="entry-body">
+        <ul>
+          <li>Centralized management platform for cafeterias and coffee producers: inventory, lots, suppliers, documents, team, and real-time analytics. Code: <a href="https://github.com/Sekkon0906/Coffee-management">github.com/Sekkon0906/Coffee-management</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Consultorio Estético Dra. Juliet Medina — Medical Aesthetic Web App</span>
+        <span class="entry-date">2023</span>
+      </div>
+      <div class="entry-sub">Next.js · TypeScript · NextAuth · PostgreSQL</div>
+      <div class="entry-body">
+        <ul>
+          <li>Full-stack clinical management application with secure authentication, admin panel, appointment and procedure management. Led full front-end development and complete back-end migration.</li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- SKILLS -->
+  <section>
+    <div class="section-title">Technical Skills</div>
+    <div class="skills-grid">
+      <span class="skill-cat">Languages</span>
+      <span>JavaScript (primary), TypeScript, Python, Java, C/C++, HTML5, CSS3</span>
+
+      <span class="skill-cat">Frameworks</span>
+      <span>React 18, Next.js, Angular 17, TailwindCSS, Flutter, Laravel, Three.js, OpenGL, TensorFlow, Keras</span>
+
+      <span class="skill-cat">Backend / DB</span>
+      <span>Node.js (Express), Supabase, PostgreSQL, MySQL, Firebase, REST API, Realtime</span>
+
+      <span class="skill-cat">AI / Automation</span>
+      <span>OpenAI API (GPT-4, Whisper, DALL·E), Groq, Gemini, Anthropic Claude, LangChain, n8n</span>
+
+      <span class="skill-cat">Integrations</span>
+      <span>MercadoPago, Whapi.cloud, Web Push (VAPID), Cloudflare Turnstile, Resend / Gmail SMTP</span>
+
+      <span class="skill-cat">Tools</span>
+      <span>Git, GitHub, Docker, Vercel, Postman, Figma, VS Code, IntelliJ IDEA</span>
+    </div>
+  </section>
+
+  <!-- LANGUAGES -->
+  <section>
+    <div class="section-title">Languages</div>
+    <div class="skills-grid">
+      <span class="skill-cat">Spanish</span>
+      <span>Native</span>
+      <span class="skill-cat">English</span>
+      <span>Intermediate — strong listening comprehension, solid reading, effective communication</span>
+    </div>
+  </section>
+
+</body>
+</html>
