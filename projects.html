@@ -142,7 +142,33 @@
       font-size: 0.55rem;
       color: var(--dgray);
       letter-spacing: 0.2em;
+      margin-bottom: 0.3rem;
+    }
+    .project-duration {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--mono);
+      font-size: 0.52rem;
+      color: var(--dgray);
+      letter-spacing: 0.12em;
       margin-bottom: 0.55rem;
+    }
+    .project-duration::before {
+      content: '';
+      width: 18px;
+      height: 1px;
+      background: var(--dgray);
+      flex-shrink: 0;
+    }
+    .project-tag-react {
+      font-family: var(--mono);
+      font-size: 0.54rem;
+      color: var(--accent);
+      border: 1px solid rgba(200,169,110,.3);
+      background: rgba(200,169,110,.05);
+      padding: 0.12rem 0.5rem;
+      letter-spacing: 0.06em;
     }
     .status {
       display: inline-block;
@@ -273,7 +299,8 @@
           </span>
         </div>
         <div class="project-body">
-          <div class="project-id">PRJ — 001 · JavaScript · Nov 2025</div>
+          <div class="project-id">PRJ — 001 · React · JavaScript · 2024</div>
+          <div class="project-duration">4 meses de desarrollo</div>
           <span class="status status-live">Público</span>
           <h3 class="project-title">CoffeeOps — Coffee Management</h3>
           <p class="project-desc">
@@ -282,6 +309,7 @@
             tiempo real para la toma de decisiones operativas.
           </p>
           <div class="project-tags">
+            <span class="project-tag-react">React</span>
             <span class="project-tag">JavaScript</span>
             <span class="project-tag">SaaS</span>
             <span class="project-tag">Inventarios</span>
@@ -315,15 +343,17 @@
           </span>
         </div>
         <div class="project-body">
-          <div class="project-id">PRJ — 002 · TypeScript · Nov 2025</div>
+          <div class="project-id">PRJ — 002 · React · Next.js · 2023</div>
+          <div class="project-duration">7 meses de desarrollo</div>
           <span class="status status-live">Público</span>
           <h3 class="project-title">Consultorio Estético Dra. Juliet Medina</h3>
           <p class="project-desc">
-            Aplicación web para clínica estética desarrollada con Next.js, TypeScript y NextAuth.
+            Aplicación web para clínica estética desarrollada con React (Next.js), TypeScript y NextAuth.
             Incluye autenticación segura, panel de administración, gestión de citas y procedimientos.
             Desarrollé todo el front-end y realicé la migración completa del back-end.
           </p>
           <div class="project-tags">
+            <span class="project-tag-react">React</span>
             <span class="project-tag">Next.js</span>
             <span class="project-tag">TypeScript</span>
             <span class="project-tag">NextAuth</span>
@@ -353,7 +383,8 @@
           </span>
         </div>
         <div class="project-body">
-          <div class="project-id">PRJ — 003 · Python · Nov 2025</div>
+          <div class="project-id">PRJ — 003 · Python · 2024</div>
+          <div class="project-duration">4 meses de desarrollo</div>
           <span class="status status-live">Público · 1 fork</span>
           <h3 class="project-title">Ardy-IA — Aprendizaje de idiomas con IA</h3>
           <p class="project-desc">
@@ -392,7 +423,8 @@
           </span>
         </div>
         <div class="project-body">
-          <div class="project-id">PRJ — 004 · TypeScript · Nov 2025</div>
+          <div class="project-id">PRJ — 004 · React · Next.js · 2025</div>
+          <div class="project-duration">1 mes de desarrollo</div>
           <span class="status status-dev">Privado</span>
           <h3 class="project-title">Wallnut — Wallet Universitaria Gamificada</h3>
           <p class="project-desc">
@@ -401,6 +433,7 @@
             participación en eventos y actividades académicas. Construida con Next.js y TypeScript.
           </p>
           <div class="project-tags">
+            <span class="project-tag-react">React</span>
             <span class="project-tag">Next.js</span>
             <span class="project-tag">TypeScript</span>
             <span class="project-tag">Gamificación</span>
@@ -436,7 +469,8 @@
           </a>
         </div>
         <div class="project-body">
-          <div class="project-id">PRJ — 005 · TypeScript · 2025</div>
+          <div class="project-id">PRJ — 005 · TypeScript · Angular · 2025</div>
+          <div class="project-duration">1 mes de desarrollo</div>
           <span class="status status-live">Privado · En producción</span>
           <h3 class="project-title">SorteosCCM — Caballos Colombianos y Más</h3>
           <p class="project-desc">
@@ -474,13 +508,15 @@
           </span>
         </div>
         <div class="project-body">
-          <div class="project-id">PRJ — 006 · JavaScript · 2025</div>
+          <div class="project-id">PRJ — 006 · React · JavaScript · 2026</div>
+          <div class="project-duration">1 mes de desarrollo</div>
           <span class="status status-live" style="border-color:rgba(200,169,110,.3);color:var(--accent);background:rgba(200,169,110,.06);">● Producción · Clientes reales</span>
           <h3 class="project-title">New Blood Premium BARF — Panel Admin + Agente IA</h3>
           <p class="project-desc">
             Sistema completo de gestión para empresa colombiana de alimentación canina natural (BARF). Panel administrativo web con dashboard en tiempo real, agente de ventas IA en WhatsApp ("Diana") que atiende clientes de forma autónoma, y sistema de notificaciones de restock automatizado.
           </p>
           <div class="project-tags">
+            <span class="project-tag-react">React</span>
             <span class="project-tag">JavaScript</span>
             <span class="project-tag">Supabase</span>
             <span class="project-tag">n8n</span>
@@ -519,7 +555,8 @@
           </a>
         </div>
         <div class="project-body">
-          <div class="project-id">PRJ — 007 · React · Node.js · 2025</div>
+          <div class="project-id">PRJ — 007 · React · Node.js · 2026</div>
+          <div class="project-duration">2 meses de desarrollo</div>
           <span class="status status-live" style="border-color:rgba(200,169,110,.3);color:var(--accent);background:rgba(200,169,110,.06);">● Producción · SaaS activo</span>
           <h3 class="project-title">GESTEK Event OS — Gestión de Eventos con IA</h3>
           <p class="project-desc">

@@ -4,122 +4,40 @@
   <meta charset="UTF-8" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap');
-
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-
     :root {
       --serif: 'EB Garamond', 'Garamond', 'Times New Roman', serif;
       --sans:  'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
-      --ink:   #111;
-      --mid:   #444;
+      --ink:   #111; --mid: #444;
     }
-
     html { font-size: 10.5pt; }
-
-    body {
-      font-family: var(--serif);
-      color: var(--ink);
-      background: #fff;
-      line-height: 1.42;
-      padding: 0;
-      margin: 0;
-    }
-
-    /* ── Page break between versions ── */
+    body { font-family: var(--serif); color: var(--ink); background: #fff; line-height: 1.42; }
     .page-break { page-break-before: always; }
-
-    /* ── Header ── */
-    header {
-      text-align: center;
-      margin-bottom: 14px;
-      padding-bottom: 10px;
-      border-bottom: 1.5px solid #111;
-    }
-    header h1 {
-      font-family: var(--serif);
-      font-size: 20pt;
-      font-weight: 700;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      margin-bottom: 5px;
-    }
-    .contact-line {
-      font-family: var(--sans);
-      font-size: 9pt;
-      color: var(--mid);
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 0 16px;
-      line-height: 1.7;
-    }
+    header { text-align: center; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1.5px solid #111; }
+    header h1 { font-family: var(--serif); font-size: 20pt; font-weight: 700; letter-spacing:.06em; text-transform: uppercase; margin-bottom: 5px; }
+    .contact-line { font-family: var(--sans); font-size: 9pt; color: var(--mid); display: flex; justify-content: center; flex-wrap: wrap; gap: 0 14px; line-height: 1.7; }
     .contact-line a { color: var(--mid); text-decoration: none; }
-
-    /* ── Section ── */
-    section { margin-bottom: 13px; }
-
-    .section-title {
-      font-family: var(--serif);
-      font-size: 10.5pt;
-      font-weight: 700;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      border-bottom: 1px solid #111;
-      padding-bottom: 2px;
-      margin-bottom: 8px;
-    }
-
-    /* ── Entry ── */
-    .entry { margin-bottom: 9px; }
+    section { margin-bottom: 12px; }
+    .section-title { font-family: var(--serif); font-size: 10.5pt; font-weight: 700; letter-spacing:.14em; text-transform: uppercase; border-bottom: 1px solid #111; padding-bottom: 2px; margin-bottom: 7px; }
+    .entry { margin-bottom: 8px; }
     .entry:last-child { margin-bottom: 0; }
-
-    .entry-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 6px;
-    }
-    .entry-title {
-      font-family: var(--serif);
-      font-weight: 700;
-      font-size: 10.5pt;
-    }
-    .entry-date {
-      font-family: var(--sans);
-      font-size: 9pt;
-      color: var(--mid);
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-    .entry-sub {
-      font-family: var(--serif);
-      font-style: italic;
-      font-size: 10pt;
-      color: var(--mid);
-      margin-bottom: 2px;
-    }
+    .entry-header { display: flex; justify-content: space-between; align-items: baseline; gap: 6px; }
+    .entry-title { font-family: var(--serif); font-weight: 700; font-size: 10.5pt; }
+    .entry-date { font-family: var(--sans); font-size: 9pt; color: var(--mid); white-space: nowrap; flex-shrink: 0; }
+    .entry-sub { font-family: var(--serif); font-style: italic; font-size: 10pt; color: var(--mid); margin-bottom: 2px; }
+    .entry-meta { font-family: var(--sans); font-size: 8.5pt; color: var(--mid); margin-bottom: 2px; }
     .entry-body { font-family: var(--serif); font-size: 10.5pt; }
     .entry-body ul { padding-left: 1.1em; margin-top: 1px; }
     .entry-body li { margin-bottom: 1.5px; }
     .entry-body a { color: var(--ink); }
-
-    /* ── Skills ── */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: 120px 1fr;
-      gap: 3px 8px;
-      font-size: 10.5pt;
-    }
+    .skills-grid { display: grid; grid-template-columns: 120px 1fr; gap: 3px 8px; font-size: 10.5pt; }
     .skill-cat { font-weight: 700; }
-
     @page { size: letter; margin: 18mm 18mm 18mm 20mm; }
   </style>
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════════════
-     VERSIÓN EN ESPAÑOL
-     ═══════════════════════════════════════════════════ -->
+<!-- ═══════════════════ VERSIÓN EN ESPAÑOL ═══════════════════ -->
 
   <header>
     <h1>Juan Felipe Medina Orjuela</h1>
@@ -128,6 +46,7 @@
       <span>+57 316 048 0641</span>
       <a href="mailto:Juan.Medina@estudiantesunibague.edu.co">Juan.Medina@estudiantesunibague.edu.co</a>
       <a href="https://github.com/Sekkon0906">github.com/Sekkon0906</a>
+      <a href="https://portafoliojmo.vercel.app/">portafoliojmo.vercel.app</a>
     </div>
   </header>
 
@@ -158,9 +77,8 @@
       <div class="entry-body">
         <ul>
           <li>Diseño y entrega de 7 proyectos de software full-stack para clientes y usuarios reales, 5 de los cuales se encuentran actualmente en producción.</li>
-          <li>Integración de IA generativa (GPT-4, Groq, Gemini, Claude) en sistemas productivos: agentes de ventas autónomos por WhatsApp y asistentes conversacionales capaces de ejecutar acciones reales de negocio.</li>
-          <li>Desarrollo de arquitecturas orientadas a eventos, automatizaciones end-to-end con n8n, e integraciones de pagos con MercadoPago (webhooks HMAC, idempotencia).</li>
-          <li>Uso habitual de React, Angular, Next.js, Node.js, Supabase, PostgreSQL y TailwindCSS en proyectos de producción con clientes reales en Colombia.</li>
+          <li>Integración de IA generativa (GPT-4, Groq, Gemini, Claude) en sistemas productivos: agentes de ventas autónomos por WhatsApp y asistentes conversacionales con +50 acciones reales de negocio.</li>
+          <li>Uso habitual de React en proyectos de producción, junto con Angular, Next.js, Node.js, Supabase, PostgreSQL y TailwindCSS. Automatizaciones end-to-end con n8n e integraciones de pagos con MercadoPago.</li>
         </ul>
       </div>
     </div>
@@ -171,30 +89,30 @@
 
     <div class="entry">
       <div class="entry-header">
-        <span class="entry-title">GESTEK Event OS — Plataforma SaaS de Gestión de Eventos con IA</span>
-        <span class="entry-date">2026</span>
+        <span class="entry-title">GESTEK Event OS — SaaS de Gestión de Eventos con IA</span>
+        <span class="entry-date">2026 · 2 meses</span>
       </div>
       <div class="entry-sub">React 18 · Node.js (Express 5) · Supabase · PostgreSQL · Groq / Gemini / Claude · MercadoPago · TailwindCSS · Web Push</div>
       <div class="entry-body">
         <ul>
-          <li>SaaS white-label end-to-end: creación de eventos, boletas con QR firmado (JWT), check-in, gestión de equipo con roles granulares, tareas Kanban, fidelidad y analítica.</li>
-          <li>Gestbot: asistente IA con +50 acciones reales sobre el evento vía lenguaje natural, formularios dinámicos y análisis de PDFs/imágenes. Motor intercambiable con failover automático Groq → Gemini → Claude.</li>
-          <li>Pagos con MercadoPago Checkout Pro; webhook HMAC con idempotencia; modo manual como respaldo. En producción: <a href="https://gestor-eventos-frontend.vercel.app/">gestor-eventos-frontend.vercel.app</a></li>
+          <li>SaaS white-label: creación de eventos, boletas con QR firmado (JWT), check-in, equipo con roles granulares, tareas Kanban, fidelidad y analítica.</li>
+          <li>Gestbot: asistente IA con +50 acciones reales vía lenguaje natural, formularios dinámicos y análisis de PDFs/imágenes. Failover automático Groq → Gemini → Claude.</li>
+          <li>Pagos con MercadoPago Checkout Pro; webhook HMAC con idempotencia. En producción: <a href="https://gestor-eventos-frontend.vercel.app/">gestor-eventos-frontend.vercel.app</a></li>
         </ul>
       </div>
     </div>
 
     <div class="entry">
       <div class="entry-header">
-        <span class="entry-title">New Blood Premium BARF — Panel Admin + Agente de Ventas IA por WhatsApp</span>
-        <span class="entry-date">2026</span>
+        <span class="entry-title">New Blood Premium BARF — Panel Admin + Agente IA en WhatsApp</span>
+        <span class="entry-date">2026 · 1 mes</span>
       </div>
-      <div class="entry-sub">JavaScript · Supabase · n8n · LangChain · GPT-4.1-mini · Whapi.cloud · Chart.js · PostgreSQL</div>
+      <div class="entry-sub">React · JavaScript · Supabase · n8n · LangChain · GPT-4.1-mini · Whapi.cloud · Chart.js · PostgreSQL</div>
       <div class="entry-body">
         <ul>
-          <li>Panel administrativo (sin frameworks) con dashboard en tiempo real, ciclo completo de pedidos, descuento automático de stock, generación de guías PDF y exportación CSV.</li>
+          <li>Panel administrativo en React con dashboard en tiempo real, ciclo completo de pedidos, descuento automático de stock, generación de guías PDF y exportación CSV.</li>
           <li>Agente autónomo "Diana" en WhatsApp: flujo completo de venta (saludo → cotización → pedido → pago → despacho), manejo de audios, imágenes y señales internas.</li>
-          <li>Workflow diario de restock: calcula fecha estimada de agotamiento y envía recordatorio automático por WhatsApp 3 días antes vía n8n + Supabase.</li>
+          <li>Workflow diario de restock: calcula fecha estimada de agotamiento y envía recordatorio automático por WhatsApp 3 días antes.</li>
         </ul>
       </div>
     </div>
@@ -202,12 +120,12 @@
     <div class="entry">
       <div class="entry-header">
         <span class="entry-title">Wallnut — Wallet Universitaria Gamificada</span>
-        <span class="entry-date">2025</span>
+        <span class="entry-date">2025 · 1 mes</span>
       </div>
-      <div class="entry-sub">Next.js · TypeScript · PostgreSQL</div>
+      <div class="entry-sub">React · Next.js · TypeScript · PostgreSQL</div>
       <div class="entry-body">
         <ul>
-          <li>Aplicación universitaria con wallet digital gamificada para estudiantes, docentes y administradores. Sistema de puntos Ardys para incentivar la participación en eventos y actividades académicas.</li>
+          <li>App universitaria con wallet digital gamificada para estudiantes, docentes y administradores. Sistema de puntos Ardys para incentivar participación en eventos y actividades académicas.</li>
         </ul>
       </div>
     </div>
@@ -215,7 +133,7 @@
     <div class="entry">
       <div class="entry-header">
         <span class="entry-title">SorteosCCM — Plataforma de Rifas Online</span>
-        <span class="entry-date">2025</span>
+        <span class="entry-date">2025 · 1 mes</span>
       </div>
       <div class="entry-sub">Angular 17 · TypeScript · Supabase · PostgreSQL · SSR · Clean Architecture</div>
       <div class="entry-body">
@@ -227,8 +145,8 @@
 
     <div class="entry">
       <div class="entry-header">
-        <span class="entry-title">Ardy-IA — Plataforma de Aprendizaje de Idiomas con IA</span>
-        <span class="entry-date">2024</span>
+        <span class="entry-title">Ardy-IA — Aprendizaje de Idiomas con Inteligencia Artificial</span>
+        <span class="entry-date">2024 · 4 meses</span>
       </div>
       <div class="entry-sub">Python · OpenAI GPT-4 · Whisper · DALL·E</div>
       <div class="entry-body">
@@ -241,9 +159,9 @@
     <div class="entry">
       <div class="entry-header">
         <span class="entry-title">CoffeeOps — SaaS de Gestión para Cafeterías</span>
-        <span class="entry-date">2024</span>
+        <span class="entry-date">2024 · 4 meses</span>
       </div>
-      <div class="entry-sub">JavaScript · SaaS</div>
+      <div class="entry-sub">React · JavaScript · SaaS</div>
       <div class="entry-body">
         <ul>
           <li>Plataforma centralizada para cafeterías y productores de café: inventarios, lotes, proveedores, documentos, equipo y analítica en tiempo real. Código: <a href="https://github.com/Sekkon0906/Coffee-management">github.com/Sekkon0906/Coffee-management</a></li>
@@ -254,12 +172,12 @@
     <div class="entry">
       <div class="entry-header">
         <span class="entry-title">Consultorio Estético Dra. Juliet Medina — Aplicación Web Clínica</span>
-        <span class="entry-date">2023</span>
+        <span class="entry-date">2023 · 7 meses</span>
       </div>
-      <div class="entry-sub">Next.js · TypeScript · NextAuth · PostgreSQL</div>
+      <div class="entry-sub">React · Next.js · TypeScript · NextAuth · PostgreSQL</div>
       <div class="entry-body">
         <ul>
-          <li>Aplicación full-stack para gestión de clínica estética con autenticación segura, panel de administración y gestión de citas. Lideré el desarrollo completo del front-end y la migración del back-end.</li>
+          <li>Aplicación full-stack para gestión de clínica estética con autenticación segura, panel de administración y gestión de citas. Lideré el desarrollo completo del front-end en React (Next.js) y la migración del back-end.</li>
         </ul>
       </div>
     </div>
@@ -294,9 +212,7 @@
   </section>
 
 
-<!-- ═══════════════════════════════════════════════════
-     ENGLISH TRANSLATION
-     ═══════════════════════════════════════════════════ -->
+<!-- ═══════════════════ ENGLISH TRANSLATION ═══════════════════ -->
 
   <div class="page-break"></div>
 
@@ -307,6 +223,7 @@
       <span>+57 316 048 0641</span>
       <a href="mailto:Juan.Medina@estudiantesunibague.edu.co">Juan.Medina@estudiantesunibague.edu.co</a>
       <a href="https://github.com/Sekkon0906">github.com/Sekkon0906</a>
+      <a href="https://portafoliojmo.vercel.app/">portafoliojmo.vercel.app</a>
     </div>
   </header>
 
@@ -337,9 +254,8 @@
       <div class="entry-body">
         <ul>
           <li>Designed and delivered 7 full-stack software projects for real clients and end users; 5 are currently live in production.</li>
-          <li>Integrated generative AI (GPT-4, Groq, Gemini, Anthropic Claude) into production systems: autonomous WhatsApp sales agents and conversational assistants capable of executing 50+ real business actions.</li>
-          <li>Built event-driven architectures, end-to-end automation workflows with n8n, and payment integrations with MercadoPago featuring HMAC-verified idempotent webhooks.</li>
-          <li>Consistent use of React, Angular, Next.js, Node.js, Supabase, PostgreSQL, and TailwindCSS in production projects with real clients across Colombia.</li>
+          <li>Integrated generative AI (GPT-4, Groq, Gemini, Anthropic Claude) into production systems: autonomous WhatsApp sales agents and conversational assistants with 50+ real business actions.</li>
+          <li>Consistent use of React across production projects, alongside Angular, Next.js, Node.js, Supabase, PostgreSQL, and TailwindCSS. End-to-end automation with n8n and MercadoPago payment integrations.</li>
         </ul>
       </div>
     </div>
@@ -351,14 +267,14 @@
     <div class="entry">
       <div class="entry-header">
         <span class="entry-title">GESTEK Event OS — AI-Powered SaaS Event Management Platform</span>
-        <span class="entry-date">2026</span>
+        <span class="entry-date">2026 · 2 months</span>
       </div>
       <div class="entry-sub">React 18 · Node.js (Express 5) · Supabase · PostgreSQL · Groq / Gemini / Claude · MercadoPago · TailwindCSS · Web Push</div>
       <div class="entry-body">
         <ul>
           <li>White-label SaaS: event creation, JWT-signed QR ticketing, check-in, team management with granular roles, Kanban tasks, loyalty points, and analytics dashboard.</li>
           <li>Gestbot AI assistant with 50+ real event actions via natural language, dynamic forms, and PDF/image analysis. Multi-provider failover: Groq → Gemini → Claude.</li>
-          <li>MercadoPago Checkout Pro for ticket and plan billing; HMAC-verified idempotent webhooks; manual fallback. Live: <a href="https://gestor-eventos-frontend.vercel.app/">gestor-eventos-frontend.vercel.app</a></li>
+          <li>MercadoPago Checkout Pro payments; HMAC-verified idempotent webhooks. Live: <a href="https://gestor-eventos-frontend.vercel.app/">gestor-eventos-frontend.vercel.app</a></li>
         </ul>
       </div>
     </div>
@@ -366,14 +282,14 @@
     <div class="entry">
       <div class="entry-header">
         <span class="entry-title">New Blood Premium BARF — Admin Panel + AI WhatsApp Sales Agent</span>
-        <span class="entry-date">2026</span>
+        <span class="entry-date">2026 · 1 month</span>
       </div>
-      <div class="entry-sub">Vanilla JavaScript · Supabase · n8n · LangChain · GPT-4.1-mini · Whapi.cloud · Chart.js · PostgreSQL</div>
+      <div class="entry-sub">React · JavaScript · Supabase · n8n · LangChain · GPT-4.1-mini · Whapi.cloud · Chart.js · PostgreSQL</div>
       <div class="entry-body">
         <ul>
-          <li>Frameworkless admin panel with real-time dashboard, full order lifecycle management, automatic stock deduction, PDF shipping labels, and CSV export.</li>
+          <li>React admin panel with real-time dashboard, full order lifecycle management, automatic stock deduction, PDF shipping labels, and CSV export.</li>
           <li>Autonomous WhatsApp agent "Diana": complete sales flow from greeting to order confirmation; handles audio, images, and internal signals.</li>
-          <li>Daily automated restock workflow: calculates estimated depletion date and sends proactive WhatsApp reminders 3 days before via n8n + Supabase.</li>
+          <li>Daily automated restock workflow: calculates estimated depletion date and sends proactive WhatsApp reminders 3 days before.</li>
         </ul>
       </div>
     </div>
@@ -381,9 +297,9 @@
     <div class="entry">
       <div class="entry-header">
         <span class="entry-title">Wallnut — Gamified University Wallet</span>
-        <span class="entry-date">2025</span>
+        <span class="entry-date">2025 · 1 month</span>
       </div>
-      <div class="entry-sub">Next.js · TypeScript · PostgreSQL</div>
+      <div class="entry-sub">React · Next.js · TypeScript · PostgreSQL</div>
       <div class="entry-body">
         <ul>
           <li>University app with a gamified digital wallet for students, faculty, and administrators. Ardys points system incentivizes participation in academic events and activities.</li>
@@ -394,7 +310,7 @@
     <div class="entry">
       <div class="entry-header">
         <span class="entry-title">SorteosCCM — Online Raffle Platform</span>
-        <span class="entry-date">2025</span>
+        <span class="entry-date">2025 · 1 month</span>
       </div>
       <div class="entry-sub">Angular 17 · TypeScript · Supabase · PostgreSQL · SSR · Clean Architecture</div>
       <div class="entry-body">
@@ -407,7 +323,7 @@
     <div class="entry">
       <div class="entry-header">
         <span class="entry-title">Ardy-IA — AI Language Learning Platform</span>
-        <span class="entry-date">2024</span>
+        <span class="entry-date">2024 · 4 months</span>
       </div>
       <div class="entry-sub">Python · OpenAI GPT-4 · Whisper · DALL·E</div>
       <div class="entry-body">
@@ -420,9 +336,9 @@
     <div class="entry">
       <div class="entry-header">
         <span class="entry-title">CoffeeOps — Coffee Operations SaaS</span>
-        <span class="entry-date">2024</span>
+        <span class="entry-date">2024 · 4 months</span>
       </div>
-      <div class="entry-sub">Vanilla JavaScript · SaaS</div>
+      <div class="entry-sub">React · JavaScript · SaaS</div>
       <div class="entry-body">
         <ul>
           <li>Centralized management platform for cafeterias and coffee producers: inventory, lots, suppliers, documents, team, and real-time analytics. Code: <a href="https://github.com/Sekkon0906/Coffee-management">github.com/Sekkon0906/Coffee-management</a></li>
@@ -433,12 +349,12 @@
     <div class="entry">
       <div class="entry-header">
         <span class="entry-title">Consultorio Estético Dra. Juliet Medina — Medical Aesthetic Web App</span>
-        <span class="entry-date">2023</span>
+        <span class="entry-date">2023 · 7 months</span>
       </div>
-      <div class="entry-sub">Next.js · TypeScript · NextAuth · PostgreSQL</div>
+      <div class="entry-sub">React · Next.js · TypeScript · NextAuth · PostgreSQL</div>
       <div class="entry-body">
         <ul>
-          <li>Full-stack clinical management app with secure authentication, admin panel, and appointment management. Led full front-end development and complete back-end migration.</li>
+          <li>Full-stack clinical management app with secure authentication, admin panel, and appointment management. Led full React (Next.js) front-end development and complete back-end migration.</li>
         </ul>
       </div>
     </div>
