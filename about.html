@@ -3,7 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23090909'/%3E%3Cpath d='M6 7h5v13a5 5 0 0 1-5 5v-4a1 1 0 0 0 1-1z' fill='%23ede9e0'/%3E%3Crect x='14' y='7' width='12' height='4' fill='%23E10600'/%3E%3Crect x='14' y='14' width='9' height='4' fill='%23E10600'/%3E%3C/svg%3E" />
   <title>Sobre mí — Juan Felipe Medina</title>
+  <meta name="description" content="Sobre Juan Felipe Medina: cofundador y CEO de Hytrex, desarrollador full-stack y estudiante de Ingeniería de Sistemas en Ibagué, Colombia." />
+  <meta name="author" content="Juan Felipe Medina Ospina" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Juan Felipe Medina — Full-Stack Developer &amp; Co-founder de Hytrex" />
+  <meta property="og:description" content="Sobre Juan Felipe Medina: cofundador y CEO de Hytrex, desarrollador full-stack y estudiante de Ingeniería de Sistemas en Ibagué, Colombia." />
+  <meta property="og:url" content="https://portafoliojmo.vercel.app/about.html" />
+  <meta property="og:image" content="https://portafoliojmo.vercel.app/assets/fotoCV.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://portafoliojmo.vercel.app/about.html" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -22,6 +32,7 @@
       <li><a href="skills.html">Stack</a></li>
       <li><a href="projects.html">Proyectos</a></li>
       <li><a href="contact.html">Contacto</a></li>
+      <li><a href="cv-juan-felipe-medina.html">CV</a></li>
       <li><a href="index.html" style="color:var(--white2);">↗ Card</a></li>
     </ul>
   </nav>
@@ -38,10 +49,25 @@
       <!-- Panel izquierdo: info personal -->
       <div class="about-info-panel reveal">
 
+        <div class="role-block">
+          <div class="role-title">Co-founder &amp; CEO — Hytrex</div>
+          <div class="role-meta">Estudio de ingeniería digital · Colombia</div>
+          <p>
+            Cofundé Hytrex para convertir ideas y problemas de negocio en tecnología de alto
+            impacto: estrategia, diseño, ingeniería y entrega en un mismo lugar. Claridad,
+            propósito, impacto.
+            <a href="https://hytrex-landing.vercel.app/" target="_blank" rel="noopener" style="color:var(--accent-soft);text-decoration:none;">hytrex-landing.vercel.app ↗</a>
+          </p>
+        </div>
+
         <div class="info-chips">
           <div class="info-chip">
             <span class="chip-label">Ubicación</span>
             <span class="chip-val">Ibagué, Colombia 🇨🇴</span>
+          </div>
+          <div class="info-chip">
+            <span class="chip-label">Rol</span>
+            <span class="chip-val">Co-founder &amp; CEO @ Hytrex</span>
           </div>
           <div class="info-chip">
             <span class="chip-label">Universidad</span>
@@ -49,7 +75,11 @@
           </div>
           <div class="info-chip">
             <span class="chip-label">Correo</span>
-            <span class="chip-val">Juan.Medina@estudiantesunibague.edu.co</span>
+            <span class="chip-val">juan.medina@hytrex.co</span>
+          </div>
+          <div class="info-chip">
+            <span class="chip-label">LinkedIn</span>
+            <span class="chip-val">in/juan-medina-40b3ba269</span>
           </div>
           <div class="info-chip">
             <span class="chip-label">GitHub</span>
@@ -61,13 +91,13 @@
           </div>
           <div class="info-chip">
             <span class="chip-label">Disponibilidad</span>
-            <span class="chip-val" style="color:var(--accent);">Abierto a colaborar ●</span>
+            <span class="chip-val accent">Prácticas · freelance ●</span>
           </div>
         </div>
 
         <div class="quote-block">
-          <p>"Si no conozco el lenguaje o entorno en el que se trabaja,
-              doy lo mejor por adaptarme y destacar."</p>
+          <p>"Me importa el código mantenible, los sistemas que escalan más allá del demo,
+             y entregar cosas que la gente realmente usa."</p>
           <cite>— Juan Felipe Medina O.</cite>
         </div>
       </div>
@@ -75,19 +105,69 @@
       <!-- Panel derecho: bio + stats -->
       <div class="reveal">
         <div class="about-text">
-          <p>Soy <strong>Juan Felipe Medina</strong>, estudiante de Ingeniería de Sistemas en la Universidad de Ibagué, Colombia. Me especializo en diseñar y construir aplicaciones <strong>full-stack</strong> con enfoque en back-end robusto y experiencias de front-end de alta calidad.</p>
-          <p>Me apasiona aprender nuevas tecnologías y llevar ideas reales a la vida a través del código. He trabajado con JavaScript, TypeScript, Python, Java, C/C++ y más — no solo los domino en papel, sino que los he usado en <strong>proyectos reales con clientes reales</strong>.</p>
-          <p>Actualmente tengo un sistema en producción para una empresa colombiana de alimentación canina: panel admin, agente de ventas IA en WhatsApp y automatizaciones end-to-end. Fuera de eso, exploro <strong>gráficas 3D</strong> con OpenGL y Three.js, y contribuyo a proyectos de código abierto.</p>
+          <p>Soy <strong>Juan Felipe Medina</strong>, desarrollador de software y estudiante de
+             Ingeniería de Sistemas en la Universidad de Ibagué. Construyo aplicaciones
+             <strong>full-stack</strong> con foco en arquitectura backend limpia e interfaces que no
+             estorban.</p>
+          <p>Mi trabajo va desde plataformas <strong>SaaS con agentes de IA que ejecutan acciones
+             reales</strong> hasta billeteras digitales a escala universitaria, sistemas de gestión
+             clínica y plataformas de inventario sobre Clean Architecture. He trabajado con
+             JavaScript, TypeScript, Python, Java, C/C++ y PHP — no solo en papel, sino en proyectos
+             con clientes y deadlines.</p>
+          <p>Hoy soy <strong>cofundador y CEO de Hytrex</strong>, el estudio de ingeniería digital
+             que montamos en Colombia, y mantengo varios sistemas en producción: GESTEK Event OS,
+             el consultorio estético de la Dra. Medina, SorteosCCM y el panel + agente de ventas de
+             New Blood Premium BARF.</p>
         </div>
+
+        <h3 style="font-family:var(--mono);font-size:.62rem;color:var(--gray);letter-spacing:.22em;text-transform:uppercase;margin:2.6rem 0 1rem;">
+          IA dentro del flujo, no alrededor
+        </h3>
+        <div class="about-text">
+          <p>Casi todo lo que construyo empieza por la pregunta de qué se puede automatizar, y cada
+             vez más eso significa escribir <strong>servidores MCP dentro del producto</strong> para
+             que un agente lo opere directamente en vez de que una persona pase por pantallas.
+             <strong>Gestbot</strong> ya hace esto en GESTEK; el mismo enfoque va para el consultorio
+             estético, para que la doctora maneje citas, procedimientos e historias hablando con un
+             agente. <strong>Ardy-IA</strong> se construyó sobre modelos locales con Ollama.</p>
+        </div>
+
+        <h3 style="font-family:var(--mono);font-size:.62rem;color:var(--gray);letter-spacing:.22em;text-transform:uppercase;margin:2.6rem 0 1rem;">
+          Trayectoria
+        </h3>
+        <div class="timeline">
+          <div class="tl-item">
+            <span class="tl-date">2026 — Presente</span>
+            <div class="tl-title">Co-founder &amp; CEO · Hytrex</div>
+            <p class="tl-desc">Estudio de ingeniería digital en Colombia. Estrategia, diseño e ingeniería de producto de punta a punta.</p>
+          </div>
+          <div class="tl-item">
+            <span class="tl-date">2025 — Presente</span>
+            <div class="tl-title">GESTEK Event OS · Producto propio</div>
+            <p class="tl-desc">SaaS marca blanca de eventos con Gestbot, agente de IA con +50 acciones reales y servidor MCP integrado.</p>
+          </div>
+          <div class="tl-item">
+            <span class="tl-date">2023 — Presente</span>
+            <div class="tl-title">Desarrollador de software independiente</div>
+            <p class="tl-desc">Proyectos full-stack para clientes reales en Colombia: clínicas, comercio, rifas y alimentación canina.</p>
+          </div>
+          <div class="tl-item">
+            <span class="tl-date">2022 — 2027 (est.)</span>
+            <div class="tl-title">Ingeniería de Sistemas · Universidad de Ibagué</div>
+            <p class="tl-desc">Estructuras de datos, algoritmos, bases de datos, redes, IA y gráficas por computador con OpenGL.</p>
+          </div>
+        </div>
+
         <div class="stat-grid">
-          <div class="stat-card"><span class="stat-num">6+</span><span class="stat-label">Lenguajes trabajados</span></div>
-          <div class="stat-card"><span class="stat-num">20+</span><span class="stat-label">Herramientas y frameworks</span></div>
-          <div class="stat-card"><span class="stat-num">7</span><span class="stat-label">Proyectos reales</span></div>
-          <div class="stat-card"><span class="stat-num">∞</span><span class="stat-label">Ganas de aprender</span></div>
+          <div class="stat-card"><span class="stat-num">12</span><span class="stat-label">Proyectos documentados</span></div>
+          <div class="stat-card"><span class="stat-num">7</span><span class="stat-label">Sistemas en producción</span></div>
+          <div class="stat-card"><span class="stat-num">7+</span><span class="stat-label">Lenguajes trabajados</span></div>
+          <div class="stat-card"><span class="stat-num">1</span><span class="stat-label">Estudio cofundado</span></div>
         </div>
         <div style="margin-top:2.5rem; display:flex; gap:1rem; flex-wrap:wrap;">
-          <a href="skills.html" class="btn-primary">Ver mi stack →</a>
-          <a href="projects.html" class="btn-ghost">Mis proyectos</a>
+          <a href="projects.html" class="btn-primary">Ver mis proyectos →</a>
+          <a href="skills.html" class="btn-ghost">Mi stack</a>
+          <a href="cv-juan-felipe-medina.html" class="btn-ghost">Ver CV</a>
         </div>
       </div>
 
@@ -95,7 +175,7 @@
   </section>
 
   <footer>
-    <p>© 2025 Juan Felipe Medina O. — Sekkon0906</p>
+    <p>© 2026 Juan Felipe Medina O. — Sekkon0906</p>
     <p>Hecho desde <a href="contact.html">Ibagué, Colombia 🇨🇴</a></p>
   </footer>
   <script src="js/main.js"></script>

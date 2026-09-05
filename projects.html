@@ -3,7 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23090909'/%3E%3Cpath d='M6 7h5v13a5 5 0 0 1-5 5v-4a1 1 0 0 0 1-1z' fill='%23ede9e0'/%3E%3Crect x='14' y='7' width='12' height='4' fill='%23E10600'/%3E%3Crect x='14' y='14' width='9' height='4' fill='%23E10600'/%3E%3C/svg%3E" />
   <title>Proyectos — Juan Felipe Medina</title>
+  <meta name="description" content="Proyectos de Juan Felipe Medina: GESTEK Event OS, Hytrex, Consultorio Estético, SorteosCCM, ViBa y más — con sus enlaces en producción." />
+  <meta name="author" content="Juan Felipe Medina Ospina" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Juan Felipe Medina — Full-Stack Developer &amp; Co-founder de Hytrex" />
+  <meta property="og:description" content="Proyectos de Juan Felipe Medina: GESTEK Event OS, Hytrex, Consultorio Estético, SorteosCCM, ViBa y más — con sus enlaces en producción." />
+  <meta property="og:url" content="https://portafoliojmo.vercel.app/projects.html" />
+  <meta property="og:image" content="https://portafoliojmo.vercel.app/assets/fotoCV.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://portafoliojmo.vercel.app/projects.html" />
   <link rel="stylesheet" href="css/styles.css" />
   <style>
 
@@ -238,6 +248,7 @@
       <li><a href="skills.html">Stack</a></li>
       <li><a href="projects.html">Proyectos</a></li>
       <li><a href="contact.html">Contacto</a></li>
+      <li><a href="cv-juan-felipe-medina.html">CV</a></li>
       <li><a href="index.html" style="color:var(--white2);">↗ Card</a></li>
     </ul>
   </nav>
@@ -251,257 +262,23 @@
       <div class="section-line"></div>
     </div>
 
+    <p class="skills-subtitle reveal" style="margin-bottom:2rem;">
+      Sistemas que <span>corren en producción</span> con usuarios y clientes reales —
+      no demos. Cada tarjeta enlaza al deploy o al repositorio público.
+    </p>
+
+    <div class="filter-bar reveal">
+      <button class="filter-btn active" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="prod">En producción</button>
+      <button class="filter-btn" data-filter="ia">IA · Agentes</button>
+      <button class="filter-btn" data-filter="dev">En desarrollo</button>
+      <button class="filter-btn" data-filter="open">Abiertos a venta</button>
+    </div>
+
     <div class="projects-grid">
 
-      <!-- ═══════════════════════════════════════════
-           PRJ 001 — CoffeeOps
-           Para agregar imagen:   src="assets/previews/coffeeops.jpg"
-           Para agregar deploy:   reemplaza <span> por <a href="URL">
-           ═══════════════════════════════════════════ -->
-      <div class="project-card reveal">
-        <div class="project-preview">
-          <!-- CON IMAGEN: descomenta y pon la ruta
-          <img src="assets/previews/coffeeops.jpg" alt="CoffeeOps preview" />
-          -->
-          <div class="preview-placeholder">
-            <span class="preview-placeholder-icon">☕</span>
-            <span class="preview-placeholder-label">Sin preview aún</span>
-          </div>
-          <!-- CON DEPLOY: cambia span por a href="URL_DEL_DEPLOY" -->
-          <span class="project-deploy-badge no-deploy-badge">
-            <span class="deploy-dot"></span>No tiene deploy
-          </span>
-        </div>
-        <div class="project-body">
-          <div class="project-id">PRJ — 001 · JavaScript · Nov 2025</div>
-          <span class="status status-live">Público</span>
-          <h3 class="project-title">CoffeeOps — Coffee Management</h3>
-          <p class="project-desc">
-            Plataforma SaaS para cafeterías y productores de café que centraliza la gestión
-            de inventarios, lotes, proveedores, documentos y equipo. Incluye analítica en
-            tiempo real para la toma de decisiones operativas.
-          </p>
-          <div class="project-tags">
-            <span class="project-tag">JavaScript</span>
-            <span class="project-tag">SaaS</span>
-            <span class="project-tag">Inventarios</span>
-            <span class="project-tag">Analítica</span>
-          </div>
-          <div class="project-footer">
-            <div class="project-links">
-              <a href="https://github.com/Sekkon0906/Coffee-management" target="_blank" class="project-link">↗ GitHub</a>
-              <!-- CON DEPLOY: añade esto cuando tengas URL
-              <div class="project-link-sep"></div>
-              <a href="URL_DEL_DEPLOY" target="_blank" class="project-link">↗ Ver en vivo</a>
-              -->
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- ═══════════════════════════════════════════
-           PRJ 002 — Consultorio Estético
-           ═══════════════════════════════════════════ -->
-      <div class="project-card reveal">
-        <div class="project-preview">
-          <!--<img src="assets/previews/consultorio.jpg" alt="Consultorio Estético preview" />-->
-          <div class="preview-placeholder">
-            <span class="preview-placeholder-icon">◎</span>
-            <span class="preview-placeholder-label">Sin preview aún</span>
-          </div>
-          <span class="project-deploy-badge no-deploy-badge">
-            <span class="deploy-dot"></span>No tiene deploy
-          </span>
-        </div>
-        <div class="project-body">
-          <div class="project-id">PRJ — 002 · TypeScript · Nov 2025</div>
-          <span class="status status-live">Público</span>
-          <h3 class="project-title">Consultorio Estético Dra. Juliet Medina</h3>
-          <p class="project-desc">
-            Aplicación web para clínica estética desarrollada con Next.js, TypeScript y NextAuth.
-            Incluye autenticación segura, panel de administración, gestión de citas y procedimientos.
-            Desarrollé todo el front-end y realicé la migración completa del back-end.
-          </p>
-          <div class="project-tags">
-            <span class="project-tag">Next.js</span>
-            <span class="project-tag">TypeScript</span>
-            <span class="project-tag">NextAuth</span>
-            <span class="project-tag">Full-Stack</span>
-          </div>
-          <div class="project-footer">
-            <div class="project-links">
-              <a href="https://github.com/Sekkon0906/consultorio-estetico" target="_blank" class="project-link">↗ GitHub</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- ═══════════════════════════════════════════
-           PRJ 003 — Ardy-IA
-           ═══════════════════════════════════════════ -->
-      <div class="project-card reveal">
-        <div class="project-preview">
-          <!--<img src="assets/previews/ardy.jpg" alt="Ardy-IA preview" />-->
-          <div class="preview-placeholder">
-            <span class="preview-placeholder-icon">⬡</span>
-            <span class="preview-placeholder-label">Sin preview aún</span>
-          </div>
-          <span class="project-deploy-badge no-deploy-badge">
-            <span class="deploy-dot"></span>No tiene deploy
-          </span>
-        </div>
-        <div class="project-body">
-          <div class="project-id">PRJ — 003 · Python · Nov 2025</div>
-          <span class="status status-live">Público · 1 fork</span>
-          <h3 class="project-title">Ardy-IA — Aprendizaje de idiomas con IA</h3>
-          <p class="project-desc">
-            Plataforma web de aprendizaje de idiomas impulsada por IA. Detecta el idioma del
-            usuario, corrige errores en tiempo real, genera voz mediante Whisper y produce
-            imágenes para práctica visual. Se adapta al nivel y progreso del usuario usando GPT.
-          </p>
-          <div class="project-tags">
-            <span class="project-tag">Python</span>
-            <span class="project-tag">OpenAI GPT</span>
-            <span class="project-tag">Whisper</span>
-            <span class="project-tag">Voice AI</span>
-            <span class="project-tag">Image Gen</span>
-          </div>
-          <div class="project-footer">
-            <div class="project-links">
-              <a href="https://github.com/Sekkon0906/Ardy-IA" target="_blank" class="project-link">↗ GitHub</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- ═══════════════════════════════════════════
-           PRJ 004 — Wallnut
-           ═══════════════════════════════════════════ -->
-      <div class="project-card reveal">
-        <div class="project-preview">
-          <!--<img src="assets/previews/wallnut.jpg" alt="Wallnut preview" />-->
-          <div class="preview-placeholder">
-            <span class="preview-placeholder-icon">◈</span>
-            <span class="preview-placeholder-label">Sin preview aún</span>
-          </div>
-          <span class="project-deploy-badge no-deploy-badge">
-            <span class="deploy-dot"></span>No tiene deploy
-          </span>
-        </div>
-        <div class="project-body">
-          <div class="project-id">PRJ — 004 · TypeScript · Nov 2025</div>
-          <span class="status status-dev">Privado</span>
-          <h3 class="project-title">Wallnut — Wallet Universitaria Gamificada</h3>
-          <p class="project-desc">
-            App universitaria que integra una wallet digital gamificada para estudiantes,
-            docentes y administradores. Usa el sistema de puntos Ardys para incentivar la
-            participación en eventos y actividades académicas. Construida con Next.js y TypeScript.
-          </p>
-          <div class="project-tags">
-            <span class="project-tag">Next.js</span>
-            <span class="project-tag">TypeScript</span>
-            <span class="project-tag">Gamificación</span>
-            <span class="project-tag">Wallet</span>
-          </div>
-          <div class="project-footer">
-            <div class="project-links">
-              <span class="no-link-badge">Repositorio privado</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- ═══════════════════════════════════════════
-           PRJ 005 — SorteosCCM
-           ═══════════════════════════════════════════ -->
-      <div class="project-card reveal">
-        <div class="project-preview">
-          <img
-            class="preview-screenshot"
-            src="https://image.thum.io/get/width/680/crop/382/https://caballoscolombianosymas.com/"
-            alt="SorteosCCM preview"
-            loading="lazy"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
-          />
-          <div class="preview-placeholder" style="display:none;">
-            <span class="preview-placeholder-icon">▷</span>
-            <span class="preview-placeholder-label">caballoscolombianosymas.com</span>
-          </div>
-          <a href="https://caballoscolombianosymas.com/" target="_blank" class="project-deploy-badge">
-            <span class="deploy-dot"></span>En producción
-          </a>
-        </div>
-        <div class="project-body">
-          <div class="project-id">PRJ — 005 · TypeScript · 2025</div>
-          <span class="status status-live">Privado · En producción</span>
-          <h3 class="project-title">SorteosCCM — Caballos Colombianos y Más</h3>
-          <p class="project-desc">
-            Plataforma de rifas online para la comunidad de Caballos Colombianos de Paso,
-            actualmente en producción. Arquitectura Feature-Sliced + Clean Architecture sobre
-            Angular 17 standalone con SSR, Supabase PostgreSQL y Edge Functions serverless.
-          </p>
-          <div class="project-tags">
-            <span class="project-tag">Angular 17</span>
-            <span class="project-tag">TypeScript</span>
-            <span class="project-tag">Supabase</span>
-            <span class="project-tag">PostgreSQL</span>
-            <span class="project-tag">SSR</span>
-            <span class="project-tag">Clean Arch</span>
-          </div>
-          <div class="project-footer">
-            <div class="project-links">
-              <a href="https://caballoscolombianosymas.com/" target="_blank" class="project-link">↗ Ver en vivo</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ═══════════════════════════════════════════
-           PRJ 006 — New Blood Premium BARF
-           ═══════════════════════════════════════════ -->
-      <div class="project-card reveal" style="border-color:rgba(200,169,110,.18);">
-        <div class="project-preview">
-          <div class="preview-placeholder" style="background:repeating-linear-gradient(45deg,var(--bg4) 0px,var(--bg4) 14px,#161410 14px,#161410 28px);">
-            <span class="preview-placeholder-icon" style="font-size:1.8rem;opacity:.2;">🐕</span>
-            <span class="preview-placeholder-label">Sistema interno · Sin URL pública</span>
-          </div>
-          <span class="project-deploy-badge" style="border-color:rgba(200,169,110,.3);color:var(--accent);">
-            <span class="deploy-dot" style="background:var(--accent);box-shadow:0 0 6px rgba(200,169,110,.6);"></span>En producción
-          </span>
-        </div>
-        <div class="project-body">
-          <div class="project-id">PRJ — 006 · JavaScript · 2025</div>
-          <span class="status status-live" style="border-color:rgba(200,169,110,.3);color:var(--accent);background:rgba(200,169,110,.06);">● Producción · Clientes reales</span>
-          <h3 class="project-title">New Blood Premium BARF — Panel Admin + Agente IA</h3>
-          <p class="project-desc">
-            Sistema completo de gestión para empresa colombiana de alimentación canina natural (BARF). Panel administrativo web con dashboard en tiempo real, agente de ventas IA en WhatsApp ("Diana") que atiende clientes de forma autónoma, y sistema de notificaciones de restock automatizado.
-          </p>
-          <div class="project-tags">
-            <span class="project-tag">JavaScript</span>
-            <span class="project-tag">Supabase</span>
-            <span class="project-tag">n8n</span>
-            <span class="project-tag">LangChain</span>
-            <span class="project-tag">GPT-4.1</span>
-            <span class="project-tag">WhatsApp Bot</span>
-            <span class="project-tag">PostgreSQL</span>
-            <span class="project-tag">Automatización</span>
-          </div>
-          <div class="project-footer">
-            <div class="project-links">
-              <span class="no-link-badge" style="color:var(--gray);">Proyecto privado · Cliente real en Colombia</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ═══════════════════════════════════════════
-           PRJ 007 — GESTEK Event OS
-           ═══════════════════════════════════════════ -->
-      <div class="project-card reveal" style="border-color:rgba(200,169,110,.18);">
+      <!-- ═══ PRJ 001 — GESTEK Event OS ═══ -->
+      <div class="project-card reveal" data-tags="prod ia" style="border-color:rgba(225,6,0,.22);">
         <div class="project-preview">
           <img
             class="preview-screenshot"
@@ -514,34 +291,481 @@
             <span class="preview-placeholder-icon">◈</span>
             <span class="preview-placeholder-label">gestor-eventos-frontend.vercel.app</span>
           </div>
-          <a href="https://gestor-eventos-frontend.vercel.app/" target="_blank" class="project-deploy-badge" style="border-color:rgba(200,169,110,.3);color:var(--accent);">
-            <span class="deploy-dot" style="background:var(--accent);box-shadow:0 0 6px rgba(200,169,110,.6);"></span>En producción
+          <a href="https://gestor-eventos-frontend.vercel.app/" target="_blank" rel="noopener" class="project-deploy-badge" style="border-color:rgba(225,6,0,.35);color:var(--accent-soft);">
+            <span class="deploy-dot" style="background:var(--accent);box-shadow:0 0 6px rgba(225,6,0,.6);"></span>En producción
           </a>
         </div>
         <div class="project-body">
-          <div class="project-id">PRJ — 007 · React · Node.js · 2025</div>
-          <span class="status status-live" style="border-color:rgba(200,169,110,.3);color:var(--accent);background:rgba(200,169,110,.06);">● Producción · SaaS activo</span>
-          <h3 class="project-title">GESTEK Event OS — Gestión de Eventos con IA</h3>
+          <div class="project-id">PRJ — 001 · React · Node.js · 2025–2026</div>
+          <span class="status status-prod">Producción · SaaS activo</span>
+          <h3 class="project-title">GESTEK Event OS — Gestión de eventos con IA</h3>
           <p class="project-desc">
-            SaaS white-label end-to-end para gestión de eventos. Incluye creación de eventos, venta de boletas con QR firmado (JWT), check-in, pagos con MercadoPago, equipo con roles granulares, agenda, fidelidad y Gestbot — asistente IA propio con +50 acciones reales sobre el evento. Motor de IA intercambiable con failover automático entre Groq, Gemini y Claude.
+            SaaS marca blanca end-to-end para eventos: creación con editor visual y 8 plantillas,
+            boletería con QR firmado (JWT) y códigos de respaldo, check-in, pagos MercadoPago
+            directos al organizador, equipos con roles, chat por canales, tareas Kanban, agenda,
+            fidelidad con puntos y analítica de conversión. <strong>Gestbot</strong> — el agente
+            de IA propio — ejecuta +50 acciones reales por lenguaje natural, con failover
+            automático entre Groq, Gemini y Claude, y un <strong>servidor MCP dentro del producto</strong>
+            para que un agente lo opere sin pasar por pantallas. API REST y webhooks con HMAC.
           </p>
           <div class="project-tags">
-            <span class="project-tag">React 18</span>
-            <span class="project-tag">Node.js</span>
+            <span class="project-tag">React 18 · Vite</span>
+            <span class="project-tag">Express 5</span>
             <span class="project-tag">Supabase</span>
             <span class="project-tag">PostgreSQL</span>
-            <span class="project-tag">Groq · Gemini · Claude</span>
+            <span class="project-tag">MCP</span>
+            <span class="project-tag">Claude · Groq · Gemini</span>
             <span class="project-tag">MercadoPago</span>
-            <span class="project-tag">TailwindCSS</span>
             <span class="project-tag">Web Push</span>
+            <span class="project-tag">Turnstile</span>
             <span class="project-tag">White-label</span>
-            <span class="project-tag">Full Stack</span>
           </div>
           <div class="project-footer">
             <div class="project-links">
-              <a href="https://github.com/Sekkon0906/GestorEventosMarcaBlanca" target="_blank" class="project-link">↗ GitHub</a>
+              <a href="https://gestor-eventos-frontend.vercel.app/" target="_blank" rel="noopener" class="project-link">↗ Ver en vivo</a>
               <div class="project-link-sep"></div>
-              <a href="https://gestor-eventos-frontend.vercel.app/" target="_blank" class="project-link">↗ Ver en vivo</a>
+              <a href="https://github.com/Sekkon0906/GestorEventosMarcaBlanca" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ PRJ 002 — Hytrex ═══ -->
+      <div class="project-card reveal" data-tags="prod" style="border-color:rgba(225,6,0,.22);">
+        <div class="project-preview">
+          <img
+            class="preview-screenshot"
+            src="https://image.thum.io/get/width/680/crop/382/https://hytrex-landing.vercel.app/"
+            alt="Hytrex landing preview"
+            loading="lazy"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+          />
+          <div class="preview-placeholder" style="display:none;">
+            <span class="preview-placeholder-icon">▲</span>
+            <span class="preview-placeholder-label">hytrex-landing.vercel.app</span>
+          </div>
+          <a href="https://hytrex-landing.vercel.app/" target="_blank" rel="noopener" class="project-deploy-badge" style="border-color:rgba(225,6,0,.35);color:var(--accent-soft);">
+            <span class="deploy-dot" style="background:var(--accent);box-shadow:0 0 6px rgba(225,6,0,.6);"></span>En producción
+          </a>
+        </div>
+        <div class="project-body">
+          <div class="project-id">PRJ — 002 · Next.js 16 · 2026</div>
+          <span class="status status-prod">Producción · Mi estudio</span>
+          <h3 class="project-title">Hytrex — Estudio de ingeniería digital</h3>
+          <p class="project-desc">
+            Sitio del estudio que cofundé y dirijo como CEO. Construido sobre Next.js 16 (App Router)
+            y React 19: el símbolo es un orbe SVG animado con un anillo de nueve capas de color a
+            velocidades distintas, y la sección de equipo reacciona al hover con un gesto de 620 ms.
+            Todo con animación CSS, contenido editable por datos, navegación por teclado y soporte
+            de <code>prefers-reduced-motion</code>.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Next.js 16</span>
+            <span class="project-tag">React 19</span>
+            <span class="project-tag">TypeScript</span>
+            <span class="project-tag">Tailwind v4</span>
+            <span class="project-tag">Motion</span>
+            <span class="project-tag">SVG · A11y</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-links">
+              <a href="https://hytrex-landing.vercel.app/" target="_blank" rel="noopener" class="project-link">↗ Ver en vivo</a>
+              <div class="project-link-sep"></div>
+              <a href="https://github.com/Sekkon0906/Hytrex-landing" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ PRJ 003 — Consultorio Estético VM ═══ -->
+      <div class="project-card reveal" data-tags="prod ia">
+        <div class="project-preview">
+          <img
+            class="preview-screenshot"
+            src="https://image.thum.io/get/width/680/crop/382/https://consultorio-estetico-vm.vercel.app/"
+            alt="Consultorio Estético VM preview"
+            loading="lazy"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+          />
+          <div class="preview-placeholder" style="display:none;">
+            <span class="preview-placeholder-icon">◎</span>
+            <span class="preview-placeholder-label">consultorio-estetico-vm.vercel.app</span>
+          </div>
+          <a href="https://consultorio-estetico-vm.vercel.app/" target="_blank" rel="noopener" class="project-deploy-badge">
+            <span class="deploy-dot"></span>En producción
+          </a>
+        </div>
+        <div class="project-body">
+          <div class="project-id">PRJ — 003 · Next.js 15 · TypeScript · 2026</div>
+          <span class="status status-prod">Producción · Cliente real</span>
+          <h3 class="project-title">Consultorio Estético — Dra. Julieth Vanessa Medina</h3>
+          <p class="project-desc">
+            Plataforma para una clínica de medicina estética en Ibagué: sitio público, agendamiento
+            con disponibilidad por calendario, catálogo de procedimientos, testimonios en video,
+            panel administrativo con analítica y <strong>consentimientos informados firmados
+            digitalmente y exportados a PDF</strong>. Autenticación con Google o correo, multi-idioma
+            y modo oscuro. Actualmente migrando módulos a la nueva estructura Next.js y sumando un
+            agente MCP para que la doctora gestione citas e historias hablando.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Next.js 15</span>
+            <span class="project-tag">React 19</span>
+            <span class="project-tag">TypeScript</span>
+            <span class="project-tag">Tailwind v4</span>
+            <span class="project-tag">Supabase</span>
+            <span class="project-tag">Express</span>
+            <span class="project-tag">jsPDF</span>
+            <span class="project-tag">Framer Motion</span>
+            <span class="project-tag">next-intl</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-links">
+              <a href="https://consultorio-estetico-vm.vercel.app/" target="_blank" rel="noopener" class="project-link">↗ Ver en vivo</a>
+              <div class="project-link-sep"></div>
+              <a href="https://github.com/Sekkon0906/consultorioEstetico-vm" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ PRJ 004 — New Blood Premium BARF ═══ -->
+      <div class="project-card reveal" data-tags="prod ia" style="border-color:rgba(225,6,0,.22);">
+        <div class="project-preview">
+          <div class="preview-placeholder" style="background:repeating-linear-gradient(45deg,var(--bg4) 0px,var(--bg4) 14px,#1a0f0f 14px,#1a0f0f 28px);">
+            <span class="preview-placeholder-icon" style="font-size:1.8rem;opacity:.2;">🐕</span>
+            <span class="preview-placeholder-label">Sistema interno · Sin URL pública</span>
+          </div>
+          <span class="project-deploy-badge" style="border-color:rgba(225,6,0,.35);color:var(--accent-soft);">
+            <span class="deploy-dot" style="background:var(--accent);box-shadow:0 0 6px rgba(225,6,0,.6);"></span>En producción
+          </span>
+        </div>
+        <div class="project-body">
+          <div class="project-id">PRJ — 004 · JavaScript · 2025–2026</div>
+          <span class="status status-prod">Producción · Clientes reales</span>
+          <h3 class="project-title">New Blood Premium BARF — Panel admin + agente de ventas IA</h3>
+          <p class="project-desc">
+            Sistema completo de gestión para una empresa colombiana de alimentación canina natural.
+            Panel administrativo sin framework con métricas en tiempo real, ciclo de vida completo
+            del pedido (pendiente → pagado → enviado → entregado), descuento automático de stock al
+            despachar, etiquetas de envío en PDF y export CSV. <strong>"Diana"</strong>, agente
+            autónomo en WhatsApp, cierra ventas de punta a punta: saludo, cálculo de ración,
+            cotización, confirmación y verificación de pago. Un flujo diario en n8n calcula el
+            agotamiento estimado por pedido y avisa 3 días antes.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">JavaScript</span>
+            <span class="project-tag">Supabase</span>
+            <span class="project-tag">n8n</span>
+            <span class="project-tag">LangChain</span>
+            <span class="project-tag">GPT-4.1</span>
+            <span class="project-tag">Whapi.cloud</span>
+            <span class="project-tag">Chart.js</span>
+            <span class="project-tag">PostgreSQL</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-links">
+              <span class="no-link-badge" style="color:var(--gray);">Proyecto privado · Cliente real en Colombia</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ PRJ 005 — SorteosCCM ═══ -->
+      <div class="project-card reveal" data-tags="prod">
+        <div class="project-preview">
+          <img
+            class="preview-screenshot"
+            src="https://image.thum.io/get/width/680/crop/382/https://caballoscolombianosymas.com/"
+            alt="SorteosCCM preview"
+            loading="lazy"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+          />
+          <div class="preview-placeholder" style="display:none;">
+            <span class="preview-placeholder-icon">▷</span>
+            <span class="preview-placeholder-label">caballoscolombianosymas.com</span>
+          </div>
+          <a href="https://caballoscolombianosymas.com/" target="_blank" rel="noopener" class="project-deploy-badge">
+            <span class="deploy-dot"></span>En producción
+          </a>
+        </div>
+        <div class="project-body">
+          <div class="project-id">PRJ — 005 · Angular 17 · TypeScript · 2025</div>
+          <span class="status status-prod">Producción · Dominio propio</span>
+          <h3 class="project-title">SorteosCCM — Caballos Colombianos y Más</h3>
+          <p class="project-desc">
+            Plataforma de rifas online para la comunidad del Caballo Colombiano de Paso, en
+            producción bajo dominio propio. Arquitectura Feature-Sliced + Clean Architecture sobre
+            Angular 17 standalone con SSR, Supabase PostgreSQL y Edge Functions serverless.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Angular 17</span>
+            <span class="project-tag">TypeScript</span>
+            <span class="project-tag">Supabase</span>
+            <span class="project-tag">PostgreSQL</span>
+            <span class="project-tag">SSR</span>
+            <span class="project-tag">Clean Arch</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-links">
+              <a href="https://caballoscolombianosymas.com/" target="_blank" rel="noopener" class="project-link">↗ Ver en vivo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ PRJ 006 — ViBa ═══ -->
+      <div class="project-card reveal" data-tags="prod">
+        <div class="project-preview">
+          <div class="preview-placeholder">
+            <span class="preview-placeholder-icon">⌘</span>
+            <span class="preview-placeholder-label">API REST · viba-beta.vercel.app</span>
+          </div>
+          <a href="https://viba-beta.vercel.app" target="_blank" rel="noopener" class="project-deploy-badge">
+            <span class="deploy-dot"></span>Desplegado
+          </a>
+        </div>
+        <div class="project-body">
+          <div class="project-id">PRJ — 006 · Node.js · MongoDB · 2026</div>
+          <span class="status status-live">Público · API desplegada</span>
+          <h3 class="project-title">ViBa — Backend para videojuegos</h3>
+          <p class="project-desc">
+            API REST modular para videojuegos bajo <em>Screaming Architecture</em>: el código se
+            organiza por módulos de dominio (auth, inventario, progreso) y no por capas técnicas.
+            Autenticación JWT, inventario con ítems únicos y apilables, historial de niveles y
+            puntaje, respuestas JSON estandarizadas y documentación Swagger/OpenAPI.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Node.js 18</span>
+            <span class="project-tag">Express</span>
+            <span class="project-tag">MongoDB · Mongoose</span>
+            <span class="project-tag">JWT</span>
+            <span class="project-tag">Swagger</span>
+            <span class="project-tag">Screaming Arch</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-links">
+              <a href="https://viba-beta.vercel.app" target="_blank" rel="noopener" class="project-link">↗ Ver API</a>
+              <div class="project-link-sep"></div>
+              <a href="https://github.com/Sekkon0906/viba" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ PRJ 007 — microservice-mail ═══ -->
+      <div class="project-card reveal" data-tags="prod">
+        <div class="project-preview">
+          <div class="preview-placeholder">
+            <span class="preview-placeholder-icon">✉</span>
+            <span class="preview-placeholder-label">Microservicio · Render</span>
+          </div>
+          <span class="project-deploy-badge">
+            <span class="deploy-dot"></span>En producción
+          </span>
+        </div>
+        <div class="project-body">
+          <div class="project-id">PRJ — 007 · Node.js · Docker · 2026</div>
+          <span class="status status-prod">Producción · Infra de GESTEK</span>
+          <h3 class="project-title">GESTEK Mail — Microservicio de correo</h3>
+          <p class="project-desc">
+            Servicio independiente que renderiza y envía las plantillas de correo diseñadas dentro
+            de GESTEK. El backend delega vía clave compartida (<code>x-gestek-key</code>) y el
+            servicio resuelve plantilla + entrega SMTP. Campañas segmentadas por equipo o tipo de
+            boleta, healthcheck <code>/healthz</code> y diagnóstico SMTP para evitar bucles de
+            reinicio en Render cuando el proveedor de correo falla.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Node.js</span>
+            <span class="project-tag">Docker</span>
+            <span class="project-tag">Supabase</span>
+            <span class="project-tag">SMTP</span>
+            <span class="project-tag">Render</span>
+            <span class="project-tag">Microservicios</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-links">
+              <a href="https://github.com/Sekkon0906/microservice-mail" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ PRJ 008 — DevUP ═══ -->
+      <div class="project-card reveal" data-tags="dev">
+        <div class="project-preview">
+          <div class="preview-placeholder">
+            <span class="preview-placeholder-icon">⬢</span>
+            <span class="preview-placeholder-label">En construcción</span>
+          </div>
+          <span class="project-deploy-badge no-deploy-badge">
+            <span class="deploy-dot"></span>Sin deploy público
+          </span>
+        </div>
+        <div class="project-body">
+          <div class="project-id">PRJ — 008 · Next.js · PL/pgSQL · 2026</div>
+          <span class="status status-dev">En desarrollo</span>
+          <h3 class="project-title">DevUP — Workspace de control de ventas</h3>
+          <p class="project-desc">
+            Plataforma de espacio de trabajo para control comercial: Next.js sobre Supabase, con el
+            modelo de datos versionado en migraciones PL/pgSQL. En desarrollo activo.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Next.js</span>
+            <span class="project-tag">TypeScript</span>
+            <span class="project-tag">Supabase</span>
+            <span class="project-tag">PL/pgSQL</span>
+            <span class="project-tag">Migraciones</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-links">
+              <a href="https://github.com/Sekkon0906/DevUP" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ PRJ 009 — Piel Canela Store ═══ -->
+      <div class="project-card reveal" data-tags="dev">
+        <div class="project-preview">
+          <div class="preview-placeholder">
+            <span class="preview-placeholder-icon">◫</span>
+            <span class="preview-placeholder-label">Sistema de inventario</span>
+          </div>
+          <span class="project-deploy-badge no-deploy-badge">
+            <span class="deploy-dot"></span>Sin deploy público
+          </span>
+        </div>
+        <div class="project-body">
+          <div class="project-id">PRJ — 009 · Vue 3 · Node.js · 2026</div>
+          <span class="status status-dev">Público · En desarrollo</span>
+          <h3 class="project-title">Piel Canela Store — Inventario para boutique</h3>
+          <p class="project-desc">
+            Plataforma de gestión de inventario para la boutique Piel Canela, construida sobre
+            Clean Architecture: backend Node/Express con MongoDB y frontend Vue 3 separados, para
+            que el dominio no dependa del framework.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Vue 3</span>
+            <span class="project-tag">Node.js</span>
+            <span class="project-tag">Express</span>
+            <span class="project-tag">MongoDB</span>
+            <span class="project-tag">Clean Arch</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-links">
+              <a href="https://github.com/Sekkon0906/pielCanelaStore" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ PRJ 010 — Ardy-IA ═══ -->
+      <div class="project-card reveal" data-tags="ia">
+        <div class="project-preview">
+          <div class="preview-placeholder">
+            <span class="preview-placeholder-icon">⬡</span>
+            <span class="preview-placeholder-label">Modelos locales · Ollama</span>
+          </div>
+          <span class="project-deploy-badge no-deploy-badge">
+            <span class="deploy-dot"></span>Sin deploy público
+          </span>
+        </div>
+        <div class="project-body">
+          <div class="project-id">PRJ — 010 · Python · 2025</div>
+          <span class="status status-live">Público · 1 fork</span>
+          <h3 class="project-title">Ardy-IA — Aprendizaje de idiomas con IA local</h3>
+          <p class="project-desc">
+            Plataforma de aprendizaje de idiomas construida sobre <strong>modelos locales con
+            Ollama</strong>: detecta el idioma del usuario, corrige errores en tiempo real, genera
+            voz e imágenes para práctica visual y se adapta al nivel y progreso de cada persona,
+            sin depender de una API externa.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Ollama</span>
+            <span class="project-tag">Whisper</span>
+            <span class="project-tag">Voice AI</span>
+            <span class="project-tag">Image Gen</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-links">
+              <a href="https://github.com/Sekkon0906/Ardy-IA" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ PRJ 011 — Walnut / Ardys ═══ -->
+      <div class="project-card reveal" data-tags="open">
+        <div class="project-preview">
+          <div class="preview-placeholder">
+            <span class="preview-placeholder-icon">◈</span>
+            <span class="preview-placeholder-label">BBMC S.S.A · Repo privado</span>
+          </div>
+          <span class="project-deploy-badge no-deploy-badge">
+            <span class="deploy-dot"></span>Desarrollo en pausa
+          </span>
+        </div>
+        <div class="project-body">
+          <div class="project-id">PRJ — 011 · React · Node.js · 2025</div>
+          <span class="status status-open">Abierto a venta o continuación</span>
+          <h3 class="project-title">Walnut — Wallet universitaria gamificada</h3>
+          <p class="project-desc">
+            Billetera digital gamificada para estudiantes, docentes y administradores, desarrollada
+            en <strong>BBMC S.S.A</strong>. El sistema de puntos <em>Ardys</em> impulsa la
+            participación en eventos y las recompensas de todo el campus. Motor de puntos y flujo de
+            recompensas terminados; el repositorio principal es privado y el código completo se
+            comparte bajo acuerdo.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">React</span>
+            <span class="project-tag">Node.js</span>
+            <span class="project-tag">PostgreSQL</span>
+            <span class="project-tag">Docker</span>
+            <span class="project-tag">Gamificación</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-links">
+              <a href="https://github.com/Sekkon0906/wallnut" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
+              <div class="project-link-sep"></div>
+              <a href="mailto:juan.medina@hytrex.co?subject=Walnut%20%2F%20Ardys" class="project-link">↗ Hablemos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ PRJ 012 — CoffeeOps ═══ -->
+      <div class="project-card reveal" data-tags="open">
+        <div class="project-preview">
+          <div class="preview-placeholder">
+            <span class="preview-placeholder-icon">☕</span>
+            <span class="preview-placeholder-label">SaaS · Repositorio público</span>
+          </div>
+          <span class="project-deploy-badge no-deploy-badge">
+            <span class="deploy-dot"></span>Desarrollo en pausa
+          </span>
+        </div>
+        <div class="project-body">
+          <div class="project-id">PRJ — 012 · Node.js · MongoDB · 2025</div>
+          <span class="status status-open">Abierto a venta o continuación</span>
+          <h3 class="project-title">CoffeeOps — Operación cafetera</h3>
+          <p class="project-desc">
+            SaaS para cafeterías y productores de café: centraliza inventario, trazabilidad de
+            lotes, proveedores, documentos, equipo y analítica en tiempo real. Inventario y
+            trazabilidad entregados; el desarrollo está en pausa y abierto a ofertas.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Node.js</span>
+            <span class="project-tag">Express</span>
+            <span class="project-tag">MongoDB</span>
+            <span class="project-tag">SaaS</span>
+            <span class="project-tag">Trazabilidad</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-links">
+              <a href="https://github.com/Sekkon0906/Coffee-management" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
+              <div class="project-link-sep"></div>
+              <a href="mailto:juan.medina@hytrex.co?subject=CoffeeOps" class="project-link">↗ Hablemos</a>
             </div>
           </div>
         </div>
@@ -549,17 +773,33 @@
 
     </div><!-- /projects-grid -->
 
-    <div style="margin-top:3rem; text-align:center;" class="reveal">
-      <a href="https://github.com/Sekkon0906" target="_blank" class="btn-ghost">
+    <div style="margin-top:3rem; text-align:center; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;" class="reveal">
+      <a href="https://github.com/Sekkon0906" target="_blank" rel="noopener" class="btn-ghost">
         Ver perfil completo en GitHub ↗
+      </a>
+      <a href="https://hytrex-landing.vercel.app/" target="_blank" rel="noopener" class="btn-primary">
+        Conocer Hytrex ↗
       </a>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 Juan Felipe Medina O. — Sekkon0906</p>
+    <p>© 2026 Juan Felipe Medina O. — Sekkon0906</p>
     <p>Hecho desde <a href="contact.html">Ibagué, Colombia 🇨🇴</a></p>
   </footer>
   <script src="js/main.js"></script>
+  <script>
+    /* Filtros de proyectos */
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards      = document.querySelectorAll('.project-card');
+    filterBtns.forEach(btn => btn.addEventListener('click', () => {
+      const f = btn.dataset.filter;
+      filterBtns.forEach(b => b.classList.toggle('active', b === btn));
+      cards.forEach(c => {
+        const tags = (c.dataset.tags || '').split(' ');
+        c.classList.toggle('hidden', f !== 'all' && !tags.includes(f));
+      });
+    }));
+  </script>
 </body>
 </html>

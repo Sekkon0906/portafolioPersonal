@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23090909'/%3E%3Cpath d='M6 7h5v13a5 5 0 0 1-5 5v-4a1 1 0 0 0 1-1z' fill='%23ede9e0'/%3E%3Crect x='14' y='7' width='12' height='4' fill='%23E10600'/%3E%3Crect x='14' y='14' width='9' height='4' fill='%23E10600'/%3E%3C/svg%3E" />
   <title>Juan Felipe Medina — ¿Qué quieres conocer?</title>
+  <meta name="description" content="Juan Felipe Medina — desarrollador full-stack y cofundador de Hytrex. Portafolio, proyectos en producción y contacto." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
@@ -26,13 +28,29 @@
 
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html, body {
-      height: 100%;
+      min-height: 100%;
       background: var(--bg);
       color: var(--white);
       font-family: var(--sans);
-      overflow: hidden;
+      overflow-x: hidden;
+      overflow-y: auto;
       cursor: none;
     }
+
+    /* Cursor personalizado sólo con puntero real */
+    @media (hover: none), (pointer: coarse) {
+      html, body, a, button { cursor: auto !important; }
+      .cursor, .cursor-ring { display: none !important; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+      .btn-card, .photo-wrap, .name, .handle, .tagline, .question, .sig, .page-label { opacity: 1 !important; }
+    }
+    a:focus-visible, button:focus-visible { outline: 2px solid #ff3b32; outline-offset: 3px; }
 
     /* ---- Cursor ---- */
     .cursor {
@@ -133,8 +151,8 @@
       content: '';
       width: 5px; height: 5px;
       border-radius: 50%;
-      background: #c8a96e;
-      box-shadow: 0 0 6px rgba(200,169,110,.6);
+      background: #E10600;
+      box-shadow: 0 0 6px rgba(225,6,0,.6);
       animation: pulse 2s infinite;
     }
 
@@ -203,19 +221,21 @@
     .btn-card:nth-child(2) { animation: fadeUp 0.6s 0.71s forwards; }
     .btn-card:nth-child(3) { animation: fadeUp 0.6s 0.80s forwards; }
     .btn-card:nth-child(4) { animation: fadeUp 0.6s 0.89s forwards; }
+    .btn-card:nth-child(5) { animation: fadeUp 0.6s 0.98s forwards; }
+    .btn-card:nth-child(6) { animation: fadeUp 0.6s 1.07s forwards; }
 
     .btn-card::before {
       content: '';
       position: absolute; left: 0; top: 0; bottom: 0;
-      width: 2px; background: #c8a96e;
+      width: 2px; background: #E10600;
       transform: scaleY(0); transform-origin: bottom;
       transition: transform 0.3s;
     }
     .btn-card:hover::before { transform: scaleY(1); }
     .btn-card:hover {
-      border-color: rgba(200,169,110,0.28);
+      border-color: rgba(225,6,0,0.28);
       color: var(--white);
-      box-shadow: 0 0 28px rgba(200,169,110,0.10);
+      box-shadow: 0 0 28px rgba(225,6,0,0.10);
       transform: translateX(4px);
     }
 
@@ -308,9 +328,9 @@
       transition: all 0.25s;
     }
     .modal-link:hover {
-      border-color: rgba(200,169,110,0.28);
+      border-color: rgba(225,6,0,0.28);
       transform: translateX(4px);
-      box-shadow: 0 0 24px rgba(200,169,110,0.10);
+      box-shadow: 0 0 24px rgba(225,6,0,0.10);
     }
     .modal-icon {
       width: 28px; height: 28px;
@@ -360,10 +380,26 @@
   <div class="modal-overlay" id="modalRedes">
     <div class="modal-panel">
       <div class="modal-header">
-        <span class="modal-title">03 — Contacto directo</span>
+        <span class="modal-title">05 — Contacto directo</span>
         <button class="modal-close" id="modalClose">×</button>
       </div>
       <div class="modal-links">
+        <a href="https://wa.me/573160480641" target="_blank" rel="noopener" class="modal-link">
+          <div class="modal-icon">◎</div>
+          <div class="modal-info">
+            <span class="modal-platform">WhatsApp</span>
+            <span class="modal-handle">+57 316 048 0641</span>
+          </div>
+          <span class="modal-arrow">↗</span>
+        </a>
+        <a href="https://www.linkedin.com/in/juan-medina-40b3ba269" target="_blank" rel="noopener" class="modal-link">
+          <div class="modal-icon">in</div>
+          <div class="modal-info">
+            <span class="modal-platform">LinkedIn</span>
+            <span class="modal-handle">in/juan-medina-40b3ba269</span>
+          </div>
+          <span class="modal-arrow">↗</span>
+        </a>
         <a href="https://instagram.com/felipe_medina_9" target="_blank" class="modal-link">
           <div class="modal-icon">◈</div>
           <div class="modal-info">
@@ -377,15 +413,6 @@
           <div class="modal-info">
             <span class="modal-platform">Facebook</span>
             <span class="modal-handle">juanpimedina916539</span>
-          </div>
-          <span class="modal-arrow">↗</span>
-        </a>
-        
-        <a href="https://wa.me/573160480641" target="_blank" class="modal-link">
-          <div class="modal-icon">◎</div>
-          <div class="modal-info">
-            <span class="modal-platform">WhatsApp</span>
-            <span class="modal-handle">+57 316 048 0641</span>
           </div>
           <span class="modal-arrow">↗</span>
         </a>
@@ -418,7 +445,7 @@
       <!-- Identidad -->
       <h1 class="name">Juan Felipe Medina</h1>
       <p class="handle">@Sekkon0906</p>
-      <p class="tagline">Full-Stack Dev · Ibagué, Colombia 🇨🇴</p>
+      <p class="tagline">Co-founder &amp; CEO @ Hytrex · Ibagué, CO 🇨🇴</p>
 
       <!-- Pregunta -->
       <p class="question">¿Qué quieres conocer?</p>
@@ -436,39 +463,59 @@
           <span class="btn-arrow">→</span>
         </a>
 
-        <!-- 02 — GitHub -->
-        <a href="https://github.com/Sekkon0906" target="_blank" class="btn-card">
+        <!-- 02 — Hytrex -->
+        <a href="https://hytrex-landing.vercel.app/" target="_blank" rel="noopener" class="btn-card">
+          <div class="btn-icon">▲</div>
+          <div class="btn-text">
+            <span class="btn-sub">02 — Mi estudio</span>
+            <span class="btn-label">Hytrex</span>
+          </div>
+          <span class="btn-arrow">↗</span>
+        </a>
+
+        <!-- 03 — GitHub -->
+        <a href="https://github.com/Sekkon0906" target="_blank" rel="noopener" class="btn-card">
           <div class="btn-icon">⌥</div>
           <div class="btn-text">
-            <span class="btn-sub">02 — Código</span>
+            <span class="btn-sub">03 — Código</span>
             <span class="btn-label">GitHub</span>
           </div>
           <span class="btn-arrow">↗</span>
         </a>
 
-        <!-- 03 — Redes (abre modal) -->
+        <!-- 04 — LinkedIn -->
+        <a href="https://www.linkedin.com/in/juan-medina-40b3ba269" target="_blank" rel="noopener" class="btn-card">
+          <div class="btn-icon">in</div>
+          <div class="btn-text">
+            <span class="btn-sub">04 — Profesional</span>
+            <span class="btn-label">LinkedIn</span>
+          </div>
+          <span class="btn-arrow">↗</span>
+        </a>
+
+        <!-- 05 — Redes (abre modal) -->
         <button class="btn-card" id="openModal" style="font-family:inherit; background:var(--bg3);">
           <div class="btn-icon">◈</div>
           <div class="btn-text">
-            <span class="btn-sub">03 — Redes</span>
+            <span class="btn-sub">05 — Redes</span>
             <span class="btn-label">Contacto directo</span>
           </div>
           <span class="btn-arrow">↓</span>
         </button>
 
-        <!-- 04 — Mail -->
-        <a href="mailto:Juan.Medina@estudiantesunibague.edu.co" class="btn-card">
+        <!-- 06 — Mail -->
+        <a href="mailto:juan.medina@hytrex.co" class="btn-card">
           <div class="btn-icon">✉</div>
           <div class="btn-text">
-            <span class="btn-sub">04 — Email</span>
-            <span class="btn-label">Enviar correo</span>
+            <span class="btn-sub">06 — Email</span>
+            <span class="btn-label">juan.medina@hytrex.co</span>
           </div>
           <span class="btn-arrow">→</span>
         </a>
 
       </div>
 
-      <p class="sig">© 2025 · Ibagué, Colombia</p>
+      <p class="sig">© 2026 · Hytrex · Ibagué, Colombia</p>
     </div>
   </main>
 
