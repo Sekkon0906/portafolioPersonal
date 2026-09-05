@@ -3,7 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Juan Felipe Medina — Desarrollador full-stack y cofundador de Hytrex. Sistemas en producción con agentes de IA, MCP y Clean Architecture." />
+  <meta name="author" content="Juan Felipe Medina Ospina" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Juan Felipe Medina — Full-Stack Developer &amp; Co-founder de Hytrex" />
+  <meta property="og:description" content="Juan Felipe Medina — Desarrollador full-stack y cofundador de Hytrex. Sistemas en producción con agentes de IA, MCP y Clean Architecture." />
+  <meta property="og:url" content="https://portafoliojmo.vercel.app/home.html" />
+  <meta property="og:image" content="https://portafoliojmo.vercel.app/assets/fotoCV.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://portafoliojmo.vercel.app/home.html" />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23090909'/%3E%3Cpath d='M6 7h5v13a5 5 0 0 1-5 5v-4a1 1 0 0 0 1-1z' fill='%23ede9e0'/%3E%3Crect x='14' y='7' width='12' height='4' fill='%23E10600'/%3E%3Crect x='14' y='14' width='9' height='4' fill='%23E10600'/%3E%3C/svg%3E" />
   <title>Juan Felipe Medina — Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <style>
@@ -82,7 +92,7 @@ nav {
   opacity:0;animation:fadeUp .8s .3s forwards;
 }
 .hero-tag::before{content:'';width:36px;height:1px;background:var(--dgray);}
-.status-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite;flex-shrink:0;box-shadow:0 0 8px rgba(200,169,110,.5);}
+.status-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite;flex-shrink:0;box-shadow:0 0 8px rgba(225,6,0,.5);}
 .hero-name{
   font-size:clamp(3.2rem,6.5vw,5.8rem);
   font-weight:800;line-height:.93;letter-spacing:-.04em;margin-bottom:1.3rem;
@@ -126,7 +136,7 @@ nav {
   cursor:none;text-decoration:none;transition:all .3s;
   clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));
 }
-.btn-primary:hover{background:var(--white);box-shadow:0 0 28px rgba(200,169,110,.25);transform:translateY(-2px);}
+.btn-primary:hover{background:var(--white);box-shadow:0 0 28px rgba(225,6,0,.25);transform:translateY(-2px);}
 .btn-ghost{
   display:inline-block;padding:.8rem 2rem;
   background:transparent;color:var(--white2);border:1px solid var(--border);
@@ -134,7 +144,7 @@ nav {
   cursor:none;text-decoration:none;transition:all .3s;
   clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));
 }
-.btn-ghost:hover{border-color:rgba(200,169,110,.35);color:var(--white);box-shadow:0 0 28px rgba(200,169,110,.12);}
+.btn-ghost:hover{border-color:rgba(225,6,0,.35);color:var(--white);box-shadow:0 0 28px rgba(225,6,0,.12);}
 
 /* ─── SECCIONES EXTRA ────────────────────── */
 .section{position:relative;z-index:1;padding:7rem 4rem;}
@@ -349,6 +359,7 @@ footer a{color:var(--white2);text-decoration:none;}
     <li><a href="skills.html">Stack</a></li>
     <li><a href="projects.html">Proyectos</a></li>
     <li><a href="contact.html">Contacto</a></li>
+    <li><a href="cv-juan-felipe-medina.html">CV</a></li>
     <li><a href="index.html" style="color:var(--white2);">↗ Card</a></li>
   </ul>
 </nav>
@@ -368,7 +379,7 @@ footer a{color:var(--white2);text-decoration:none;}
 
       <div class="hero-tag">
         <div class="status-dot"></div>
-        Disponible para colaborar
+        Co-founder &amp; CEO @ Hytrex · Abierto a proyectos
       </div>
 
       <h1 class="hero-name">
@@ -382,6 +393,7 @@ footer a{color:var(--white2);text-decoration:none;}
       <div class="hero-btns">
         <a href="projects.html" class="btn-primary">Ver proyectos</a>
         <a href="contact.html"  class="btn-ghost">Contactar</a>
+        <a href="cv-juan-felipe-medina.html" class="btn-ghost">CV</a>
       </div>
     </div>
 
@@ -408,25 +420,27 @@ footer a{color:var(--white2);text-decoration:none;}
     </div>
     <div class="intro-grid">
       <div class="intro-bio reveal">
-        <p>Soy <strong>Juan Felipe Medina</strong>, estudiante de Ingeniería de Sistemas
-           en la Universidad de Ibagué. Me dedico a construir aplicaciones
-           <strong>full-stack</strong> que resuelven problemas reales.</p>
-        <p>Mi enfoque está en escribir <strong>back-ends eficientes</strong> y front-ends
-           que realmente se disfrutan usar. Me adapto rápido a cualquier stack y he
-           trabajado con múltiples lenguajes y tecnologías en proyectos reales.</p>
-        <p>He construido desde clínicas estéticas y plataformas universitarias gamificadas
-           hasta <strong>sistemas de IA en producción</strong> con agentes de WhatsApp y
-           automatizaciones end-to-end para clientes reales en Colombia.</p>
-        <div style="margin-top:1.8rem;">
+        <p>Soy <strong>Juan Felipe Medina</strong>, desarrollador de software y estudiante de
+           Ingeniería de Sistemas en la Universidad de Ibagué. Construyo aplicaciones
+           <strong>full-stack</strong> con foco en arquitectura backend limpia e interfaces que
+           no estorban.</p>
+        <p>Soy <strong>cofundador y CEO de Hytrex</strong>, el estudio de ingeniería digital que
+           montamos en Colombia: convertimos ideas y problemas de negocio en productos que mueven
+           el negocio, no que solo lucen bien en un demo.</p>
+        <p>Cada vez más mi trabajo pasa por escribir <strong>servidores MCP dentro del producto</strong>
+           para que un agente de IA lo opere directamente. <strong>Gestbot</strong> ya lo hace en
+           GESTEK Event OS, con +50 acciones reales sobre un evento.</p>
+        <div style="margin-top:1.8rem; display:flex; gap:1rem; flex-wrap:wrap;">
           <a href="about.html" class="btn-ghost">Leer más sobre mí →</a>
+          <a href="https://hytrex-landing.vercel.app/" target="_blank" rel="noopener" class="btn-ghost">Hytrex ↗</a>
         </div>
       </div>
       <div class="reveal">
         <div class="intro-stats">
-          <div class="stat-card"><span class="stat-num">7</span><span class="stat-label">Proyectos reales</span></div>
-          <div class="stat-card"><span class="stat-num">6+</span><span class="stat-label">Lenguajes trabajados</span></div>
-          <div class="stat-card"><span class="stat-num">5</span><span class="stat-label">Apps en producción</span></div>
-          <div class="stat-card"><span class="stat-num">∞</span><span class="stat-label">Ganas de aprender</span></div>
+          <div class="stat-card"><span class="stat-num">12</span><span class="stat-label">Proyectos documentados</span></div>
+          <div class="stat-card"><span class="stat-num">7</span><span class="stat-label">Sistemas en producción</span></div>
+          <div class="stat-card"><span class="stat-num">7+</span><span class="stat-label">Lenguajes trabajados</span></div>
+          <div class="stat-card"><span class="stat-num">1</span><span class="stat-label">Estudio cofundado</span></div>
         </div>
         <a href="projects.html" class="btn-primary" style="display:inline-block;margin-top:0">
           Ver todos los proyectos →
@@ -450,41 +464,41 @@ footer a{color:var(--white2);text-decoration:none;}
           <span class="stack-item">TypeScript</span>
           <span class="stack-item">Python</span>
           <span class="stack-item">Java</span>
+          <span class="stack-item">PHP</span>
           <span class="stack-item">C / C++</span>
-          <span class="stack-item">HTML · CSS</span>
         </div>
       </div>
       <div class="reveal">
-        <div class="stack-col-title">Frameworks</div>
+        <div class="stack-col-title">Frontend</div>
         <div class="stack-list">
-          <span class="stack-item">Next.js</span>
-          <span class="stack-item">React</span>
+          <span class="stack-item">React 19</span>
+          <span class="stack-item">Next.js 16</span>
           <span class="stack-item">Angular 17</span>
-          <span class="stack-item">TailwindCSS</span>
-          <span class="stack-item">Flutter</span>
+          <span class="stack-item">Vue 3</span>
+          <span class="stack-item">TailwindCSS v4</span>
           <span class="stack-item">Three.js</span>
         </div>
       </div>
       <div class="reveal">
-        <div class="stack-col-title">Backend / DB</div>
+        <div class="stack-col-title">Backend · Datos</div>
         <div class="stack-list">
+          <span class="stack-item">Node.js · Express</span>
           <span class="stack-item">Supabase</span>
-          <span class="stack-item">Firebase</span>
           <span class="stack-item">PostgreSQL</span>
-          <span class="stack-item">MySQL</span>
-          <span class="stack-item">NextAuth</span>
-          <span class="stack-item">REST API</span>
+          <span class="stack-item">MongoDB</span>
+          <span class="stack-item">Laravel</span>
+          <span class="stack-item">REST · Webhooks</span>
         </div>
       </div>
       <div class="reveal">
-        <div class="stack-col-title">Herramientas</div>
+        <div class="stack-col-title">IA · DevOps</div>
         <div class="stack-list">
+          <span class="stack-item">MCP</span>
+          <span class="stack-item">Claude · Groq · Gemini</span>
+          <span class="stack-item">Ollama · LangChain</span>
+          <span class="stack-item">n8n</span>
           <span class="stack-item">Docker</span>
-          <span class="stack-item">Git · GitHub</span>
-          <span class="stack-item">OpenAI API</span>
-          <span class="stack-item">Figma</span>
-          <span class="stack-item">Postman</span>
-          <span class="stack-item">VS Code</span>
+          <span class="stack-item">Vercel · Render</span>
         </div>
       </div>
     </div>
@@ -502,41 +516,36 @@ footer a{color:var(--white2);text-decoration:none;}
       <div class="section-line"></div>
     </div>
     <div class="teaser-grid">
-      <div class="teaser-card reveal">
+      <a href="https://gestor-eventos-frontend.vercel.app/" target="_blank" rel="noopener" class="teaser-card reveal" style="border-color:rgba(225,6,0,.2); text-decoration:none; color:inherit; display:block;">
+        <div class="teaser-dot" style="background:var(--accent);box-shadow:0 0 8px rgba(225,6,0,.5);"></div>
+        <div class="teaser-name">GESTEK Event OS ↗</div>
+        <p class="teaser-desc">SaaS marca blanca de eventos con Gestbot: +50 acciones reales por IA y servidor MCP dentro del producto. En producción.</p>
+      </a>
+      <a href="https://hytrex-landing.vercel.app/" target="_blank" rel="noopener" class="teaser-card reveal" style="border-color:rgba(225,6,0,.2); text-decoration:none; color:inherit; display:block;">
+        <div class="teaser-dot" style="background:var(--accent);box-shadow:0 0 8px rgba(225,6,0,.5);"></div>
+        <div class="teaser-name">Hytrex ↗</div>
+        <p class="teaser-desc">El estudio de ingeniería digital que cofundé. Next.js 16 + React 19, con símbolo animado en SVG puro.</p>
+      </a>
+      <a href="https://consultorio-estetico-vm.vercel.app/" target="_blank" rel="noopener" class="teaser-card reveal" style="text-decoration:none; color:inherit; display:block;">
         <div class="teaser-dot"></div>
-        <div class="teaser-name">CoffeeOps</div>
-        <p class="teaser-desc">SaaS para cafeterías — inventarios, lotes, proveedores y analítica en tiempo real.</p>
-      </div>
-      <div class="teaser-card reveal">
+        <div class="teaser-name">Consultorio Estético ↗</div>
+        <p class="teaser-desc">Clínica estética: citas, historia, consentimientos firmados en PDF y panel admin. Next.js 15 + Supabase.</p>
+      </a>
+      <a href="https://caballoscolombianosymas.com/" target="_blank" rel="noopener" class="teaser-card reveal" style="text-decoration:none; color:inherit; display:block;">
         <div class="teaser-dot"></div>
-        <div class="teaser-name">Consultorio Estético</div>
-        <p class="teaser-desc">App web con Next.js, TypeScript y NextAuth. Panel de admin + citas.</p>
-      </div>
-      <div class="teaser-card reveal">
-        <div class="teaser-dot"></div>
-        <div class="teaser-name">Ardy-IA</div>
-        <p class="teaser-desc">Aprendizaje de idiomas con GPT + Whisper. Voz, imágenes y corrección adaptativa.</p>
-      </div>
-      <div class="teaser-card reveal">
-        <div class="teaser-dot"></div>
-        <div class="teaser-name">Wallnut</div>
-        <p class="teaser-desc">Wallet universitaria gamificada con sistema de puntos Ardys.</p>
-      </div>
-      <div class="teaser-card reveal">
-        <div class="teaser-dot"></div>
-        <div class="teaser-name">SorteosCCM</div>
-        <p class="teaser-desc">Plataforma de rifas online. Angular 17 + Supabase + Clean Architecture. En producción en caballoscolombianosymas.com.</p>
-      </div>
-      <div class="teaser-card reveal" style="border-color:rgba(200,169,110,.18);">
-        <div class="teaser-dot" style="background:var(--accent);box-shadow:0 0 8px rgba(200,169,110,.5);"></div>
+        <div class="teaser-name">SorteosCCM ↗</div>
+        <p class="teaser-desc">Rifas online para la comunidad del Caballo de Paso. Angular 17 SSR + Supabase, con dominio propio.</p>
+      </a>
+      <div class="teaser-card reveal" style="border-color:rgba(225,6,0,.2);">
+        <div class="teaser-dot" style="background:var(--accent);box-shadow:0 0 8px rgba(225,6,0,.5);"></div>
         <div class="teaser-name">New Blood Premium BARF</div>
-        <p class="teaser-desc">Panel admin + agente IA en WhatsApp + automatizaciones end-to-end. En producción con clientes reales.</p>
+        <p class="teaser-desc">Panel admin + "Diana", agente de ventas autónomo en WhatsApp, y restock automatizado con n8n. Cliente real.</p>
       </div>
-      <div class="teaser-card reveal" style="border-color:rgba(200,169,110,.18);">
-        <div class="teaser-dot" style="background:var(--accent);box-shadow:0 0 8px rgba(200,169,110,.5);"></div>
-        <div class="teaser-name">GESTEK Event OS</div>
-        <p class="teaser-desc">SaaS de gestión de eventos con IA (Gestbot). React + Node + Supabase + MercadoPago. En producción en Vercel.</p>
-      </div>
+      <a href="https://viba-beta.vercel.app" target="_blank" rel="noopener" class="teaser-card reveal" style="text-decoration:none; color:inherit; display:block;">
+        <div class="teaser-dot"></div>
+        <div class="teaser-name">ViBa ↗</div>
+        <p class="teaser-desc">API REST modular para videojuegos: auth, inventario y progreso bajo Screaming Architecture.</p>
+      </a>
     </div>
     <div style="text-align:center;" class="reveal">
       <a href="projects.html" class="btn-primary">Ver proyectos completos →</a>
@@ -544,7 +553,7 @@ footer a{color:var(--white2);text-decoration:none;}
   </section>
 
   <footer>
-    <p>© 2025 Juan Felipe Medina O. — Sekkon0906</p>
+    <p>© 2026 Juan Felipe Medina O. — Sekkon0906</p>
     <p>Hecho desde <a href="contact.html">Colombia 🇨🇴</a></p>
   </footer>
 
@@ -603,7 +612,7 @@ footer a{color:var(--white2);text-decoration:none;}
   /* ── Typed ── */
   const typedEl = document.getElementById('typed');
   if(typedEl){
-    const roles=['Software Developer.','Full-Stack Engineer.','Systems Student.','API Integration Dev.','3D Graphics Enthusiast.'];
+    const roles=['Co-founder & CEO @ Hytrex.','Full-Stack Developer.','AI Agents & MCP Servers.','Clean Architecture.','Systems Engineering Student.'];
     let ri=0,ci=0,del=false;
     function type(){
       const c=roles[ri];
