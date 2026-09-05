@@ -130,11 +130,11 @@ if (canvas) {
 const typedEl = document.getElementById('typed');
 if (typedEl) {
   const roles = [
-    'Software Developer.',
-    'Full-Stack Engineer.',
-    'Systems Student.',
-    'API Integration Dev.',
-    '3D Graphics Enthusiast.'
+    'Co-founder & CEO @ Hytrex.',
+    'Full-Stack Developer.',
+    'AI Agents & MCP Servers.',
+    'Clean Architecture.',
+    'Systems Engineering Student.'
   ];
   let ri = 0, ci = 0, deleting = false;
 
@@ -171,20 +171,35 @@ document.querySelectorAll('.reveal').forEach((el, i) => {
   revealObs.observe(el);
 });
 
-/* ---- Contact form ---- */
+/* ---- Contact form ----
+   No hay backend: en vez de fingir un envío, componemos un mailto
+   con los datos del formulario y abrimos el cliente de correo.      */
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
+  const DESTINO = 'juan.medina@hytrex.co';
+
   contactForm.addEventListener('submit', e => {
     e.preventDefault();
+
+    const nombre  = contactForm.name.value.trim();
+    const email   = contactForm.email.value.trim();
+    const asunto  = contactForm.subject.value.trim() || `Contacto desde el portafolio — ${nombre}`;
+    const mensaje = contactForm.message.value.trim();
+
+    const cuerpo = `${mensaje}\n\n—\n${nombre}\n${email}`;
+    const url = `mailto:${DESTINO}`
+      + `?subject=${encodeURIComponent(asunto)}`
+      + `&body=${encodeURIComponent(cuerpo)}`;
+
+    window.location.href = url;
+
     const btn = contactForm.querySelector('button[type="submit"]');
-    btn.textContent = 'Mensaje enviado ✓';
+    const original = btn.textContent;
+    btn.textContent = 'Abriendo tu correo ✓';
     btn.style.opacity = '0.7';
-    btn.disabled = true;
     setTimeout(() => {
-      btn.textContent = 'Enviar mensaje →';
+      btn.textContent = original;
       btn.style.opacity = '1';
-      btn.disabled = false;
-      contactForm.reset();
     }, 3000);
   });
 }
