@@ -777,3 +777,6 @@ input:focus-visible, textarea:focus-visible {
 
 /* La insignia de estado no debe estirarse dentro del flex column de la tarjeta */
 .status { align-self: flex-start; }
+
+/* El placeholder usa display:flex, así que [hidden] necesita ganarle */
+.preview-placeholder[hidden] { display: none !important; }

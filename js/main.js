@@ -171,6 +171,32 @@ document.querySelectorAll('.reveal').forEach((el, i) => {
   revealObs.observe(el);
 });
 
+/* ---- Previews de proyectos ----
+   Cadena de respaldo por cada tarjeta:
+     1. assets/previews/<archivo>  — captura propia, servida desde el repo
+     2. image.thum.io              — captura remota del sitio en vivo
+     3. .preview-placeholder       — franjas + nombre del dominio
+   Así basta con soltar el .jpg en assets/previews/ para que deje de
+   depender de un servicio de terceros; no hay que tocar el HTML.       */
+document.querySelectorAll('.preview-screenshot[data-shot]').forEach(img => {
+  const local  = img.dataset.shot;
+  const live   = img.dataset.live;
+  const remoto = live
+    ? 'https://image.thum.io/get/width/680/crop/382/' + live
+    : null;
+
+  const fallar = () => {
+    if (remoto && img.src !== remoto) { img.src = remoto; return; }
+    // Leer el padre ANTES de quitar la imagen: después queda en null.
+    const ph = img.parentElement && img.parentElement.querySelector('.preview-placeholder');
+    img.remove();
+    if (ph) ph.hidden = false;
+  };
+
+  img.addEventListener('error', fallar);
+  img.src = local;
+});
+
 /* ---- Contact form ----
    No hay backend: en vez de fingir un envío, componemos un mailto
    con los datos del formulario y abrimos el cliente de correo.      */
