@@ -14,7 +14,30 @@ aquí con el nombre exacto.
 | `consultorio.jpg`  | Consultorio Estético | consultorio-estetico-vm.vercel.app      |
 | `sorteosccm.jpg`   | SorteosCCM           | caballoscolombianosymas.com             |
 
-## Cómo generarlas
+## Generarlas con el script
+
+```sh
+npm i -D playwright
+npx playwright install chromium
+node scripts/capturar-previews.mjs
+```
+
+Captura las cuatro de una vez, con el tamaño y la calidad correctos, y
+cierra los banners de cookies que tapen el hero. Si un sitio falla, avisa
+y sigue con los demás — esa tarjeta simplemente sigue usando thum.io.
+
+Para capturar un sitio distinto sin editar el script:
+
+```sh
+node scripts/capturar-previews.mjs sorteosccm.jpg=https://otro-dominio.com
+```
+
+> El repo **no tiene `package.json` a propósito**: Vercel lo despliega como
+> sitio estático, y añadir uno haría que intentara detectar un build. Instala
+> Playwright en local sin comprometerlo al repo, o corre el script desde otra
+> carpeta con `node /ruta/a/capturar-previews.mjs`.
+
+## Generarlas a mano
 
 Las tarjetas recortan a 16/9 con `object-position: top`, así que lo que
 importa es la parte de arriba de la página.
@@ -25,12 +48,13 @@ importa es la parte de arriba de la página.
 - **Encuadre:** viewport de escritorio, sin barras del navegador, con el
   hero visible y los banners de cookies cerrados.
 
-Con Chrome headless:
+Desde el navegador: DevTools → Ctrl+Shift+P → "Capture screenshot", con el
+dispositivo fijado en 1360 × 765.
+
+Con Chrome headless (ojo: escribe **PNG** aunque el archivo diga `.jpg`,
+hay que convertirlo después):
 
 ```sh
-chrome --headless --screenshot=gestek.jpg --window-size=1360,765 \
+chrome --headless --screenshot=gestek.png --window-size=1360,765 \
   --hide-scrollbars https://gestor-eventos-frontend.vercel.app/
 ```
-
-O desde el navegador: DevTools → Ctrl+Shift+P → "Capture screenshot",
-con el dispositivo fijado en 1360 × 765.
