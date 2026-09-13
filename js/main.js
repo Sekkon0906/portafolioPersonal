@@ -130,11 +130,11 @@ if (canvas) {
 const typedEl = document.getElementById('typed');
 if (typedEl) {
   const roles = [
-    'Software Developer.',
-    'Full-Stack Engineer.',
-    'Systems Student.',
-    'API Integration Dev.',
-    '3D Graphics Enthusiast.'
+    'Co-founder & CEO @ Hytrex.',
+    'Full-Stack Developer.',
+    'AI Agents & MCP Servers.',
+    'Clean Architecture.',
+    'Systems Engineering Student.'
   ];
   let ri = 0, ci = 0, deleting = false;
 
@@ -171,20 +171,61 @@ document.querySelectorAll('.reveal').forEach((el, i) => {
   revealObs.observe(el);
 });
 
-/* ---- Contact form ---- */
+/* ---- Previews de proyectos ----
+   Cadena de respaldo por cada tarjeta:
+     1. assets/previews/<archivo>  — captura propia, servida desde el repo
+     2. image.thum.io              — captura remota del sitio en vivo
+     3. .preview-placeholder       — franjas + nombre del dominio
+   Así basta con soltar el .jpg en assets/previews/ para que deje de
+   depender de un servicio de terceros; no hay que tocar el HTML.       */
+document.querySelectorAll('.preview-screenshot[data-shot]').forEach(img => {
+  const local  = img.dataset.shot;
+  const live   = img.dataset.live;
+  const remoto = live
+    ? 'https://image.thum.io/get/width/680/crop/382/' + live
+    : null;
+
+  const fallar = () => {
+    if (remoto && img.src !== remoto) { img.src = remoto; return; }
+    // Leer el padre ANTES de quitar la imagen: después queda en null.
+    const ph = img.parentElement && img.parentElement.querySelector('.preview-placeholder');
+    img.remove();
+    if (ph) ph.hidden = false;
+  };
+
+  img.addEventListener('error', fallar);
+  img.src = local;
+});
+
+/* ---- Contact form ----
+   No hay backend: en vez de fingir un envío, componemos un mailto
+   con los datos del formulario y abrimos el cliente de correo.      */
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
+  const DESTINO = 'juan.medina@hytrex.co';
+
   contactForm.addEventListener('submit', e => {
     e.preventDefault();
+
+    const nombre  = contactForm.name.value.trim();
+    const email   = contactForm.email.value.trim();
+    const asunto  = contactForm.subject.value.trim() || `Contacto desde el portafolio — ${nombre}`;
+    const mensaje = contactForm.message.value.trim();
+
+    const cuerpo = `${mensaje}\n\n—\n${nombre}\n${email}`;
+    const url = `mailto:${DESTINO}`
+      + `?subject=${encodeURIComponent(asunto)}`
+      + `&body=${encodeURIComponent(cuerpo)}`;
+
+    window.location.href = url;
+
     const btn = contactForm.querySelector('button[type="submit"]');
-    btn.textContent = 'Mensaje enviado ✓';
+    const original = btn.textContent;
+    btn.textContent = 'Abriendo tu correo ✓';
     btn.style.opacity = '0.7';
-    btn.disabled = true;
     setTimeout(() => {
-      btn.textContent = 'Enviar mensaje →';
+      btn.textContent = original;
       btn.style.opacity = '1';
-      btn.disabled = false;
-      contactForm.reset();
     }, 3000);
   });
 }
