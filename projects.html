@@ -6,7 +6,7 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23090909'/%3E%3Cpath d='M6 7h5v13a5 5 0 0 1-5 5v-4a1 1 0 0 0 1-1z' fill='%23ede9e0'/%3E%3Crect x='14' y='7' width='12' height='4' fill='%23E10600'/%3E%3Crect x='14' y='14' width='9' height='4' fill='%23E10600'/%3E%3C/svg%3E" />
   <title>Proyectos — Juan Felipe Medina</title>
   <meta name="description" content="Proyectos de Juan Felipe Medina: GESTEK Event OS, Hytrex, Consultorio Estético, SorteosCCM, ViBa y más — con sus enlaces en producción." />
-  <meta name="author" content="Juan Felipe Medina Ospina" />
+  <meta name="author" content="Juan Felipe Medina Orjuela" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Juan Felipe Medina — Full-Stack Developer &amp; Co-founder de Hytrex" />
   <meta property="og:description" content="Proyectos de Juan Felipe Medina: GESTEK Event OS, Hytrex, Consultorio Estético, SorteosCCM, ViBa y más — con sus enlaces en producción." />
@@ -230,6 +230,21 @@
     @media (max-width: 720px) {
       .projects-grid { grid-template-columns: 1fr; }
     }
+    .project-arch {
+      font-family: var(--mono);
+      font-size: 0.66rem;
+      line-height: 1.7;
+      color: var(--white2);
+      border-left: 2px solid var(--border2);
+      padding: 0.35rem 0 0.35rem 0.8rem;
+      margin: 0 0 1rem;
+    }
+    .project-arch b { color: var(--white); font-weight: 700; }
+    .tags-label {
+      display: block; width: 100%;
+      font-family: var(--mono); font-size: 0.58rem; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--gray); margin-bottom: .2rem;
+    }
   </style>
 </head>
 <body>
@@ -282,45 +297,53 @@
         <div class="project-preview">
           <img class="preview-screenshot" alt="GESTEK Event OS preview" loading="lazy"
                data-shot="assets/previews/gestek.jpg"
-               data-live="https://gestor-eventos-frontend.vercel.app/" />
+               data-live="https://gestekeventost.dpdns.org/" />
           <div class="preview-placeholder" hidden>
             <span class="preview-placeholder-icon">◈</span>
-            <span class="preview-placeholder-label">gestor-eventos-frontend.vercel.app</span>
+            <span class="preview-placeholder-label">gestekeventost.dpdns.org</span>
           </div>
-          <a href="https://gestor-eventos-frontend.vercel.app/" target="_blank" rel="noopener" class="project-deploy-badge" style="border-color:rgba(225,6,0,.35);color:var(--accent-soft);">
+          <a href="https://gestekeventost.dpdns.org/" target="_blank" rel="noopener" class="project-deploy-badge" style="border-color:rgba(225,6,0,.35);color:var(--accent-soft);">
             <span class="deploy-dot" style="background:var(--accent);box-shadow:0 0 6px rgba(225,6,0,.6);"></span>En producción
           </a>
         </div>
         <div class="project-body">
-          <div class="project-id">PRJ — 001 · React · Node.js · 2025–2026</div>
-          <span class="status status-prod">Producción · SaaS activo</span>
-          <h3 class="project-title">GESTEK Event OS — Gestión de eventos con IA</h3>
+          <div class="project-id">PRJ — 001 · React · Node.js · 2026 · Develovers Group · Experiencia certificada</div>
+          <span class="status status-prod">Producción · FESTECH Ibagué 2026</span>
+          <h3 class="project-title">GESTEK — Plataforma de eventos de marca blanca</h3>
           <p class="project-desc">
-            SaaS marca blanca end-to-end para eventos: creación con editor visual y 8 plantillas,
-            boletería con QR firmado (JWT) y códigos de respaldo, check-in, pagos MercadoPago
-            directos al organizador, equipos con roles, chat por canales, tareas Kanban, agenda,
-            fidelidad con puntos y analítica de conversión. <strong>Gestbot</strong> — el agente
-            de IA propio — ejecuta +50 acciones reales por lenguaje natural, con failover
-            automático entre Groq, Gemini y Claude, y un <strong>servidor MCP dentro del producto</strong>
-            para que un agente lo opere sin pasar por pantallas. API REST y webhooks con HMAC.
+            Plataforma de marca blanca para organizar eventos de punta a punta: página pública por
+            organizador, boletas con QR firmado (JWT), control de puerta con reingreso y motivos de
+            rechazo, prellenado del registro por cédula, impresión de escarapelas, carné digital,
+            equipos con roles, pagos con Mercado Pago y registro embebible por iframe. Con ella se
+            operó <strong>FESTECH Ibagué 2026</strong> para la Alcaldía de Ibagué: <strong>4.485
+            boletas y 3.334 ingresos en tres días</strong>, con picos de 67 ingresos en 5 minutos por
+            una sola puerta. Un conector OAuth2 (PKCE) + MCP permite operarla desde un asistente de IA.
+          </p>
+          <p class="project-arch">
+            <b>Arquitectura:</b> SPA React 18 + Vite (PWA) → API Express (Node 20) en cPanel →
+            PostgreSQL en Supabase (Auth, Storage, Realtime, RLS). Build en GitHub Actions publicado a
+            una rama <code>deploy</code>. <b>Antes:</b> Vercel + Render (hasta sep. 2026). Salida de
+            Supabase a una base propia en curso.
           </p>
           <div class="project-tags">
+            <span class="tags-label">Herramientas</span>
             <span class="project-tag">React 18 · Vite</span>
-            <span class="project-tag">Express 5</span>
+            <span class="project-tag">Express</span>
             <span class="project-tag">Supabase</span>
             <span class="project-tag">PostgreSQL</span>
-            <span class="project-tag">MCP</span>
-            <span class="project-tag">Claude · Groq · Gemini</span>
-            <span class="project-tag">MercadoPago</span>
-            <span class="project-tag">Web Push</span>
+            <span class="project-tag">cPanel</span>
+            <span class="project-tag">GitHub Actions</span>
+            <span class="project-tag">Sentry</span>
+            <span class="project-tag">MCP · OAuth2</span>
+            <span class="project-tag">Mercado Pago</span>
             <span class="project-tag">Turnstile</span>
-            <span class="project-tag">White-label</span>
+            <span class="project-tag">Playwright</span>
           </div>
           <div class="project-footer">
             <div class="project-links">
-              <a href="https://gestor-eventos-frontend.vercel.app/" target="_blank" rel="noopener" class="project-link">↗ Ver en vivo</a>
+              <a href="https://gestekeventost.dpdns.org/" target="_blank" rel="noopener" class="project-link">↗ Ver en vivo</a>
               <div class="project-link-sep"></div>
-              <a href="https://github.com/Sekkon0906/GestorEventosMarcaBlanca" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
+              <a href="https://github.com/BBMC-S-S-A/gestor-eventos-frontend" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
             </div>
           </div>
         </div>
@@ -384,26 +407,35 @@
           </a>
         </div>
         <div class="project-body">
-          <div class="project-id">PRJ — 003 · Next.js 15 · TypeScript · 2026</div>
+          <div class="project-id">PRJ — 003 · Next.js 15 · TypeScript · 2023–2026 · Experiencia certificada</div>
           <span class="status status-prod">Producción · Cliente real</span>
           <h3 class="project-title">Consultorio Estético — Dra. Julieth Vanessa Medina</h3>
           <p class="project-desc">
-            Plataforma para una clínica de medicina estética en Ibagué: sitio público, agendamiento
-            con disponibilidad por calendario, catálogo de procedimientos, testimonios en video,
-            panel administrativo con analítica y <strong>consentimientos informados firmados
-            digitalmente y exportados a PDF</strong>. Autenticación con Google o correo, multi-idioma
-            y modo oscuro. Actualmente migrando módulos a la nueva estructura Next.js y sumando un
-            agente MCP para que la doctora gestione citas e historias hablando.
+            Plataforma para un consultorio de medicina estética en Ibagué: sitio público bilingüe
+            (es/en), catálogo de procedimientos, agendamiento en línea, cuentas con roles,
+            <strong>consentimiento informado con firma electrónica</strong> guardado en almacenamiento
+            privado, panel administrativo con analítica de ingresos y un <strong>copiloto de IA con
+            servidor MCP</strong> que solo un administrador autoriza y que pide confirmación antes de
+            escribir. Auditorías de seguridad con 4 fallos críticos corregidos y cumplimiento de la
+            Ley 1581 para datos de salud.
+          </p>
+          <p class="project-arch">
+            <b>Arquitectura:</b> Next.js 15 en Vercel → API Express en Railway → PostgreSQL 18 en Neon
+            con SQL directo (sin SDK de proveedor) + archivos en Cloudflare R2. Auth propia: JWT en
+            memoria, refresh rotativo en cookie httpOnly, argon2id y Google OAuth. <b>Antes:</b>
+            Supabase (base, auth y storage) hasta sep. 2026.
           </p>
           <div class="project-tags">
+            <span class="tags-label">Herramientas</span>
             <span class="project-tag">Next.js 15</span>
             <span class="project-tag">React 19</span>
-            <span class="project-tag">TypeScript</span>
-            <span class="project-tag">Tailwind v4</span>
-            <span class="project-tag">Supabase</span>
             <span class="project-tag">Express</span>
-            <span class="project-tag">jsPDF</span>
-            <span class="project-tag">Framer Motion</span>
+            <span class="project-tag">Neon</span>
+            <span class="project-tag">Cloudflare R2</span>
+            <span class="project-tag">Railway</span>
+            <span class="project-tag">Vercel</span>
+            <span class="project-tag">Sentry</span>
+            <span class="project-tag">Anthropic · MCP</span>
             <span class="project-tag">next-intl</span>
           </div>
           <div class="project-footer">
@@ -473,21 +505,31 @@
           </a>
         </div>
         <div class="project-body">
-          <div class="project-id">PRJ — 005 · Angular 17 · TypeScript · 2025</div>
+          <div class="project-id">PRJ — 005 · Angular 21 · TypeScript · 2026</div>
           <span class="status status-prod">Producción · Dominio propio</span>
           <h3 class="project-title">SorteosCCM — Caballos Colombianos y Más</h3>
           <p class="project-desc">
             Plataforma de rifas online para la comunidad del Caballo Colombiano de Paso, en
-            producción bajo dominio propio. Arquitectura Feature-Sliced + Clean Architecture sobre
-            Angular 17 standalone con SSR, Supabase PostgreSQL y Edge Functions serverless.
+            producción bajo dominio propio: paquetes de boletas, doble modo de sorteo, reserva de
+            números, comprobante de pago por WhatsApp con confirmación del administrador y
+            liberación automática de reservas vencidas.
+          </p>
+          <p class="project-arch">
+            <b>Arquitectura:</b> SPA Angular 21 servida como estático en Hostinger → Supabase:
+            PostgreSQL con RLS y funciones RPC, Auth, Edge Functions en Deno y <code>pg_cron</code>;
+            correo con Resend. <b>Antes:</b> Angular 17 con SSR y checkout de Stripe, reemplazados
+            por la confirmación manual del pago.
           </p>
           <div class="project-tags">
-            <span class="project-tag">Angular 17</span>
+            <span class="tags-label">Herramientas</span>
+            <span class="project-tag">Angular 21</span>
             <span class="project-tag">TypeScript</span>
             <span class="project-tag">Supabase</span>
-            <span class="project-tag">PostgreSQL</span>
-            <span class="project-tag">SSR</span>
-            <span class="project-tag">Clean Arch</span>
+            <span class="project-tag">PostgreSQL · RLS</span>
+            <span class="project-tag">Edge Functions</span>
+            <span class="project-tag">pg_cron</span>
+            <span class="project-tag">Resend</span>
+            <span class="project-tag">Hostinger</span>
           </div>
           <div class="project-footer">
             <div class="project-links">
@@ -543,20 +585,21 @@
             <span class="preview-placeholder-icon">✉</span>
             <span class="preview-placeholder-label">Microservicio · Render</span>
           </div>
-          <span class="project-deploy-badge">
-            <span class="deploy-dot"></span>En producción
+          <span class="project-deploy-badge no-deploy-badge">
+            <span class="deploy-dot"></span>Sin uso en producción
           </span>
         </div>
         <div class="project-body">
           <div class="project-id">PRJ — 007 · Node.js · Docker · 2026</div>
-          <span class="status status-prod">Producción · Infra de GESTEK</span>
+          <span class="status status-dev">Prototipo · GESTEK</span>
           <h3 class="project-title">GESTEK Mail — Microservicio de correo</h3>
           <p class="project-desc">
             Servicio independiente que renderiza y envía las plantillas de correo diseñadas dentro
             de GESTEK. El backend delega vía clave compartida (<code>x-gestek-key</code>) y el
             servicio resuelve plantilla + entrega SMTP. Campañas segmentadas por equipo o tipo de
             boleta, healthcheck <code>/healthz</code> y diagnóstico SMTP para evitar bucles de
-            reinicio en Render cuando el proveedor de correo falla.
+            reinicio en Render cuando el proveedor de correo falla. Hoy GESTEK envía el correo desde su
+            propio backend (SMTP con reparto entre buzones), así que este servicio quedó como prototipo.
           </p>
           <div class="project-tags">
             <span class="project-tag">Node.js</span>
@@ -575,40 +618,145 @@
       </div>
 
       <!-- ═══ PRJ 008 — DevUP ═══ -->
-      <div class="project-card reveal" data-tags="dev">
+      <div class="project-card reveal" data-tags="dev ia">
         <div class="project-preview">
           <div class="preview-placeholder">
             <span class="preview-placeholder-icon">⬢</span>
-            <span class="preview-placeholder-label">En construcción</span>
+            <span class="preview-placeholder-label">devup.hytrex.co</span>
           </div>
           <span class="project-deploy-badge no-deploy-badge">
-            <span class="deploy-dot"></span>Sin deploy público
+            <span class="deploy-dot"></span>En desarrollo · uso interno
           </span>
         </div>
         <div class="project-body">
-          <div class="project-id">PRJ — 008 · Next.js · PL/pgSQL · 2026</div>
-          <span class="status status-dev">En desarrollo</span>
-          <h3 class="project-title">DevUP — Workspace de control de ventas</h3>
+          <div class="project-id">PRJ — 008 · Fastify · Next.js 15 · 2026</div>
+          <span class="status status-dev">En desarrollo · Lo usa el equipo de GESTEK</span>
+          <h3 class="project-title">DevUP — Centro de mando para equipos de software</h3>
           <p class="project-desc">
-            Plataforma de espacio de trabajo para control comercial: Next.js sobre Supabase, con el
-            modelo de datos versionado en migraciones PL/pgSQL. En desarrollo activo.
+            Espacio de trabajo para equipos de desarrollo: canales, voz y video cifrados de extremo a
+            extremo (malla WebRTC), tareas, ventas, bóveda de credenciales y un <strong>servidor MCP</strong>
+            para que agentes de IA trabajen directamente sobre el tablero. Cada organización queda
+            aislada en la base con Row Level Security, con pruebas de fugas entre organizaciones en CI.
+          </p>
+          <p class="project-arch">
+            <b>Arquitectura:</b> monorepo npm → API Fastify + WebSocket propio en Railway → PostgreSQL 17
+            con RLS (rol de aplicación sin privilegios de dueño) y almacenamiento S3/MinIO; web Next.js 15
+            en Cloudflare Workers. Docker para el entorno local y migraciones con checksum.
           </p>
           <div class="project-tags">
-            <span class="project-tag">Next.js</span>
-            <span class="project-tag">TypeScript</span>
-            <span class="project-tag">Supabase</span>
-            <span class="project-tag">PL/pgSQL</span>
-            <span class="project-tag">Migraciones</span>
+            <span class="tags-label">Herramientas</span>
+            <span class="project-tag">Fastify</span>
+            <span class="project-tag">Next.js 15</span>
+            <span class="project-tag">PostgreSQL 17 · RLS</span>
+            <span class="project-tag">WebRTC</span>
+            <span class="project-tag">WebSocket</span>
+            <span class="project-tag">MCP</span>
+            <span class="project-tag">Docker</span>
+            <span class="project-tag">Railway</span>
+            <span class="project-tag">Cloudflare Workers</span>
+            <span class="project-tag">MinIO · S3</span>
           </div>
           <div class="project-footer">
             <div class="project-links">
-              <a href="https://github.com/Sekkon0906/DevUP" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
+              <a href="https://github.com/BBMC-S-S-A/DevUP" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- ═══ PRJ 009 — Piel Canela Store ═══ -->
+      <!-- ═══ PRJ 009 — Lázaro Cloud ═══ -->
+      <div class="project-card reveal" data-tags="dev">
+        <div class="project-preview">
+          <div class="preview-placeholder">
+            <span class="preview-placeholder-icon">◇</span>
+            <span class="preview-placeholder-label">lz-landing.medinapipe123.workers.dev</span>
+          </div>
+          <a href="https://lz-landing.medinapipe123.workers.dev" target="_blank" rel="noopener" class="project-deploy-badge">
+            <span class="deploy-dot"></span>MVP en demo
+          </a>
+        </div>
+        <div class="project-body">
+          <div class="project-id">PRJ — 009 · TypeScript · .NET · 2026</div>
+          <span class="status status-dev">MVP · Cliente real</span>
+          <h3 class="project-title">Lázaro Cloud — SaaS modular para Lázaro Software</h3>
+          <p class="project-desc">
+            Propuesta técnica de 8 módulos y desarrollo del MVP para Lázaro Software, empresa de
+            Ibagué con 20 años en POS/ERP y más de 45 clientes de gastronomía: inicio de sesión propio
+            con 2FA y licencias firmadas, domicilios, sitios web por negocio, soporte con agentes y un
+            servicio Edge en .NET para los locales. Más de 1.500 pruebas automatizadas y 29 decisiones
+            de arquitectura documentadas.
+          </p>
+          <p class="project-arch">
+            <b>Arquitectura:</b> Cloudflare Workers + Hono (cuentas con PBKDF2, CSRF, 2FA, JWKS y licencias
+            ES256/Ed25519; domicilios; sitios) y landing Next.js 16 exportada como estático → Neon PostgreSQL.
+            Soporte en Next.js sobre Render. Servicio Edge en C#/.NET como servicio de Windows con órdenes
+            firmadas. CI en GitHub Actions.
+          </p>
+          <div class="project-tags">
+            <span class="tags-label">Herramientas</span>
+            <span class="project-tag">Cloudflare Workers</span>
+            <span class="project-tag">Hono</span>
+            <span class="project-tag">Next.js 16</span>
+            <span class="project-tag">Neon</span>
+            <span class="project-tag">Render</span>
+            <span class="project-tag">.NET · C#</span>
+            <span class="project-tag">GitHub Actions</span>
+            <span class="project-tag">Tailwind v4</span>
+            <span class="project-tag">Motion</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-links">
+              <a href="https://lz-landing.medinapipe123.workers.dev" target="_blank" rel="noopener" class="project-link">↗ Ver demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ PRJ 010 — Ablaze ═══ -->
+      <div class="project-card reveal" data-tags="dev">
+        <div class="project-preview">
+          <div class="preview-placeholder">
+            <span class="preview-placeholder-icon">△</span>
+            <span class="preview-placeholder-label">Local · despliegue pendiente</span>
+          </div>
+          <span class="project-deploy-badge no-deploy-badge">
+            <span class="deploy-dot"></span>En desarrollo
+          </span>
+        </div>
+        <div class="project-body">
+          <div class="project-id">PRJ — 010 · Expo · TypeScript · 2026</div>
+          <span class="status status-dev">En desarrollo</span>
+          <h3 class="project-title">Ablaze — PWA de entrenamiento offline-first</h3>
+          <p class="project-desc">
+            Registro de entrenamiento que cruza la semana del usuario con su gimnasio y representa la
+            constancia con una llama. Funciona sin conexión, busca sin tildes en un catálogo de 136
+            ejercicios y sugiere con un motor de reglas determinista, sin modelo de lenguaje.
+          </p>
+          <p class="project-arch">
+            <b>Arquitectura:</b> Expo Router con salida web + React 19 → SQLite WASM sobre OPFS como fuente
+            de verdad ("el teléfono manda, la nube copia") → API Express 5 + Zod → PostgreSQL como copia.
+            Esquema en Drizzle para los dos dialectos, verificado con <code>db:check</code>.
+          </p>
+          <div class="project-tags">
+            <span class="tags-label">Herramientas</span>
+            <span class="project-tag">Expo</span>
+            <span class="project-tag">React 19</span>
+            <span class="project-tag">SQLite WASM · OPFS</span>
+            <span class="project-tag">Express 5</span>
+            <span class="project-tag">Zod</span>
+            <span class="project-tag">Drizzle</span>
+            <span class="project-tag">PostgreSQL</span>
+            <span class="project-tag">PWA</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-links">
+              <a href="https://github.com/BBMC-S-S-A/Ablaze" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ PRJ 011 — Piel Canela Store ═══ -->
       <div class="project-card reveal" data-tags="dev">
         <div class="project-preview">
           <div class="preview-placeholder">
@@ -620,7 +768,7 @@
           </span>
         </div>
         <div class="project-body">
-          <div class="project-id">PRJ — 009 · Vue 3 · Node.js · 2026</div>
+          <div class="project-id">PRJ — 011 · Vue 3 · Node.js · 2026</div>
           <span class="status status-dev">Público · En desarrollo</span>
           <h3 class="project-title">Piel Canela Store — Inventario para boutique</h3>
           <p class="project-desc">
@@ -643,7 +791,7 @@
         </div>
       </div>
 
-      <!-- ═══ PRJ 010 — Ardy-IA ═══ -->
+      <!-- ═══ PRJ 012 — Ardy-IA ═══ -->
       <div class="project-card reveal" data-tags="ia">
         <div class="project-preview">
           <div class="preview-placeholder">
@@ -655,7 +803,7 @@
           </span>
         </div>
         <div class="project-body">
-          <div class="project-id">PRJ — 010 · Python · 2025</div>
+          <div class="project-id">PRJ — 012 · Python · 2025</div>
           <span class="status status-live">Público · 1 fork</span>
           <h3 class="project-title">Ardy-IA — Aprendizaje de idiomas con IA local</h3>
           <p class="project-desc">
@@ -679,7 +827,7 @@
         </div>
       </div>
 
-      <!-- ═══ PRJ 011 — Walnut / Ardys ═══ -->
+      <!-- ═══ PRJ 013 — Walnut / Ardys ═══ -->
       <div class="project-card reveal" data-tags="open">
         <div class="project-preview">
           <div class="preview-placeholder">
@@ -691,7 +839,7 @@
           </span>
         </div>
         <div class="project-body">
-          <div class="project-id">PRJ — 011 · React · Node.js · 2025</div>
+          <div class="project-id">PRJ — 013 · React · Node.js · 2025</div>
           <span class="status status-open">Abierto a venta o continuación</span>
           <h3 class="project-title">Walnut — Wallet universitaria gamificada</h3>
           <p class="project-desc">
@@ -718,7 +866,7 @@
         </div>
       </div>
 
-      <!-- ═══ PRJ 012 — CoffeeOps ═══ -->
+      <!-- ═══ PRJ 014 — CoffeeOps ═══ -->
       <div class="project-card reveal" data-tags="open">
         <div class="project-preview">
           <div class="preview-placeholder">
@@ -730,7 +878,7 @@
           </span>
         </div>
         <div class="project-body">
-          <div class="project-id">PRJ — 012 · Node.js · MongoDB · 2025</div>
+          <div class="project-id">PRJ — 014 · Node.js · MongoDB · 2025</div>
           <span class="status status-open">Abierto a venta o continuación</span>
           <h3 class="project-title">CoffeeOps — Operación cafetera</h3>
           <p class="project-desc">
