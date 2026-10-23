@@ -195,7 +195,7 @@
           <li>JWT-signed QR tickets, door control with re-entry and rejection reasons, registration prefilled by national ID, badge printing, team roles, Mercado Pago payments and an embeddable iframe registration widget.</li>
           <li>The platform ran <strong>FESTECH Ibagué 2026</strong> (City of Ibagué, Sep. 17–19): 4,485 tickets issued, 3,334 check-ins, 1,555 on the peak day and bursts of 67 entries in 5 minutes through a single door.</li>
           <li>Fixed a race condition in capacity counting with atomic PostgreSQL counters, and moved JWT verification local to cut over 100,000 daily calls to the auth provider.</li>
-          <li>Moved off Render and Vercel to a self-managed server (cPanel) with GitHub Actions builds; built an OAuth2 (PKCE) + MCP connector so an AI assistant can operate the platform.</li>
+          <li>Moved off Render and Vercel to a self-managed server (cPanel) with GitHub Actions builds; built an OAuth2 (PKCE) + MCP connector so an AI assistant can operate the platform. 1,800+ automated tests across API and web.</li>
           <li>Live: <a href="https://gestekeventost.dpdns.org/">gestekeventost.dpdns.org</a></li>
         </ul>
       </div>
@@ -210,9 +210,9 @@
       <div class="entry-body">
         <ul>
           <li>Owned analysis, design, development, launch and maintenance: public site, procedure catalog, online booking, role-based accounts, digitally signed informed consent, admin panel and revenue analytics.</li>
-          <li>Full migration off Supabase: PostgreSQL on Neon with plain SQL, files on Cloudflare R2 (consents in a private bucket), Express API on Railway and Next.js on Vercel, for about USD 5/month.</li>
+          <li>Full migration off Supabase: PostgreSQL on Neon with plain SQL, files on Cloudflare R2 (consents in a private bucket), Express API on Railway and Next.js 16 on Vercel, for about USD 5/month.</li>
           <li>Custom authentication: short-lived in-memory JWT, rotating refresh token in an httpOnly cookie, argon2id and Google OAuth.</li>
-          <li>AI copilot (Anthropic) and an OAuth-protected MCP server that requires human confirmation before writes. Security audits with 4 critical issues fixed, CSP, CI and compliance with Colombian health-data law (Ley 1581).</li>
+          <li>AI copilot (Anthropic) to edit content by chat or voice, and a security audit with 4 critical issues fixed. In integration: an OAuth-protected MCP server with human confirmation, blocking CSP with CI, and health-data consent under Colombian law (Ley 1581).</li>
           <li>Live: <a href="https://consultorio-estetico-vm.vercel.app/">consultorio-estetico-vm.vercel.app</a> — Code: <a href="https://github.com/Sekkon0906/consultorioEstetico-vm">github.com/Sekkon0906/consultorioEstetico-vm</a></li>
         </ul>
       </div>
