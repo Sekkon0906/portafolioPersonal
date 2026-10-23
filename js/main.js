@@ -133,8 +133,8 @@ if (typedEl) {
     'Co-founder & CEO @ Hytrex.',
     'Full-Stack Developer.',
     'AI Agents & MCP Servers.',
-    'Clean Architecture.',
-    'Systems Engineering Student.'
+    'Neon · Supabase · Cloudflare · Docker.',
+    'Ready to hire. Eager to learn.'
   ];
   let ri = 0, ci = 0, deleting = false;
 
