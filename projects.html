@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23090909'/%3E%3Cpath d='M6 7h5v13a5 5 0 0 1-5 5v-4a1 1 0 0 0 1-1z' fill='%23ede9e0'/%3E%3Crect x='14' y='7' width='12' height='4' fill='%23E10600'/%3E%3Crect x='14' y='14' width='9' height='4' fill='%23E10600'/%3E%3C/svg%3E" />
   <title>Proyectos — Juan Felipe Medina</title>
-  <meta name="description" content="Proyectos de Juan Felipe Medina: GESTEK Event OS, Hytrex, Consultorio Estético, SorteosCCM, ViBa y más — con sus enlaces en producción." />
+  <meta name="description" content="Proyectos de Juan Felipe Medina: GESTEK Event OS, Hytrex, Consultorio Estético, SorteosCCM, Lázaro Cloud, DevUP y más, con su arquitectura y enlaces en producción." />
   <meta name="author" content="Juan Felipe Medina Orjuela" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Juan Felipe Medina — Full-Stack Developer &amp; Co-founder de Hytrex" />
-  <meta property="og:description" content="Proyectos de Juan Felipe Medina: GESTEK Event OS, Hytrex, Consultorio Estético, SorteosCCM, ViBa y más — con sus enlaces en producción." />
+  <meta property="og:description" content="Proyectos de Juan Felipe Medina: GESTEK Event OS, Hytrex, Consultorio Estético, SorteosCCM, Lázaro Cloud, DevUP y más, con su arquitectura y enlaces en producción." />
   <meta property="og:url" content="https://portafoliojmo.vercel.app/projects.html" />
   <meta property="og:image" content="https://portafoliojmo.vercel.app/assets/fotoCV.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -796,7 +796,7 @@
         <div class="project-preview">
           <div class="preview-placeholder">
             <span class="preview-placeholder-icon">⬡</span>
-            <span class="preview-placeholder-label">Modelos locales · Ollama</span>
+            <span class="preview-placeholder-label">FastAPI · Groq · RAG</span>
           </div>
           <span class="project-deploy-badge no-deploy-badge">
             <span class="deploy-dot"></span>Sin deploy público
@@ -804,20 +804,26 @@
         </div>
         <div class="project-body">
           <div class="project-id">PRJ — 012 · Python · 2025</div>
-          <span class="status status-live">Público · 1 fork</span>
-          <h3 class="project-title">Ardy-IA — Aprendizaje de idiomas con IA local</h3>
+          <span class="status status-live">Público · Prototipo</span>
+          <h3 class="project-title">Ardy-IA — Tutor de idiomas con IA</h3>
           <p class="project-desc">
-            Plataforma de aprendizaje de idiomas construida sobre <strong>modelos locales con
-            Ollama</strong>: detecta el idioma del usuario, corrige errores en tiempo real, genera
-            voz e imágenes para práctica visual y se adapta al nivel y progreso de cada persona,
-            sin depender de una API externa.
+            Tutor conversacional para practicar español, inglés y francés: corrige dentro de la
+            conversación, recuerda la sesión, busca en la web para responder con contexto y acepta
+            voz como entrada. La respuesta se lee en voz alta desde el navegador.
+          </p>
+          <p class="project-arch">
+            <b>Arquitectura:</b> página HTML → API FastAPI → Groq (Llama 3.1 8B) con un prompt de
+            tutor por idioma; RAG con búsqueda web guardada en ChromaDB (sentence-transformers);
+            memoria de conversación en SQLite; voz con faster-whisper local (opcional).
           </p>
           <div class="project-tags">
+            <span class="tags-label">Herramientas</span>
             <span class="project-tag">Python</span>
-            <span class="project-tag">Ollama</span>
-            <span class="project-tag">Whisper</span>
-            <span class="project-tag">Voice AI</span>
-            <span class="project-tag">Image Gen</span>
+            <span class="project-tag">FastAPI</span>
+            <span class="project-tag">Groq · Llama 3.1</span>
+            <span class="project-tag">ChromaDB</span>
+            <span class="project-tag">SQLite</span>
+            <span class="project-tag">faster-whisper</span>
           </div>
           <div class="project-footer">
             <div class="project-links">
@@ -827,71 +833,38 @@
         </div>
       </div>
 
-      <!-- ═══ PRJ 013 — Walnut / Ardys ═══ -->
-      <div class="project-card reveal" data-tags="open">
-        <div class="project-preview">
-          <div class="preview-placeholder">
-            <span class="preview-placeholder-icon">◈</span>
-            <span class="preview-placeholder-label">BBMC S.S.A · Repo privado</span>
-          </div>
-          <span class="project-deploy-badge no-deploy-badge">
-            <span class="deploy-dot"></span>Desarrollo en pausa
-          </span>
-        </div>
-        <div class="project-body">
-          <div class="project-id">PRJ — 013 · React · Node.js · 2025</div>
-          <span class="status status-open">Abierto a venta o continuación</span>
-          <h3 class="project-title">Walnut — Wallet universitaria gamificada</h3>
-          <p class="project-desc">
-            Billetera digital gamificada para estudiantes, docentes y administradores, desarrollada
-            en <strong>BBMC S.S.A</strong>. El sistema de puntos <em>Ardys</em> impulsa la
-            participación en eventos y las recompensas de todo el campus. Motor de puntos y flujo de
-            recompensas terminados; el repositorio principal es privado y el código completo se
-            comparte bajo acuerdo.
-          </p>
-          <div class="project-tags">
-            <span class="project-tag">React</span>
-            <span class="project-tag">Node.js</span>
-            <span class="project-tag">PostgreSQL</span>
-            <span class="project-tag">Docker</span>
-            <span class="project-tag">Gamificación</span>
-          </div>
-          <div class="project-footer">
-            <div class="project-links">
-              <a href="https://github.com/Sekkon0906/wallnut" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
-              <div class="project-link-sep"></div>
-              <a href="mailto:juan.medina@hytrex.co?subject=Walnut%20%2F%20Ardys" class="project-link">↗ Hablemos</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ═══ PRJ 014 — CoffeeOps ═══ -->
+      <!-- ═══ PRJ 013 — CoffeeOps ═══ -->
       <div class="project-card reveal" data-tags="open">
         <div class="project-preview">
           <div class="preview-placeholder">
             <span class="preview-placeholder-icon">☕</span>
-            <span class="preview-placeholder-label">SaaS · Repositorio público</span>
+            <span class="preview-placeholder-label">Repositorio público</span>
           </div>
           <span class="project-deploy-badge no-deploy-badge">
             <span class="deploy-dot"></span>Desarrollo en pausa
           </span>
         </div>
         <div class="project-body">
-          <div class="project-id">PRJ — 014 · Node.js · MongoDB · 2025</div>
+          <div class="project-id">PRJ — 013 · React · Express · MySQL · 2025</div>
           <span class="status status-open">Abierto a venta o continuación</span>
-          <h3 class="project-title">CoffeeOps — Operación cafetera</h3>
+          <h3 class="project-title">CoffeeOps — Trazabilidad y calidad de café</h3>
           <p class="project-desc">
-            SaaS para cafeterías y productores de café: centraliza inventario, trazabilidad de
-            lotes, proveedores, documentos, equipo y analítica en tiempo real. Inventario y
-            trazabilidad entregados; el desarrollo está en pausa y abierto a ofertas.
+            Sistema para un procesador de café: maestro de lotes, proveedores, trazabilidad en 7
+            etapas (ingreso, trilla, tueste, cata, empaque, despacho e inspección) con un PDF por
+            etapa y otro completo, inventario por movimientos y ranking de calidad de taza por lote
+            y proveedor. El desarrollo está en pausa y abierto a ofertas.
+          </p>
+          <p class="project-arch">
+            <b>Arquitectura:</b> SPA React 19 + Vite → API REST Express → MySQL; reportes en PDF
+            generados en el servidor con pdfkit.
           </p>
           <div class="project-tags">
-            <span class="project-tag">Node.js</span>
+            <span class="tags-label">Herramientas</span>
+            <span class="project-tag">React 19</span>
+            <span class="project-tag">Vite</span>
             <span class="project-tag">Express</span>
-            <span class="project-tag">MongoDB</span>
-            <span class="project-tag">SaaS</span>
-            <span class="project-tag">Trazabilidad</span>
+            <span class="project-tag">MySQL</span>
+            <span class="project-tag">pdfkit</span>
           </div>
           <div class="project-footer">
             <div class="project-links">
