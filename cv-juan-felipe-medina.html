@@ -149,11 +149,12 @@
     @page { margin: 22mm 20mm; }
   </style>
 </head>
-<body>
+<body lang="en">
 
   <!-- ══════════════ HEADER ══════════════ -->
   <header>
     <h1>Juan Felipe Medina Orjuela</h1>
+    <div class="entry-sub" style="margin-bottom:4px;">Full-Stack Software Developer</div>
     <div class="contact-line">
       <span>Ibagué, Colombia</span>
       <span>+57 316 048 0641</span>
@@ -167,66 +168,96 @@
 
   <!-- ══════════════ SUMMARY ══════════════ -->
   <section>
-    <div class="section-title">Profile</div>
+    <div class="section-title">Summary</div>
     <div class="entry-body">
+      <p style="margin-bottom:4px;">Full-stack software developer with 3+ years building personal and client products (since 2023), from analysis and design to deployment and maintenance. I work with supervised agentic development, build automations and AI agents that take real actions, choose infrastructure for cost and portability (I have migrated projects off Supabase, Render and Vercel) and document architecture decisions. Ready to join a team and eager to keep learning.</p>
       <ul>
-        <li><strong>3+ years</strong> building personal and client projects (since 2023), from analysis and design to deployment and maintenance.</li>
-        <li><strong>4 projects in production</strong> with real users. The largest ran FESTECH Ibagué 2026 for the City of Ibagué: 4,485 tickets and 3,334 attendees through access control over three days.</li>
-        <li><strong>Certified experience:</strong> Develovers Group S.A.S. (Mar–Jul 2026) and Consultorio Estético Dra. Julieth Medina (2023–2026). Co-founder and CEO of Hytrex.</li>
-        <li><strong>English B2.</strong></li>
-        <li><strong>Worth knowing:</strong> ready to join a team and eager to keep learning. I work with supervised agentic development, build automations and AI agents that take real actions (including RAG), choose infrastructure for cost and portability and document architecture decisions.</li>
+        <li><strong>Co-founder and CEO of Hytrex</strong> (2026 – present, <a href="https://hytrex-landing.vercel.app/" target="_blank">hytrex-landing.vercel.app</a>): a software development group that turns business problems into products, from strategy and design to engineering and delivery. I lead technical direction and architecture.</li>
+        <li><strong>Local and paid AI:</strong> I work daily with paid models (Claude, OpenAI, Gemini) and local ones (Ollama running qwen3 on my own GPU), and I build tool-using agents and MCP servers.</li>
+        <li><strong>My AI development environment:</strong> I feed it with my own Claude Code skills (architecture, UX, model choice, legal radar and memory) used across all my repos, and with an Obsidian vault of about 400 notes that works as a knowledge graph: a map per project and a summary and importance level per note, so the agent reads only what it needs. Every session leaves its log and decisions, and audits run as multi-agent workflows.</li>
+        <li><strong>Cloud training:</strong> AWS Academy Graduate (Cloud Foundations and Cloud Developing) and 6 Google Cloud badges. <strong>Languages:</strong> Spanish native, English B2.</li>
       </ul>
+    </div>
+  </section>
+
+  <!-- ══════════════ STACK & TOOLS ══════════════ -->
+  <section>
+    <div class="section-title">Stack &amp; tools</div>
+
+    <div class="entry-title" style="font-style:italic;margin-bottom:4px;">Core stack</div>
+    <div class="skills-grid" style="margin-bottom:10px;">
+      <span class="skill-cat">Languages</span>
+      <span>TypeScript, JavaScript, SQL, Python</span>
+
+      <span class="skill-cat">Frontend</span>
+      <span>React 18/19, Next.js 15/16, Tailwind CSS, PWA</span>
+
+      <span class="skill-cat">Backend</span>
+      <span>Node.js (Express, Fastify, Hono), REST, JWT, OAuth2 / PKCE</span>
+
+      <span class="skill-cat">Databases</span>
+      <span>PostgreSQL (plain SQL, RLS, migrations) on Neon, Supabase and Railway</span>
+
+      <span class="skill-cat">AI &amp; agents</span>
+      <span>Claude (Claude Code), Ollama (local models), custom skills, multi-agent workflows, tool-using agents, MCP servers, Obsidian knowledge graph, supervised agentic development</span>
+
+      <span class="skill-cat">Cloud &amp; deployment</span>
+      <span>Railway, Vercel, Cloudflare (Workers, R2), GitHub Actions</span>
+    </div>
+
+    <div class="entry-title" style="font-style:italic;margin-bottom:4px;">Other tools I have used</div>
+    <div class="skills-grid">
+      <span class="skill-cat">Frontend &amp; mobile</span>
+      <span>Angular 17/21, Vite, Expo / React Native, NativeWind, three.js</span>
+
+      <span class="skill-cat">Backend &amp; data</span>
+      <span>FastAPI, WebSocket, WebRTC, Better Auth, Zod, Drizzle ORM, MySQL, SQLite, ChromaDB</span>
+
+      <span class="skill-cat">AI &amp; automation</span>
+      <span>OpenAI (GPT, Codex), Gemini, Groq (Llama), Whisper, LangChain, n8n, RAG (embeddings, web search), Tesseract.js (OCR)</span>
+
+      <span class="skill-cat">Infrastructure</span>
+      <span>Docker, Render, cPanel, Hostinger, Cloudflare Turnstile, Sentry · AWS and Google Cloud (training)</span>
+
+      <span class="skill-cat">Payments &amp; messaging</span>
+      <span>Mercado Pago, Stripe, Wompi, Resend, SMTP, Web Push, Whapi.cloud</span>
+
+      <span class="skill-cat">Other languages</span>
+      <span>Java, C#</span>
     </div>
   </section>
 
   <!-- ══════════════ EXPERIENCE ══════════════ -->
   <section>
-    <div class="section-title">Certified Experience</div>
+    <div class="section-title">Experience</div>
 
     <div class="entry">
       <div class="entry-header">
-        <span class="entry-title">Software Developer — Develovers Group S.A.S.</span>
-        <span class="entry-date">Mar. 2026 – Jul. 2026</span>
+        <span class="entry-title">GESTEK — White-label event platform</span>
+        <span class="entry-date">Mar 2026 – Jul 2026</span>
       </div>
-      <div class="entry-sub">GESTEK, white-label event management platform &nbsp;·&nbsp; Ibagué, Colombia &nbsp;·&nbsp; Certified</div>
+      <div class="entry-sub">Develovers Group S.A.S. &nbsp;·&nbsp; Certified &nbsp;·&nbsp; React 18 · Vite (PWA) · Express 5 · Supabase (PostgreSQL) · cPanel · GitHub Actions · Sentry · Mercado Pago</div>
       <div class="entry-body">
         <ul>
-          <li>Technical analysis, design, implementation and integration of features using supervised agentic development workflows, shaping the architecture around the product's growth needs.</li>
-          <li>JWT-signed QR tickets, door control with re-entry and rejection reasons, registration prefilled by national ID, badge printing, team roles, Mercado Pago payments and an embeddable iframe registration widget.</li>
-          <li>The platform ran <strong>FESTECH Ibagué 2026</strong> (City of Ibagué, Sep. 17–19): 4,485 tickets issued, 3,334 check-ins, 1,555 on the peak day and bursts of 67 entries in 5 minutes through a single door.</li>
-          <li>Fixed a race condition in capacity counting with atomic PostgreSQL counters, and moved JWT verification local to cut over 100,000 daily calls to the auth provider.</li>
-          <li>Moved off Render and Vercel to a self-managed server (cPanel) with GitHub Actions builds; built an OAuth2 (PKCE) + MCP connector so an AI assistant can operate the platform. 1,800+ automated tests across API and web.</li>
-          <li>Live: <a href="https://gestekeventost.dpdns.org/">gestekeventost.dpdns.org</a></li>
+          <li><strong>Key highlight — FESTECH Ibagué 2026:</strong> GESTEK ran the entire process of the City of Ibagué's event (Sep 17–19), from registration and ticketing to door access control: 4,485 tickets, 3,334 check-ins, 1,555 people on the peak day and bursts of 67 entries in 5 minutes through a single door.</li>
+          <li><strong>My role:</strong> technical analysis, design, implementation and integration of features using supervised agentic development workflows, shaping the architecture around the product's growth needs.</li>
+          <li>JWT-signed QR tickets, door control with re-entry and rejection reasons, registration prefilled by national ID, badge printing, team roles, payments and an embeddable iframe registration widget.</li>
+          <li>Fixed a capacity race condition with atomic PostgreSQL counters, moved JWT verification local to avoid 100,000+ daily calls, migrated from Render and Vercel to cPanel with GitHub Actions builds, and built an OAuth2 (PKCE) + MCP connector. 1,800+ automated tests.</li>
         </ul>
       </div>
     </div>
 
     <div class="entry">
       <div class="entry-header">
-        <span class="entry-title">Full-Stack Developer — Consultorio Estético Dra. Julieth Medina</span>
+        <span class="entry-title">Consultorio Estético Dra. Julieth Medina — Clinical platform</span>
         <span class="entry-date">2023 – 2026</span>
       </div>
-      <div class="entry-sub">Clinical web platform in production &nbsp;·&nbsp; Ibagué, Colombia &nbsp;·&nbsp; Certified</div>
+      <div class="entry-sub">Certified &nbsp;·&nbsp; Next.js 16 · Express · PostgreSQL on Neon · Cloudflare R2 · Railway · Vercel · Anthropic · <a href="https://consultorio-estetico-vm.vercel.app/" target="_blank" style="color:var(--mid);">consultorio-estetico-vm.vercel.app</a></div>
       <div class="entry-body">
         <ul>
-          <li>Owned analysis, design, development, launch and maintenance: public site, procedure catalog, online booking, role-based accounts, digitally signed informed consent, admin panel and revenue analytics.</li>
-          <li>Full migration off Supabase: PostgreSQL on Neon with plain SQL, files on Cloudflare R2 (consents in a private bucket), Express API on Railway and Next.js 16 on Vercel, for about USD 5/month.</li>
-          <li>Custom authentication: short-lived in-memory JWT, rotating refresh token in an httpOnly cookie, argon2id and Google OAuth.</li>
-          <li>AI copilot (Anthropic) to edit content by chat or voice, and a security audit with 4 critical issues fixed. In integration: an OAuth-protected MCP server with human confirmation, blocking CSP with CI, and health-data consent under Colombian law (Ley 1581).</li>
-          <li>Live: <a href="https://consultorio-estetico-vm.vercel.app/">consultorio-estetico-vm.vercel.app</a> — Code: <a href="https://github.com/Sekkon0906/consultorioEstetico-vm">github.com/Sekkon0906/consultorioEstetico-vm</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-title">Co-founder &amp; Chief Executive Officer — Hytrex</span>
-        <span class="entry-date">2026 – Present</span>
-      </div>
-      <div class="entry-sub">Software development group &nbsp;·&nbsp; Colombia</div>
-      <div class="entry-body">
-        <ul>
-          <li>Co-founded a software development group that turns business problems into shipped products; lead technical direction and architecture for its products, including DevUP and Ablaze. Group site on Next.js 16 / React 19: <a href="https://hytrex-landing.vercel.app/">hytrex-landing.vercel.app</a>.</li>
+          <li><strong>My role:</strong> owned analysis, design, development, launch and maintenance of the whole platform: public site, catalog, online booking, role-based accounts, digitally signed informed consent, admin panel and analytics.</li>
+          <li>Moved the platform off Supabase to Neon + R2 + Railway + Vercel (about USD 5/month), with plain SQL and custom auth: in-memory JWT, rotating refresh token in an httpOnly cookie, argon2id and Google OAuth.</li>
+          <li>AI copilot that edits content by chat or voice, and a security audit with 4 critical issues fixed. In integration: an OAuth-protected MCP server with human confirmation, and health-data consent under Colombian law (Ley 1581).</li>
         </ul>
       </div>
     </div>
@@ -234,114 +265,149 @@
 
   <!-- ══════════════ PROJECTS ══════════════ -->
   <section>
-    <div class="section-title">Selected Projects</div>
+    <div class="section-title">Projects</div>
 
     <div class="entry">
       <div class="entry-header">
-        <span class="entry-title">DevUP — Command Center for Software Teams</span>
+        <span class="entry-title">New Blood Premium BARF — Sales automation with an AI agent</span>
+        <span class="entry-date">2026</span>
+      </div>
+      <div class="entry-sub">React · Supabase · n8n · LangChain · OpenAI · Whapi.cloud · PostgreSQL</div>
+      <div class="entry-body">
+        <ul>
+          <li>End-to-end automation for a dog-food company. Built the order panel (automatic stock deduction, PDF shipping labels, CSV export), an agent that handles the full sale over WhatsApp, and a daily n8n workflow that reminds customers before they run out.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">SorteosCCM — Online raffle platform</span>
+        <span class="entry-date">2026</span>
+      </div>
+      <div class="entry-sub">Angular 21 · Supabase (PostgreSQL, RLS, Edge Functions, pg_cron) · Resend · Hostinger</div>
+      <div class="entry-body">
+        <ul>
+          <li>Live platform for the Colombian Paso Horse community (<a href="https://caballoscolombianosymas.com/" target="_blank">caballoscolombianosymas.com</a>): ticket bundles, two draw modes, number reservation, admin-confirmed payments and automatic release of expired reservations, secured with Row Level Security.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Atenea — AI agent microservice for any business</span>
+        <span class="entry-date">2026</span>
+      </div>
+      <div class="entry-sub">Node.js · TypeScript · Hono · PostgreSQL · Groq · Ollama · Anthropic · Whisper · Railway</div>
+      <div class="entry-body">
+        <ul>
+          <li>Conversational assistant that adapts to each business: the client app defines profile, context and tools, and the agent runs them through HMAC-signed webhooks without touching the business's database. Fallback model, Whisper voice notes, per-client token quotas, per-user history and a panel to choose model and appearance. First client: MeDinero.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">MeDinero — Personal finance app with an AI assistant</span>
+        <span class="entry-date">2026</span>
+      </div>
+      <div class="entry-sub">Next.js 15 · Tailwind v4 · PostgreSQL (RLS) · Better Auth · Tesseract.js (OCR) · three.js · PWA · Railway</div>
+      <div class="entry-body">
+        <ul>
+          <li>iPhone PWA that logs expenses by voice (Siri), by hand, from a receipt photo and from bank notifications; tracks cards, debts and installments, computes cost of living and goals, and reads payslips. Per-user isolation with RLS. Assistant with voice and a 3D avatar, powered by Atenea.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">DevUP — Command center for software teams</span>
         <span class="entry-date">2026</span>
       </div>
       <div class="entry-sub">Fastify · Next.js 15 · PostgreSQL 17 (RLS) · WebRTC · Docker · Railway · Cloudflare Workers</div>
       <div class="entry-body">
         <ul>
-          <li>Channels, end-to-end encrypted voice and video, tasks, a credentials vault and an MCP server so AI agents can work on the board. Multi-tenant isolation with Row Level Security tested in CI. Used by the GESTEK team. Code: <a href="https://github.com/BBMC-S-S-A/DevUP">github.com/BBMC-S-S-A/DevUP</a></li>
+          <li>Product, workflow and interface in a two-person team. Channels, end-to-end encrypted voice and video, tasks, a credentials vault and an MCP server so AI agents can work on the board. Multi-tenant isolation with RLS tested in CI. Used by the GESTEK team.</li>
         </ul>
       </div>
     </div>
 
     <div class="entry">
       <div class="entry-header">
-        <span class="entry-title">Ablaze — Offline-first Training PWA</span>
+        <span class="entry-title">Wallnut — Digital campus and points economy</span>
+        <span class="entry-date">2025</span>
+      </div>
+      <div class="entry-sub">React Native · Expo Router · TypeScript · NativeWind · Express</div>
+      <div class="entry-body">
+        <ul>
+          <li>Mobile platform for a university that digitizes campus activities and introduces an economy of positive points earned by participating: QR attendance, wallet with history, leaderboard and a virtual assistant. Point movements are stored in a hash-chained ledger.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Ablaze — Offline-first training PWA</span>
         <span class="entry-date">2026</span>
       </div>
       <div class="entry-sub">Expo · React 19 · SQLite WASM (OPFS) · Express 5 · Zod · Drizzle · PostgreSQL</div>
       <div class="entry-body">
         <ul>
-          <li>The phone is the source of truth and the cloud keeps a copy; deterministic rule engine with no language model, its own test suite and a 136-exercise catalog. Code: <a href="https://github.com/BBMC-S-S-A/Ablaze">github.com/BBMC-S-S-A/Ablaze</a></li>
+          <li>Local-first architecture where the phone is the source of truth and the cloud keeps a copy; deterministic rule engine with no language model and its own test suite.</li>
         </ul>
       </div>
     </div>
 
     <div class="entry">
       <div class="entry-header">
-        <span class="entry-title">SorteosCCM — Online Raffle Platform</span>
-        <span class="entry-date">2026</span>
+        <span class="entry-title">Ardy-IA — AI language tutor</span>
+        <span class="entry-date">2025</span>
       </div>
-      <div class="entry-sub">Angular 21 · TypeScript · Supabase (PostgreSQL, RLS, Edge Functions, pg_cron) · Resend · Hostinger</div>
+      <div class="entry-sub">Python · FastAPI · Groq (Llama 3.1) · ChromaDB · sentence-transformers · SQLite · faster-whisper</div>
       <div class="entry-body">
         <ul>
-          <li>Raffle platform for the Colombian Paso Horse community: ticket bundles, two draw modes, number reservation, payment receipts confirmed by an admin and automatic release of expired reservations. Live: <a href="https://caballoscolombianosymas.com/">caballoscolombianosymas.com</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-title">New Blood Premium BARF — Admin Panel and WhatsApp Sales Agent</span>
-        <span class="entry-date">2026</span>
-      </div>
-      <div class="entry-sub">JavaScript · Supabase · n8n · LangChain · GPT-4.1-mini · Whapi.cloud · Chart.js · PostgreSQL</div>
-      <div class="entry-body">
-        <ul>
-          <li>Order panel with automatic stock deduction, PDF shipping labels and CSV export; WhatsApp agent "Diana" that handles the full sale, and a daily n8n workflow that reminds customers three days before they run out.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-title">Other projects</span>
-        <span class="entry-date">2025 – 2026</span>
-      </div>
-      <div class="entry-body">
-        <ul>
-          <li><strong>ViBa</strong>: modular game REST API (Node.js, MongoDB, Screaming Architecture) — <a href="https://viba-beta.vercel.app">viba-beta.vercel.app</a>. <strong>Ardy-IA</strong>: AI language tutor (FastAPI, Groq/Llama, RAG with ChromaDB, faster-whisper). <strong>Wallnut</strong>: mobile campus platform that digitizes university activities and rewards participation with a positive-points economy, QR attendance and a hash-chained points ledger (Expo / React Native, Express). <strong>CoffeeOps</strong>: development proposal for coffee lot traceability and cup quality that reached beta (React 19, Express, MySQL).</li>
+          <li>Conversational tutor with <strong>RAG</strong> (web search indexed in ChromaDB with embeddings), conversation memory and voice input.</li>
+          <li><strong>CoffeeOps</strong> (2025): development proposal for coffee traceability that reached beta (React, Express, MySQL).</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- ══════════════ SKILLS ══════════════ -->
+  <!-- ══════════════ CERTIFICATIONS ══════════════ -->
   <section>
-    <div class="section-title">Tools</div>
-    <div class="skills-grid">
-      <span class="skill-cat">Languages</span>
-      <span>JavaScript, TypeScript, Python, C#, Java, SQL</span>
+    <div class="section-title">Certifications &amp; badges</div>
 
-      <span class="skill-cat">Frontend</span>
-      <span>React 18/19, Next.js 15/16, Angular 17/21, Vite, Expo, Tailwind CSS, Framer Motion, PWA</span>
-
-      <span class="skill-cat">Backend</span>
-      <span>Node.js (Express, Fastify), FastAPI, REST, WebSocket, WebRTC, JWT, OAuth2 / PKCE</span>
-
-      <span class="skill-cat">Databases</span>
-      <span>PostgreSQL (plain SQL, RLS, migrations), MySQL, SQLite, MongoDB, Drizzle ORM</span>
-
-      <span class="skill-cat">Cloud &amp; Infra</span>
-      <span>Docker, Supabase, Neon, Railway, Render, Vercel, Cloudflare (Workers, Pages, R2, Turnstile), cPanel, Hostinger, GitHub Actions, Sentry</span>
-
-      <span class="skill-cat">Automation &amp; agents</span>
-      <span>AI agents that take actions (WhatsApp sales, copilots), MCP servers, RAG (embeddings, ChromaDB, web search), n8n, LangChain, supervised agentic development</span>
-
-      <span class="skill-cat">AI models</span>
-      <span>Anthropic Claude, OpenAI, Gemini, Groq (Llama), Whisper</span>
-
-      <span class="skill-cat">Payments &amp; Messaging</span>
-      <span>Mercado Pago, Stripe, Wompi, Resend, SMTP, Web Push (VAPID), Whapi.cloud</span>
-
-      <span class="skill-cat">Workflow</span>
-      <span>Git, GitHub, Postman, Figma, documented architecture decisions (ADR)</span>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">AWS Academy Graduate — Cloud Developing</span>
+        <span class="entry-date">Nov 2026</span>
+      </div>
+      <div class="entry-sub">Amazon Web Services · 40 hours · <a href="https://www.credly.com/go/V1s0sIQN" target="_blank" style="color:var(--mid);">credly.com/go/V1s0sIQN</a></div>
     </div>
-  </section>
 
-  <!-- ══════════════ LANGUAGES ══════════════ -->
-  <section>
-    <div class="section-title">Languages</div>
-    <div class="skills-grid">
-      <span class="skill-cat">Spanish</span>
-      <span>Native</span>
-      <span class="skill-cat">English</span>
-      <span>B2</span>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">AWS Academy Graduate — Cloud Foundations</span>
+        <span class="entry-date">Apr 2025</span>
+      </div>
+      <div class="entry-sub">Amazon Web Services · 20 hours · <a href="https://www.credly.com/go/rGBo51yY" target="_blank" style="color:var(--mid);">credly.com/go/rGBo51yY</a></div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Introduction to Scrum Master Training</span>
+        <span class="entry-date">Aug 2025</span>
+      </div>
+      <div class="entry-sub">Coursera · LearnQuest · 6 hours · <a href="https://coursera.org/verify/EB0KJ675QA3E" target="_blank" style="color:var(--mid);">coursera.org/verify/EB0KJ675QA3E</a></div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Google Cloud — 6 completion badges</span>
+        <span class="entry-date">Apr 2025</span>
+      </div>
+      <div class="entry-sub"><a href="https://www.skills.google/public_profiles/ca1e6001-8392-4f69-8495-a233333f2fcd" target="_blank" style="color:var(--mid);">skills.google/public_profiles/ca1e6001-8392-4f69-8495-a233333f2fcd</a></div>
+      <div class="entry-body">Digital Transformation · Exploring Data Transformation · Innovating with AI · Infrastructure and Application Modernization · Trust and Security · Scaling with Operations</div>
     </div>
   </section>
 

@@ -26,7 +26,6 @@ const CALIDAD = 80;
 
 const OBJETIVOS = {
   'gestek.jpg':      'https://gestor-eventos-frontend.vercel.app/',
-  'hytrex.jpg':      'https://hytrex-landing.vercel.app/',
   'consultorio.jpg': 'https://consultorio-estetico-vm.vercel.app/',
   'sorteosccm.jpg':  'https://caballoscolombianosymas.com/',
 };

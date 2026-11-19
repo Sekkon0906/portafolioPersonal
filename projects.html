@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23090909'/%3E%3Cpath d='M6 7h5v13a5 5 0 0 1-5 5v-4a1 1 0 0 0 1-1z' fill='%23ede9e0'/%3E%3Crect x='14' y='7' width='12' height='4' fill='%23E10600'/%3E%3Crect x='14' y='14' width='9' height='4' fill='%23E10600'/%3E%3C/svg%3E" />
   <title>Proyectos — Juan Felipe Medina</title>
-  <meta name="description" content="Proyectos de Juan Felipe Medina: GESTEK Event OS, Hytrex, Consultorio Estético, SorteosCCM, DevUP, Wallnut y más, con su arquitectura y enlaces en producción." />
+  <meta name="description" content="Experiencia y proyectos de Juan Felipe Medina: GESTEK (FESTECH Ibagué 2026), Consultorio Estético, New Blood Premium BARF, SorteosCCM, Atenea, MeDinero, DevUP y más, con su arquitectura y enlaces." />
   <meta name="author" content="Juan Felipe Medina Orjuela" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Juan Felipe Medina — Full-Stack Developer &amp; Co-founder de Hytrex" />
-  <meta property="og:description" content="Proyectos de Juan Felipe Medina: GESTEK Event OS, Hytrex, Consultorio Estético, SorteosCCM, DevUP, Wallnut y más, con su arquitectura y enlaces en producción." />
+  <meta property="og:description" content="Experiencia y proyectos de Juan Felipe Medina: GESTEK (FESTECH Ibagué 2026), Consultorio Estético, New Blood Premium BARF, SorteosCCM, Atenea, MeDinero, DevUP y más, con su arquitectura y enlaces." />
   <meta property="og:url" content="https://portafoliojmo.vercel.app/projects.html" />
   <meta property="og:image" content="https://portafoliojmo.vercel.app/assets/fotoCV.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -278,8 +278,9 @@
     </div>
 
     <p class="skills-subtitle reveal" style="margin-bottom:2rem;">
-      Sistemas que <span>corren en producción</span> con usuarios y clientes reales —
-      no demos. Cada tarjeta enlaza al deploy o al repositorio público.
+      Primero la <span>experiencia certificada</span>, después los proyectos propios y para
+      clientes. Cada tarjeta enlaza al deploy o al repositorio cuando es público; las que no
+      tienen enlace lo indican.
     </p>
 
     <div class="filter-bar reveal">
@@ -290,7 +291,10 @@
       <button class="filter-btn" data-filter="open">Abiertos a venta</button>
     </div>
 
-    <div class="projects-grid">
+    <!-- ═══ GRUPO · EXPERIENCIA ═══ -->
+    <div class="project-group" data-group="exp" style="margin-bottom:3.5rem;">
+      <div class="group-label reveal">Experiencia · certificada</div>
+      <div class="projects-grid">
 
       <!-- ═══ PRJ 001 — GESTEK Event OS ═══ -->
       <div class="project-card reveal" data-tags="prod ia" style="border-color:rgba(225,6,0,.22);">
@@ -310,14 +314,24 @@
           <div class="project-id">PRJ — 001 · React · Node.js · 2026 · Develovers Group · Experiencia certificada</div>
           <span class="status status-prod">Producción · FESTECH Ibagué 2026</span>
           <h3 class="project-title">GESTEK — Plataforma de eventos de marca blanca</h3>
+          <p class="project-arch" style="border-left-color:var(--accent);">
+            <b>Experiencia más destacada — FESTECH Ibagué 2026:</b> GESTEK gestionó todo el proceso
+            del evento de la Alcaldía de Ibagué (17–19 sep.), desde el registro y la emisión de
+            boletas hasta el control de acceso en puerta: <b>4.485 boletas</b>, <b>3.334 ingresos</b>,
+            <b>1.555 personas en el día pico</b> y picos de <b>67 ingresos en 5 minutos</b> por una
+            sola puerta.
+          </p>
           <p class="project-desc">
-            Plataforma de marca blanca para organizar eventos de punta a punta: página pública por
-            organizador, boletas con QR firmado (JWT), control de puerta con reingreso y motivos de
-            rechazo, prellenado del registro por cédula, impresión de escarapelas, carné digital,
-            equipos con roles, pagos con Mercado Pago y registro embebible por iframe. Con ella se
-            operó <strong>FESTECH Ibagué 2026</strong> para la Alcaldía de Ibagué: <strong>4.485
-            boletas y 3.334 ingresos en tres días</strong>, con picos de 67 ingresos en 5 minutos por
-            una sola puerta. Un conector OAuth2 (PKCE) + MCP permite operarla desde un asistente de IA, y la respaldan más de 1.800 pruebas automatizadas.
+            <strong>Mi rol:</strong> análisis técnico, diseño, implementación e integración de
+            funcionalidades con flujos de desarrollo agéntico supervisados, definiendo la arquitectura
+            según las necesidades de crecimiento del producto. La plataforma organiza eventos de punta
+            a punta: página pública por organizador, boletas con QR firmado (JWT), control de puerta
+            con reingreso y motivos de rechazo, prellenado del registro por cédula, impresión de
+            escarapelas, carné digital, equipos con roles, pagos con Mercado Pago y registro
+            embebible por iframe. Corregí una condición de carrera en el aforo con contadores atómicos
+            en PostgreSQL y pasé la verificación de JWT a local para evitar más de 100.000 llamadas
+            diarias. Un conector OAuth2 (PKCE) + MCP permite operarla desde un asistente de IA, y la
+            respaldan más de 1.800 pruebas automatizadas.
           </p>
           <p class="project-arch">
             <b>Arquitectura:</b> SPA React 18 + Vite (PWA) → API Express (Node 20) en cPanel →
@@ -349,50 +363,7 @@
         </div>
       </div>
 
-      <!-- ═══ PRJ 002 — Hytrex ═══ -->
-      <div class="project-card reveal" data-tags="prod" style="border-color:rgba(225,6,0,.22);">
-        <div class="project-preview">
-          <img class="preview-screenshot" alt="Hytrex landing preview" loading="lazy"
-               data-shot="assets/previews/hytrex.jpg"
-               data-live="https://hytrex-landing.vercel.app/" />
-          <div class="preview-placeholder" hidden>
-            <span class="preview-placeholder-icon">▲</span>
-            <span class="preview-placeholder-label">hytrex-landing.vercel.app</span>
-          </div>
-          <a href="https://hytrex-landing.vercel.app/" target="_blank" rel="noopener" class="project-deploy-badge" style="border-color:rgba(225,6,0,.35);color:var(--accent-soft);">
-            <span class="deploy-dot" style="background:var(--accent);box-shadow:0 0 6px rgba(225,6,0,.6);"></span>En producción
-          </a>
-        </div>
-        <div class="project-body">
-          <div class="project-id">PRJ — 002 · Next.js 16 · 2026</div>
-          <span class="status status-prod">Producción · Mi grupo de desarrollo</span>
-          <h3 class="project-title">Hytrex — Grupo de desarrollo de software</h3>
-          <p class="project-desc">
-            Sitio del grupo de desarrollo que cofundé y dirijo como CEO. Construido sobre Next.js 16 (App Router)
-            y React 19: el símbolo es un orbe SVG animado con un anillo de nueve capas de color a
-            velocidades distintas, y la sección de equipo reacciona al hover con un gesto de 620 ms.
-            Todo con animación CSS, contenido editable por datos, navegación por teclado y soporte
-            de <code>prefers-reduced-motion</code>.
-          </p>
-          <div class="project-tags">
-            <span class="project-tag">Next.js 16</span>
-            <span class="project-tag">React 19</span>
-            <span class="project-tag">TypeScript</span>
-            <span class="project-tag">Tailwind v4</span>
-            <span class="project-tag">Motion</span>
-            <span class="project-tag">SVG · A11y</span>
-          </div>
-          <div class="project-footer">
-            <div class="project-links">
-              <a href="https://hytrex-landing.vercel.app/" target="_blank" rel="noopener" class="project-link">↗ Ver en vivo</a>
-              <div class="project-link-sep"></div>
-              <a href="https://github.com/Sekkon0906/Hytrex-landing" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ═══ PRJ 003 — Consultorio Estético VM ═══ -->
+      <!-- ═══ PRJ 002 — Consultorio Estético VM ═══ -->
       <div class="project-card reveal" data-tags="prod ia">
         <div class="project-preview">
           <img class="preview-screenshot" alt="Consultorio Estético VM preview" loading="lazy"
@@ -407,10 +378,12 @@
           </a>
         </div>
         <div class="project-body">
-          <div class="project-id">PRJ — 003 · Next.js 16 · TypeScript · 2023–2026 · Experiencia certificada</div>
+          <div class="project-id">PRJ — 002 · Next.js 16 · TypeScript · 2023–2026 · Experiencia certificada</div>
           <span class="status status-prod">Producción · Cliente real</span>
           <h3 class="project-title">Consultorio Estético — Dra. Julieth Vanessa Medina</h3>
           <p class="project-desc">
+            <strong>Mi rol:</strong> a cargo del análisis, diseño, desarrollo, puesta en
+            funcionamiento y mantenimiento de toda la plataforma.
             Plataforma para un consultorio de medicina estética en Ibagué: sitio público bilingüe
             (es/en), catálogo de procedimientos, agendamiento en línea, cuentas con roles,
             <strong>consentimiento informado con firma electrónica</strong> guardado en almacenamiento
@@ -422,8 +395,8 @@
           <p class="project-arch">
             <b>Arquitectura:</b> Next.js 16 en Vercel → API Express en Railway → PostgreSQL 18 en Neon
             con SQL directo (sin SDK de proveedor) + archivos en Cloudflare R2. Auth propia: JWT en
-            memoria, refresh rotativo en cookie httpOnly, argon2id y Google OAuth. <b>Antes:</b>
-            Supabase (base, auth y storage) hasta sep. 2026.
+            memoria, refresh rotativo en cookie httpOnly, argon2id y Google OAuth, por unos 5 USD/mes.
+            <b>Antes:</b> Supabase (base, auth y storage) hasta sep. 2026.
           </p>
           <div class="project-tags">
             <span class="tags-label">Herramientas</span>
@@ -448,7 +421,15 @@
         </div>
       </div>
 
-      <!-- ═══ PRJ 004 — New Blood Premium BARF ═══ -->
+      </div>
+    </div><!-- /grupo experiencia -->
+
+    <!-- ═══ GRUPO · PROYECTOS ═══ -->
+    <div class="project-group" data-group="prj">
+      <div class="group-label reveal">Proyectos</div>
+      <div class="projects-grid">
+
+      <!-- ═══ PRJ 003 — New Blood Premium BARF ═══ -->
       <div class="project-card reveal" data-tags="prod ia" style="border-color:rgba(225,6,0,.22);">
         <div class="project-preview">
           <div class="preview-placeholder" style="background:repeating-linear-gradient(45deg,var(--bg4) 0px,var(--bg4) 14px,#1a0f0f 14px,#1a0f0f 28px);">
@@ -460,12 +441,12 @@
           </span>
         </div>
         <div class="project-body">
-          <div class="project-id">PRJ — 004 · JavaScript · 2025–2026</div>
+          <div class="project-id">PRJ — 003 · React · 2026</div>
           <span class="status status-prod">Producción · Clientes reales</span>
           <h3 class="project-title">New Blood Premium BARF — Panel admin + agente de ventas IA</h3>
           <p class="project-desc">
-            Sistema completo de gestión para una empresa colombiana de alimentación canina natural.
-            Panel administrativo sin framework con métricas en tiempo real, ciclo de vida completo
+            Automatización de punta a punta para una empresa colombiana de alimentación canina natural.
+            Panel administrativo con métricas en tiempo real, ciclo de vida completo
             del pedido (pendiente → pagado → enviado → entregado), descuento automático de stock al
             despachar, etiquetas de envío en PDF y export CSV. <strong>"Diana"</strong>, agente
             autónomo en WhatsApp, cierra ventas de punta a punta: saludo, cálculo de ración,
@@ -473,7 +454,7 @@
             agotamiento estimado por pedido y avisa 3 días antes.
           </p>
           <div class="project-tags">
-            <span class="project-tag">JavaScript</span>
+            <span class="project-tag">React</span>
             <span class="project-tag">Supabase</span>
             <span class="project-tag">n8n</span>
             <span class="project-tag">LangChain</span>
@@ -490,7 +471,7 @@
         </div>
       </div>
 
-      <!-- ═══ PRJ 005 — SorteosCCM ═══ -->
+      <!-- ═══ PRJ 004 — SorteosCCM ═══ -->
       <div class="project-card reveal" data-tags="prod">
         <div class="project-preview">
           <img class="preview-screenshot" alt="SorteosCCM preview" loading="lazy"
@@ -505,7 +486,7 @@
           </a>
         </div>
         <div class="project-body">
-          <div class="project-id">PRJ — 005 · Angular 21 · TypeScript · 2026</div>
+          <div class="project-id">PRJ — 004 · Angular 21 · TypeScript · 2026</div>
           <span class="status status-prod">Producción · Dominio propio</span>
           <h3 class="project-title">SorteosCCM — Caballos Colombianos y Más</h3>
           <p class="project-desc">
@@ -539,85 +520,89 @@
         </div>
       </div>
 
-      <!-- ═══ PRJ 006 — ViBa ═══ -->
-      <div class="project-card reveal" data-tags="prod">
+      <!-- ═══ PRJ 005 — Atenea ═══ -->
+      <div class="project-card reveal" data-tags="ia">
         <div class="project-preview">
-          <div class="preview-placeholder">
-            <span class="preview-placeholder-icon">⌘</span>
-            <span class="preview-placeholder-label">API REST · viba-beta.vercel.app</span>
-          </div>
-          <a href="https://viba-beta.vercel.app" target="_blank" rel="noopener" class="project-deploy-badge">
-            <span class="deploy-dot"></span>Desplegado
-          </a>
-        </div>
-        <div class="project-body">
-          <div class="project-id">PRJ — 006 · Node.js · MongoDB · 2026</div>
-          <span class="status status-live">Público · API desplegada</span>
-          <h3 class="project-title">ViBa — Backend para videojuegos</h3>
-          <p class="project-desc">
-            API REST modular para videojuegos bajo <em>Screaming Architecture</em>: el código se
-            organiza por módulos de dominio (auth, inventario, progreso) y no por capas técnicas.
-            Autenticación JWT, inventario con ítems únicos y apilables, historial de niveles y
-            puntaje, respuestas JSON estandarizadas y documentación Swagger/OpenAPI.
-          </p>
-          <div class="project-tags">
-            <span class="project-tag">Node.js 18</span>
-            <span class="project-tag">Express</span>
-            <span class="project-tag">MongoDB · Mongoose</span>
-            <span class="project-tag">JWT</span>
-            <span class="project-tag">Swagger</span>
-            <span class="project-tag">Screaming Arch</span>
-          </div>
-          <div class="project-footer">
-            <div class="project-links">
-              <a href="https://viba-beta.vercel.app" target="_blank" rel="noopener" class="project-link">↗ Ver API</a>
-              <div class="project-link-sep"></div>
-              <a href="https://github.com/Sekkon0906/viba" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ═══ PRJ 007 — microservice-mail ═══ -->
-      <div class="project-card reveal" data-tags="prod">
-        <div class="project-preview">
-          <div class="preview-placeholder">
-            <span class="preview-placeholder-icon">✉</span>
-            <span class="preview-placeholder-label">Microservicio · Render</span>
+          <div class="preview-placeholder" style="background:repeating-linear-gradient(45deg,var(--bg4) 0px,var(--bg4) 14px,#1a0f0f 14px,#1a0f0f 28px);">
+            <span class="preview-placeholder-icon" style="opacity:.2;">⟁</span>
+            <span class="preview-placeholder-label">Microservicio de IA · Repo privado</span>
           </div>
           <span class="project-deploy-badge no-deploy-badge">
-            <span class="deploy-dot"></span>Sin uso en producción
+            <span class="deploy-dot"></span>Sin URL pública
           </span>
         </div>
         <div class="project-body">
-          <div class="project-id">PRJ — 007 · Node.js · Docker · 2026</div>
-          <span class="status status-dev">Prototipo · GESTEK</span>
-          <h3 class="project-title">GESTEK Mail — Microservicio de correo</h3>
+          <div class="project-id">PRJ — 005 · Node.js · TypeScript · 2026</div>
+          <span class="status status-dev">Repo privado · Primer cliente: MeDinero</span>
+          <h3 class="project-title">Atenea — Microservicio de agentes de IA para cualquier negocio</h3>
           <p class="project-desc">
-            Servicio independiente que renderiza y envía las plantillas de correo diseñadas dentro
-            de GESTEK. El backend delega vía clave compartida (<code>x-gestek-key</code>) y el
-            servicio resuelve plantilla + entrega SMTP. Campañas segmentadas por equipo o tipo de
-            boleta, healthcheck <code>/healthz</code> y diagnóstico SMTP para evitar bucles de
-            reinicio en Render cuando el proveedor de correo falla. Hoy GESTEK envía el correo desde su
-            propio backend (SMTP con reparto entre buzones), así que este servicio quedó como prototipo.
+            Asistente conversacional que se adapta a cada negocio: la app cliente define perfil,
+            contexto y herramientas, y el agente las ejecuta por <strong>webhook firmado con HMAC</strong>,
+            sin tocar la base del negocio. Modelo de respaldo, notas de voz con Whisper, cupo de
+            tokens por cliente, historial por usuario y panel para elegir modelo y apariencia.
+            Primer cliente: <strong>MeDinero</strong>.
           </p>
           <div class="project-tags">
+            <span class="tags-label">Herramientas</span>
             <span class="project-tag">Node.js</span>
-            <span class="project-tag">Docker</span>
-            <span class="project-tag">Supabase</span>
-            <span class="project-tag">SMTP</span>
-            <span class="project-tag">Render</span>
-            <span class="project-tag">Microservicios</span>
+            <span class="project-tag">TypeScript</span>
+            <span class="project-tag">Hono</span>
+            <span class="project-tag">PostgreSQL</span>
+            <span class="project-tag">Groq</span>
+            <span class="project-tag">Ollama</span>
+            <span class="project-tag">Anthropic</span>
+            <span class="project-tag">Whisper</span>
+            <span class="project-tag">Railway</span>
           </div>
           <div class="project-footer">
             <div class="project-links">
-              <a href="https://github.com/Sekkon0906/microservice-mail" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
+              <span class="no-link-badge">Repositorio privado · Sin URL pública</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- ═══ PRJ 008 — DevUP ═══ -->
+      <!-- ═══ PRJ 006 — MeDinero ═══ -->
+      <div class="project-card reveal" data-tags="ia">
+        <div class="project-preview">
+          <div class="preview-placeholder" style="background:repeating-linear-gradient(45deg,var(--bg4) 0px,var(--bg4) 14px,#1a0f0f 14px,#1a0f0f 28px);">
+            <span class="preview-placeholder-icon" style="opacity:.2;">¤</span>
+            <span class="preview-placeholder-label">PWA para iPhone · Repo privado</span>
+          </div>
+          <span class="project-deploy-badge no-deploy-badge">
+            <span class="deploy-dot"></span>Sin URL pública
+          </span>
+        </div>
+        <div class="project-body">
+          <div class="project-id">PRJ — 006 · Next.js 15 · PWA · 2026</div>
+          <span class="status status-dev">Repo privado · Asistente sobre Atenea</span>
+          <h3 class="project-title">MeDinero — App de finanzas personales con asistente de IA</h3>
+          <p class="project-desc">
+            PWA para iPhone que registra gastos por voz (Siri), a mano, con foto del recibo y desde
+            los avisos del banco; maneja tarjetas, deudas y cuotas, calcula costo de vida y metas, y
+            lee desprendibles de nómina. Aislamiento por usuario con <strong>RLS</strong>. Asistente
+            con voz y <strong>avatar 3D</strong> sobre Atenea.
+          </p>
+          <div class="project-tags">
+            <span class="tags-label">Herramientas</span>
+            <span class="project-tag">Next.js 15</span>
+            <span class="project-tag">Tailwind v4</span>
+            <span class="project-tag">PostgreSQL · RLS</span>
+            <span class="project-tag">Better Auth</span>
+            <span class="project-tag">Tesseract.js · OCR</span>
+            <span class="project-tag">three.js</span>
+            <span class="project-tag">PWA</span>
+            <span class="project-tag">Railway</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-links">
+              <span class="no-link-badge">Repositorio privado · Sin URL pública</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ PRJ 007 — DevUP ═══ -->
       <div class="project-card reveal" data-tags="dev ia">
         <div class="project-preview">
           <div class="preview-placeholder">
@@ -629,7 +614,7 @@
           </span>
         </div>
         <div class="project-body">
-          <div class="project-id">PRJ — 008 · Fastify · Next.js 15 · 2026</div>
+          <div class="project-id">PRJ — 007 · Fastify · Next.js 15 · 2026</div>
           <span class="status status-dev">En desarrollo · Lo usa el equipo de GESTEK</span>
           <h3 class="project-title">DevUP — Centro de mando para equipos de software</h3>
           <p class="project-desc">
@@ -659,6 +644,53 @@
           <div class="project-footer">
             <div class="project-links">
               <a href="https://github.com/BBMC-S-S-A/DevUP" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ PRJ 008 — Wallnut ═══ -->
+      <div class="project-card reveal" data-tags="open">
+        <div class="project-preview">
+          <div class="preview-placeholder">
+            <span class="preview-placeholder-icon">◈</span>
+            <span class="preview-placeholder-label">App móvil · BBMC S.S.A · Repo privado</span>
+          </div>
+          <span class="project-deploy-badge no-deploy-badge">
+            <span class="deploy-dot"></span>Desarrollo en pausa
+          </span>
+        </div>
+        <div class="project-body">
+          <div class="project-id">PRJ — 008 · React Native · Expo · 2025</div>
+          <span class="status status-open">Abierto a venta o continuación</span>
+          <h3 class="project-title">Wallnut — Campus digital y economía de puntos</h3>
+          <p class="project-desc">
+            Plataforma móvil para una institución universitaria que digitaliza las actividades del
+            campus (charlas, debates, laboratorios, eventos de la comunidad) y plantea una nueva
+            economía basada en <strong>puntos positivos</strong>: quien participa los gana, los
+            acumula en su billetera y compite en un ranking. Incluye registro de asistencia por QR,
+            billetera con historial y el asistente <em>Ardy</em>.
+          </p>
+          <p class="project-arch">
+            <b>Arquitectura:</b> app Expo / React Native con Expo Router (Android, iOS y web) →
+            API Express. Cada movimiento de puntos se registra en un libro encadenado por hash
+            (blockchain simulada) para que el historial no se pueda alterar sin que se note.
+          </p>
+          <div class="project-tags">
+            <span class="tags-label">Herramientas</span>
+            <span class="project-tag">React Native</span>
+            <span class="project-tag">Expo Router</span>
+            <span class="project-tag">TypeScript</span>
+            <span class="project-tag">NativeWind</span>
+            <span class="project-tag">Expo Camera · QR</span>
+            <span class="project-tag">Express</span>
+            <span class="project-tag">Gamificación</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-links">
+              <a href="https://github.com/Sekkon0906/wallnut" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
+              <div class="project-link-sep"></div>
+              <a href="mailto:juan.medina@hytrex.co?subject=Wallnut" class="project-link">↗ Hablemos</a>
             </div>
           </div>
         </div>
@@ -708,42 +740,7 @@
         </div>
       </div>
 
-      <!-- ═══ PRJ 010 — Piel Canela Store ═══ -->
-      <div class="project-card reveal" data-tags="dev">
-        <div class="project-preview">
-          <div class="preview-placeholder">
-            <span class="preview-placeholder-icon">◫</span>
-            <span class="preview-placeholder-label">Sistema de inventario</span>
-          </div>
-          <span class="project-deploy-badge no-deploy-badge">
-            <span class="deploy-dot"></span>Sin deploy público
-          </span>
-        </div>
-        <div class="project-body">
-          <div class="project-id">PRJ — 010 · Vue 3 · Node.js · 2026</div>
-          <span class="status status-dev">Público · En desarrollo</span>
-          <h3 class="project-title">Piel Canela Store — Inventario para boutique</h3>
-          <p class="project-desc">
-            Plataforma de gestión de inventario para la boutique Piel Canela, construida sobre
-            Clean Architecture: backend Node/Express con MongoDB y frontend Vue 3 separados, para
-            que el dominio no dependa del framework.
-          </p>
-          <div class="project-tags">
-            <span class="project-tag">Vue 3</span>
-            <span class="project-tag">Node.js</span>
-            <span class="project-tag">Express</span>
-            <span class="project-tag">MongoDB</span>
-            <span class="project-tag">Clean Arch</span>
-          </div>
-          <div class="project-footer">
-            <div class="project-links">
-              <a href="https://github.com/Sekkon0906/pielCanelaStore" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ═══ PRJ 011 — Ardy-IA ═══ -->
+      <!-- ═══ PRJ 010 — Ardy-IA ═══ -->
       <div class="project-card reveal" data-tags="ia">
         <div class="project-preview">
           <div class="preview-placeholder">
@@ -755,7 +752,7 @@
           </span>
         </div>
         <div class="project-body">
-          <div class="project-id">PRJ — 011 · Python · 2025</div>
+          <div class="project-id">PRJ — 010 · Python · 2025</div>
           <span class="status status-live">Público · Prototipo</span>
           <h3 class="project-title">Ardy-IA — Tutor de idiomas con IA</h3>
           <p class="project-desc">
@@ -785,54 +782,7 @@
         </div>
       </div>
 
-      <!-- ═══ PRJ 012 — Wallnut ═══ -->
-      <div class="project-card reveal" data-tags="open">
-        <div class="project-preview">
-          <div class="preview-placeholder">
-            <span class="preview-placeholder-icon">◈</span>
-            <span class="preview-placeholder-label">App móvil · BBMC S.S.A · Repo privado</span>
-          </div>
-          <span class="project-deploy-badge no-deploy-badge">
-            <span class="deploy-dot"></span>Desarrollo en pausa
-          </span>
-        </div>
-        <div class="project-body">
-          <div class="project-id">PRJ — 012 · React Native · Expo · 2025</div>
-          <span class="status status-open">Abierto a venta o continuación</span>
-          <h3 class="project-title">Wallnut — Campus digital y economía de puntos</h3>
-          <p class="project-desc">
-            Plataforma móvil para una institución universitaria que digitaliza las actividades del
-            campus (charlas, debates, laboratorios, eventos de la comunidad) y plantea una nueva
-            economía basada en <strong>puntos positivos</strong>: quien participa los gana, los
-            acumula en su billetera y compite en un ranking. Incluye registro de asistencia por QR,
-            billetera con historial y el asistente <em>Ardy</em>.
-          </p>
-          <p class="project-arch">
-            <b>Arquitectura:</b> app Expo / React Native con Expo Router (Android, iOS y web) →
-            API Express. Cada movimiento de puntos se registra en un libro encadenado por hash
-            (blockchain simulada) para que el historial no se pueda alterar sin que se note.
-          </p>
-          <div class="project-tags">
-            <span class="tags-label">Herramientas</span>
-            <span class="project-tag">React Native</span>
-            <span class="project-tag">Expo Router</span>
-            <span class="project-tag">TypeScript</span>
-            <span class="project-tag">NativeWind</span>
-            <span class="project-tag">Expo Camera · QR</span>
-            <span class="project-tag">Express</span>
-            <span class="project-tag">Gamificación</span>
-          </div>
-          <div class="project-footer">
-            <div class="project-links">
-              <a href="https://github.com/Sekkon0906/wallnut" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
-              <div class="project-link-sep"></div>
-              <a href="mailto:juan.medina@hytrex.co?subject=Wallnut" class="project-link">↗ Hablemos</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ═══ PRJ 013 — CoffeeOps ═══ -->
+      <!-- ═══ PRJ 011 — CoffeeOps ═══ -->
       <div class="project-card reveal" data-tags="open">
         <div class="project-preview">
           <div class="preview-placeholder">
@@ -844,7 +794,7 @@
           </span>
         </div>
         <div class="project-body">
-          <div class="project-id">PRJ — 013 · React · Express · MySQL · 2025</div>
+          <div class="project-id">PRJ — 011 · React · Express · MySQL · 2025</div>
           <span class="status status-dev">Propuesta de desarrollo · Beta</span>
           <h3 class="project-title">CoffeeOps — Trazabilidad y calidad de café</h3>
           <p class="project-desc">
@@ -875,7 +825,121 @@
         </div>
       </div>
 
-    </div><!-- /projects-grid -->
+      <!-- ═══ PRJ 012 — ViBa ═══ -->
+      <div class="project-card reveal" data-tags="prod">
+        <div class="project-preview">
+          <div class="preview-placeholder">
+            <span class="preview-placeholder-icon">⌘</span>
+            <span class="preview-placeholder-label">API REST · viba-beta.vercel.app</span>
+          </div>
+          <a href="https://viba-beta.vercel.app" target="_blank" rel="noopener" class="project-deploy-badge">
+            <span class="deploy-dot"></span>Desplegado
+          </a>
+        </div>
+        <div class="project-body">
+          <div class="project-id">PRJ — 012 · Node.js · MongoDB · 2026</div>
+          <span class="status status-live">Público · API desplegada</span>
+          <h3 class="project-title">ViBa — Backend para videojuegos</h3>
+          <p class="project-desc">
+            API REST modular para videojuegos bajo <em>Screaming Architecture</em>: el código se
+            organiza por módulos de dominio (auth, inventario, progreso) y no por capas técnicas.
+            Autenticación JWT, inventario con ítems únicos y apilables, historial de niveles y
+            puntaje, respuestas JSON estandarizadas y documentación Swagger/OpenAPI.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Node.js 18</span>
+            <span class="project-tag">Express</span>
+            <span class="project-tag">MongoDB · Mongoose</span>
+            <span class="project-tag">JWT</span>
+            <span class="project-tag">Swagger</span>
+            <span class="project-tag">Screaming Arch</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-links">
+              <a href="https://viba-beta.vercel.app" target="_blank" rel="noopener" class="project-link">↗ Ver API</a>
+              <div class="project-link-sep"></div>
+              <a href="https://github.com/Sekkon0906/viba" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ PRJ 013 — microservice-mail ═══ -->
+      <div class="project-card reveal" data-tags="prod">
+        <div class="project-preview">
+          <div class="preview-placeholder">
+            <span class="preview-placeholder-icon">✉</span>
+            <span class="preview-placeholder-label">Microservicio · Render</span>
+          </div>
+          <span class="project-deploy-badge no-deploy-badge">
+            <span class="deploy-dot"></span>Sin uso en producción
+          </span>
+        </div>
+        <div class="project-body">
+          <div class="project-id">PRJ — 013 · Node.js · Docker · 2026</div>
+          <span class="status status-dev">Prototipo · GESTEK</span>
+          <h3 class="project-title">GESTEK Mail — Microservicio de correo</h3>
+          <p class="project-desc">
+            Servicio independiente que renderiza y envía las plantillas de correo diseñadas dentro
+            de GESTEK. El backend delega vía clave compartida (<code>x-gestek-key</code>) y el
+            servicio resuelve plantilla + entrega SMTP. Campañas segmentadas por equipo o tipo de
+            boleta, healthcheck <code>/healthz</code> y diagnóstico SMTP para evitar bucles de
+            reinicio en Render cuando el proveedor de correo falla. Hoy GESTEK envía el correo desde su
+            propio backend (SMTP con reparto entre buzones), así que este servicio quedó como prototipo.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Node.js</span>
+            <span class="project-tag">Docker</span>
+            <span class="project-tag">Supabase</span>
+            <span class="project-tag">SMTP</span>
+            <span class="project-tag">Render</span>
+            <span class="project-tag">Microservicios</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-links">
+              <a href="https://github.com/Sekkon0906/microservice-mail" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ PRJ 014 — Piel Canela Store ═══ -->
+      <div class="project-card reveal" data-tags="dev">
+        <div class="project-preview">
+          <div class="preview-placeholder">
+            <span class="preview-placeholder-icon">◫</span>
+            <span class="preview-placeholder-label">Sistema de inventario</span>
+          </div>
+          <span class="project-deploy-badge no-deploy-badge">
+            <span class="deploy-dot"></span>Sin deploy público
+          </span>
+        </div>
+        <div class="project-body">
+          <div class="project-id">PRJ — 014 · Vue 3 · Node.js · 2026</div>
+          <span class="status status-dev">Público · En desarrollo</span>
+          <h3 class="project-title">Piel Canela Store — Inventario para boutique</h3>
+          <p class="project-desc">
+            Plataforma de gestión de inventario para la boutique Piel Canela, construida sobre
+            Clean Architecture: backend Node/Express con MongoDB y frontend Vue 3 separados, para
+            que el dominio no dependa del framework.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Vue 3</span>
+            <span class="project-tag">Node.js</span>
+            <span class="project-tag">Express</span>
+            <span class="project-tag">MongoDB</span>
+            <span class="project-tag">Clean Arch</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-links">
+              <a href="https://github.com/Sekkon0906/pielCanelaStore" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </div><!-- /grupo proyectos -->
 
     <div style="margin-top:3rem; text-align:center; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;" class="reveal">
       <a href="https://github.com/Sekkon0906" target="_blank" rel="noopener" class="btn-ghost">
@@ -902,6 +966,10 @@
       cards.forEach(c => {
         const tags = (c.dataset.tags || '').split(' ');
         c.classList.toggle('hidden', f !== 'all' && !tags.includes(f));
+      });
+      /* Oculta el grupo (Experiencia / Proyectos) si el filtro lo deja vacío */
+      document.querySelectorAll('.project-group').forEach(g => {
+        g.hidden = !g.querySelector('.project-card:not(.hidden)');
       });
     }));
   </script>

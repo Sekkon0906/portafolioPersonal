@@ -10,7 +10,6 @@ aquí con el nombre exacto.
 | Archivo            | Proyecto             | Sitio                                   |
 |--------------------|----------------------|-----------------------------------------|
 | `gestek.jpg`       | GESTEK Event OS      | gestor-eventos-frontend.vercel.app      |
-| `hytrex.jpg`       | Hytrex               | hytrex-landing.vercel.app               |
 | `consultorio.jpg`  | Consultorio Estético | consultorio-estetico-vm.vercel.app      |
 | `sorteosccm.jpg`   | SorteosCCM           | caballoscolombianosymas.com             |
 
@@ -22,7 +21,7 @@ npx playwright install chromium
 node scripts/capturar-previews.mjs
 ```
 
-Captura las cuatro de una vez, con el tamaño y la calidad correctos, y
+Captura las tres de una vez, con el tamaño y la calidad correctos, y
 cierra los banners de cookies que tapen el hero. Si un sitio falla, avisa
 y sigue con los demás — esa tarjeta simplemente sigue usando thum.io.
 
@@ -44,7 +43,7 @@ importa es la parte de arriba de la página.
 
 - **Tamaño:** 1360 × 765 px (2× de los 680 × 382 que se muestran).
 - **Formato:** JPG de calidad ~80. Apunta a menos de 200 KB por archivo;
-  se cargan con `loading="lazy"` pero son cuatro.
+  se cargan con `loading="lazy"` pero son tres.
 - **Encuadre:** viewport de escritorio, sin barras del navegador, con el
   hero visible y los banners de cookies cerrados.
 
