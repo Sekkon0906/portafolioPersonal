@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hoja de vida de Juan Felipe Medina Orjuela, desarrollador de software full-stack: arquitectura de aplicaciones web, desarrollo con agentes de IA y despliegue en la nube." />
+  <meta name="author" content="Juan Felipe Medina Orjuela" />
+  <link rel="canonical" href="https://portafoliojmo.vercel.app/cv-juan-felipe-medina-es.html" />
+  <title>Hoja de vida — Juan Felipe Medina Orjuela</title>
+  <link rel="stylesheet" href="css/cv.css" />
+</head>
+<body>
+
+<header>
+  <h1>Juan Felipe Medina Orjuela</h1>
+  <div class="cargo">Desarrollador de Software Full-Stack</div>
+  <div class="contacto">
+    <span>Ibagué, Colombia</span>
+    <span>+57 316 048 0641</span>
+    <a href="mailto:juan.medina@hytrex.co">juan.medina@hytrex.co</a>
+    <a href="https://www.linkedin.com/in/juan-felipe-medina-orjuela-40b3ba269">linkedin.com/in/juan-felipe-medina-orjuela-40b3ba269</a>
+    <a href="https://github.com/Sekkon0906">github.com/Sekkon0906</a>
+    <a href="https://portafoliojmo.vercel.app/">portafoliojmo.vercel.app</a>
+  </div>
+  <div class="contacto no-print"><a href="assets/cv/CV_Juan_Felipe_Medina_Orjuela.pdf" download>Descargar PDF (español e inglés)</a> · <a href="cv-juan-felipe-medina.html">English version</a></div>
+</header>
+
+<section>
+  <h2>Perfil profesional</h2>
+  <p>Desarrollador de software full-stack con más de tres años construyendo y operando aplicaciones web para clientes y productos propios, desde el levantamiento de requisitos y el diseño de la arquitectura hasta el despliegue, la operación en producción y el mantenimiento. He llevado sistemas a producción en eventos públicos de alta concurrencia y en plataformas que manejan pagos y datos sensibles.</p>
+  <p>En inteligencia artificial aplicada diseño sistemas de recuperación aumentada (RAG) con fragmentación de texto, embeddings y búsqueda híbrida; integro modelos con herramientas y datos mediante Model Context Protocol (MCP), y orquesto agentes con patrones de encadenamiento, enrutamiento, paralelización y evaluación con reintento. Todo con pruebas automatizadas y revisión de código antes de entregar. Mi enfoque es la arquitectura de software y la nube.</p>
+</section>
+
+<section>
+  <h2>Competencias</h2>
+  <ul class="dos-col">
+    <li>Arquitectura de aplicaciones web y diseño de APIs REST</li>
+    <li>Modelado de bases de datos relacionales y seguridad por filas (RLS)</li>
+    <li>Autenticación y autorización: OAuth 2.0 / PKCE, JWT, control por roles</li>
+    <li>Sistemas RAG: fragmentación, embeddings y búsqueda híbrida</li>
+    <li>Orquestación de agentes de IA y servidores MCP</li>
+    <li>Integración continua y despliegue automatizado (CI/CD)</li>
+    <li>Pruebas automatizadas y monitoreo de errores en producción</li>
+    <li>Aplicaciones que funcionan sin conexión (offline-first, PWA)</li>
+    <li>Análisis de requisitos con clientes y documentación de decisiones técnicas</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Ingeniería de IA aplicada</h2>
+  <ul>
+    <li><strong>Recuperación aumentada (RAG):</strong> fragmentación de texto según la estructura del documento (secciones de Markdown, bloques de código de 40 a 70 líneas), embeddings de 1024 dimensiones con instrucción de consulta, búsqueda híbrida que combina BM25 (SQLite FTS5) y similitud coseno fusionadas con Reciprocal Rank Fusion, reindexado incremental y ocultamiento de secretos antes de indexar. Formación en reranking, arquitecturas de índices múltiples y contextual retrieval.</li>
+    <li><strong>Flujos y agentes:</strong> encadenamiento de prompts, enrutamiento condicional, paralelización, orquestador–trabajadores y evaluador–optimizador (un agente revisor devuelve la tarea hasta que cumple los criterios de aceptación). Agentes de programación sin interfaz con salida estructurada (JSON Schema), sesiones reanudables y límites de concurrencia.</li>
+    <li><strong>Evaluación:</strong> evaluación sistemática de prompts con conjuntos de prueba generados y calificación por código y por modelo; las pruebas automatizadas funcionan como compuerta antes de aceptar el trabajo de un agente.</li>
+    <li><strong>Model Context Protocol:</strong> servidores y clientes con tools, resources y prompts; transportes stdio y Streamable HTTP, HTTP sin estado para escalar horizontalmente, sampling, notificaciones de progreso y roots. Servidores MCP en producción con OAuth 2.0 y confirmación humana.</li>
+    <li><strong>Contexto y costo:</strong> tool use, salida estructurada, streaming, extended thinking, prompts compatibles con la caché (prompt caching), compactación del contexto y elección del modelo según la tarea, incluidos modelos locales para trabajo de bajo costo.</li>
+    <li><strong>Claude Code en equipo:</strong> modo plan, instrucciones del proyecto (CLAUDE.md), skills, hooks que hacen cumplir reglas, modos de permiso, worktrees para agentes en paralelo, ejecución sin interfaz y revisión de pull requests con GitHub Actions.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Habilidades técnicas</h2>
+  <div class="rejilla">
+    <span class="cat">Lenguajes</span><span>TypeScript, JavaScript, Python, SQL, Java</span>
+    <span class="cat">Frontend</span><span>React, Next.js, Angular, Tailwind CSS, PWA, React Native (Expo)</span>
+    <span class="cat">Backend</span><span>Node.js (Express, Fastify, Hono), FastAPI, REST, WebSocket</span>
+    <span class="cat">Bases de datos</span><span>PostgreSQL, MySQL, SQLite</span>
+    <span class="cat">Nube y DevOps</span><span>Docker, GitHub Actions, AWS y Google Cloud (formación certificada), Cloudflare, Railway, Vercel</span>
+    <span class="cat">IA aplicada</span><span>Claude y Claude Code, OpenAI, Gemini, modelos locales (Ollama), MCP, RAG con embeddings, LangChain, n8n</span>
+    <span class="cat">Calidad</span><span>Pruebas automatizadas de extremo a extremo y de integración, Sentry</span>
+  </div>
+</section>
+
+<section>
+  <h2>Experiencia</h2>
+
+  <div class="entrada">
+    <div class="fila"><span class="titulo">Desarrollador Full-Stack — Develovers Group S.A.S.</span><span class="fecha">Mar. 2026 – actualidad</span></div>
+    <div class="sub">GESTEK, plataforma de marca blanca para la gestión de eventos · Experiencia certificada</div>
+    <div class="tec">React · Vite (PWA) · Express · PostgreSQL · GitHub Actions · Sentry · Mercado Pago</div>
+    <ul>
+      <li>Análisis técnico, diseño, implementación e integración de funcionalidades con flujos de desarrollo agéntico supervisados, definiendo la arquitectura según el crecimiento del producto (desarrollo de marzo a julio de 2026).</li>
+      <li>Puesta en producción bajo contrato en <strong>FESTECH Ibagué 2026</strong> (Alcaldía de Ibagué, 17–19 de septiembre): registro, emisión de boletas y control de acceso en puerta para <strong>4.485 boletas</strong> y <strong>3.334 ingresos</strong>, con 1.555 asistentes en el día pico y ráfagas de 67 ingresos en 5 minutos por una sola puerta.</li>
+      <li>Boletas con QR firmado (JWT), control de puerta con reingreso y motivos de rechazo, prellenado del registro por documento, impresión de escarapelas, roles por equipo, pagos y registro embebible en sitios de terceros.</li>
+      <li>Corregí una condición de carrera en el control de aforo con contadores atómicos en PostgreSQL; llevé la verificación de tokens al servidor local, evitando más de 100.000 llamadas diarias a un servicio externo; automaticé el despliegue con GitHub Actions y construí un conector OAuth 2.0 (PKCE) + MCP. Más de 1.800 pruebas automatizadas.</li>
+    </ul>
+  </div>
+
+  <div class="entrada">
+    <div class="fila"><span class="titulo">Cofundador y Director Técnico — Hytrex</span><span class="fecha">Sep. 2026 – actualidad</span></div>
+    <div class="sub">Grupo independiente de desarrollo de software (aún no constituido como empresa)</div>
+    <ul>
+      <li>Dirección técnica y arquitectura de los productos del grupo: de la estrategia y el diseño a la ingeniería y la entrega.</li>
+      <li>Proceso de desarrollo del equipo con agentes de IA supervisados, pruebas y revisión de código.</li>
+    </ul>
+  </div>
+
+  <div class="entrada">
+    <div class="fila"><span class="titulo">Desarrollador Full-Stack independiente — Consultorio Estético Dra. Julieth Medina</span><span class="fecha">2023 – 2026</span></div>
+    <div class="sub">Plataforma clínica · Experiencia certificada · <a href="https://consultorio-estetico-vm.vercel.app/">consultorio-estetico-vm.vercel.app</a></div>
+    <div class="tec">Next.js · Express · PostgreSQL · Cloudflare R2 · API de Anthropic</div>
+    <ul>
+      <li>Análisis, diseño, desarrollo, puesta en marcha y mantenimiento de toda la plataforma: sitio público, catálogo, agendamiento en línea, cuentas con roles, consentimiento informado con firma electrónica, panel administrativo y analítica.</li>
+      <li>Diseñé la arquitectura en la nube y una autenticación propia: tokens de acceso en memoria, renovación rotativa en cookie httpOnly, contraseñas con argon2id e inicio de sesión con Google.</li>
+      <li>Asistente de IA que edita el contenido del sitio por chat o voz, auditoría de seguridad con 4 fallos críticos corregidos y servidor MCP con OAuth y confirmación humana. Tratamiento de datos de salud conforme a la Ley 1581.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Proyectos destacados</h2>
+
+  <div class="entrada">
+    <div class="fila"><span class="titulo">Atenea — Orquestador local de agentes de IA</span><span class="fecha">2026</span></div>
+    <div class="tec">TypeScript · Node.js · Hono · Ollama · Whisper · Claude Code · Codex</div>
+    <ul>
+      <li>Asistente de voz que corre en el equipo y coordina agentes de programación sin interfaz (Claude Code y Codex): reparte tareas con criterios de aceptación, transmite su actividad en vivo y lleva un tablero por proyecto.</li>
+      <li>Buscador de conocimiento sobre todos los repositorios y la documentación: RAG local con búsqueda híbrida BM25 + embeddings fusionada con RRF, que cita archivo y líneas en cada respuesta.</li>
+    </ul>
+  </div>
+
+  <div class="entrada">
+    <div class="fila"><span class="titulo">Sekkon — Microservicio de agentes de IA para negocios</span><span class="fecha">2026</span></div>
+    <div class="tec">Node.js · TypeScript · Hono · PostgreSQL · Railway</div>
+    <ul><li>Asistente conversacional configurable por negocio: cada aplicación cliente define perfil, contexto y herramientas, y el agente las ejecuta mediante webhooks firmados con HMAC, sin acceder a la base de datos del negocio. Modelo de respaldo, notas de voz, cupo de tokens por cliente e historial por usuario.</li></ul>
+  </div>
+
+  <div class="entrada">
+    <div class="fila"><span class="titulo">MeDinero — Finanzas personales con asistente de IA</span><span class="fecha">2026</span></div>
+    <div class="tec">Next.js · PostgreSQL (RLS) · Better Auth · OCR · PWA · Railway</div>
+    <ul><li>Registro de gastos por voz, a mano, desde la foto del recibo y desde las notificaciones del banco; tarjetas, deudas, cuotas, costo de vida y metas. Aislamiento de datos por usuario con seguridad por filas.</li></ul>
+  </div>
+
+  <div class="entrada">
+    <div class="fila"><span class="titulo">DevUP — Centro de mando para equipos de software</span><span class="fecha">2026</span></div>
+    <div class="tec">Fastify · Next.js · PostgreSQL · WebRTC · Docker · Cloudflare Workers</div>
+    <ul><li>Canales, voz y video cifrados de extremo a extremo, tareas, bóveda de credenciales y servidor MCP para que agentes de IA trabajen sobre el tablero. Aislamiento multiempresa probado en integración continua. Lo usa el equipo de GESTEK.</li></ul>
+  </div>
+
+  <div class="entrada">
+    <div class="fila"><span class="titulo">SorteosCCM — Plataforma de rifas en línea (en producción)</span><span class="fecha">2026</span></div>
+    <div class="tec">Angular · PostgreSQL (RLS, funciones y tareas programadas) · Resend</div>
+    <ul><li>Paquetes de boletas, dos modos de sorteo, reserva de números, confirmación de pagos por el administrador y liberación automática de reservas vencidas.</li></ul>
+  </div>
+
+  <div class="entrada">
+    <div class="fila"><span class="titulo">New Blood Premium BARF — Automatización de ventas con un agente de IA</span><span class="fecha">2026</span></div>
+    <div class="tec">React · PostgreSQL · n8n · LangChain · OpenAI · WhatsApp</div>
+    <ul><li>Panel de pedidos con descuento automático de inventario y guías en PDF, agente que atiende la venta completa por WhatsApp y flujo diario que avisa al cliente antes de que se le acabe el producto.</li></ul>
+  </div>
+
+  <div class="entrada">
+    <div class="fila"><span class="titulo">Otros proyectos</span><span class="fecha">2025 – 2026</span></div>
+    <ul><li><strong>Wallnut</strong> (proyecto de grado, en desarrollo), campus universitario móvil con asistencia por QR (React Native) · <strong>Ablaze</strong>, PWA offline-first con SQLite en el navegador · <strong>Ardy-IA</strong>, tutor de idiomas con RAG y voz (Python, FastAPI).</li></ul>
+  </div>
+
+  <p><strong>Integraciones en producción:</strong> pasarelas de pago (Mercado Pago, Stripe, Wompi), correo transaccional (Resend, SMTP), notificaciones Web Push y mensajería por WhatsApp.</p>
+</section>
+
+<section>
+  <h2>Certificaciones e insignias</h2>
+
+  <div class="cert-grupo">
+    <div class="fila"><span class="titulo">Anthropic — Claude Academy</span><span class="fecha">Nov. 2026</span></div>
+    <ul class="cert-lista">
+      <li><a href="https://academy.claude.com/verify/f8f9b1deccb86253ac9f57df46d0735f">Building with the Claude API</a> (8 h): API, evaluación de prompts, tool use, RAG con búsqueda híbrida y reranking, MCP, flujos y agentes.</li>
+      <li><a href="https://academy.claude.com/verify/a98f31cc28b581188c8cb5a0ccb30d9e">Model Context Protocol: Advanced Topics</a>: sampling, notificaciones, roots, transportes stdio y Streamable HTTP, despliegue sin estado.</li>
+      <li><a href="https://academy.claude.com/verify/6a6990dc50accb7c91458c38f4f09d63">Introduction to Model Context Protocol</a>: servidores y clientes MCP con tools, resources y prompts.</li>
+      <li><a href="https://academy.claude.com/verify/c9b96be3deedab5885548ce622d01786">Claude Code in Action</a>: sesiones largas, hooks, skills, agentes en paralelo con worktrees, ejecución sin interfaz y revisión en CI.</li>
+      <li><a href="https://academy.claude.com/verify/4c1224ca6fb748c825763951d0f6126c">Claude Platform 101</a>: ciclo del agente, tool use, extended thinking, skills, gestión de contexto y agentes administrados.</li>
+    </ul>
+    <div class="cert-lista">También: <a href="https://academy.claude.com/verify/e36f26a77a5f575b9cdcf4787a3405b8">Claude Code 101</a> · <a href="https://academy.claude.com/verify/b47dc8b496de9f1efaa47260b81abde3">AI Fluency for Builders</a> · <a href="https://academy.claude.com/verify/ae4c0f8700cc727ea051a2cbb40ec0aa">Introduction to Claude Cowork</a> · <a href="https://academy.claude.com/verify/a23037aaee26c1fe4960188557978760">Claude 101</a>
+    </div>
+  </div>
+
+  <div class="cert-grupo">
+    <div class="fila"><span class="titulo">Amazon Web Services — AWS Academy Graduate</span><span class="fecha">2025 – 2026</span></div>
+    <div class="cert-lista">
+      <a href="https://www.credly.com/go/V1s0sIQN">Cloud Developing</a> (40 h, nov. 2026) ·
+      <a href="https://www.credly.com/go/rGBo51yY">Cloud Foundations</a> (20 h, abr. 2025)
+    </div>
+  </div>
+
+  <div class="cert-grupo">
+    <div class="fila"><span class="titulo"><a href="https://www.skills.google/public_profiles/ca1e6001-8392-4f69-8495-a233333f2fcd">Google Cloud — insignias</a></span><span class="fecha">Abr. 2025</span></div>
+    <div class="cert-lista">Digital Transformation with Google Cloud · Exploring Data Transformation with Google Cloud · Innovating with Google Cloud Artificial Intelligence · Infrastructure and Application Modernization with Google Cloud · Trust and Security with Google Cloud · Scaling with Google Cloud Operations</div>
+  </div>
+
+  <div class="cert-grupo">
+    <div class="fila"><span class="titulo">LearnQuest (Coursera) — <a href="https://coursera.org/verify/EB0KJ675QA3E">Introduction to Scrum Master Training</a></span><span class="fecha">Ago. 2025</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Educación e idiomas</h2>
+  <p><strong>Universidad de Ibagué</strong>, Ingeniería de Sistemas, noveno de diez semestres (desde 2022) · <strong>Idiomas:</strong> español (nativo) · inglés B1 (<a href="https://cert.efset.org/en/e2ecUq">EF SET 44/100</a>)</p>
+</section>
+
+</body>
+</html>
